@@ -1,0 +1,6 @@
+[
+  { "id": "laws", "nameKey": "topic.laws", "categories": ["B", "A", "A3", "C1", "C", "BUS", "TRACTOR"] },
+  { "id": "signs", "nameKey": "topic.signs", "categories": ["B", "A", "C1", "C", "BUS", "TRACTOR"] },
+  { "id": "safety", "nameKey": "topic.safety", "categories": ["B", "A", "A3", "C1", "C", "BUS", "TRACTOR"] },
+  { "id": "vehicle", "nameKey": "topic.vehicle", "categories": ["B", "A", "A3", "C1", "C", "BUS", "TRACTOR"] }
+]

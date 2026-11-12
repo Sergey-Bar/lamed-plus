@@ -1,0 +1,35 @@
+{
+  "source": "Israel Ministry of Transport and Road Safety — official theory question bank",
+  "portal": "https://data.gov.il",
+  "importedAt": "2026-11-10T07:41:33.913Z",
+  "questionCount": 1801,
+  "imageQuestionCount": 599,
+  "imageCount": 444,
+  "topics": {
+    "laws": 900,
+    "signs": 391,
+    "safety": 400,
+    "vehicle": 110
+  },
+  "categories": {
+    "B": 1276,
+    "A": 1160,
+    "C1": 1395,
+    "C": 1320,
+    "BUS": 1326,
+    "TRACTOR": 1144
+  },
+  "files": [
+    "laws-01.json",
+    "laws-02.json",
+    "laws-03.json",
+    "laws-04.json",
+    "laws-05.json",
+    "signs-01.json",
+    "signs-02.json",
+    "safety-01.json",
+    "safety-02.json",
+    "vehicle-01.json"
+  ],
+  "checksum": "db50cf51b913c3ef"
+}

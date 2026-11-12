@@ -1,0 +1,26 @@
+{
+  "source": "Israel Ministry of Transport and Road Safety — official A3 electric bicycle theory bank",
+  "portal": "https://data.gov.il",
+  "importedAt": "2026-11-11",
+  "questionCount": 40,
+  "languages": [
+    "he",
+    "en",
+    "ar",
+    "fr",
+    "es"
+  ],
+  "exam": {
+    "questions": 30,
+    "minutes": 40,
+    "passThreshold": 26
+  },
+  "sourceUrls": {
+    "he": "https://data.gov.il/dataset/7fa2032a-eca9-48ba-a85b-cdd5a6bafbfa/resource/c99e857c-902d-4539-97b9-2df5c9d5f64c/download/theoryexamhe_a3_data_yellow.xlsx",
+    "en": "https://data.gov.il/dataset/1afab4b5-f36e-4f96-b4e2-adca47d18d1b/resource/76d032de-222b-4c27-9bf6-5229d41ed379/download/theoryexamhe_a3_data_yellow_en.xlsx",
+    "ar": "https://data.gov.il/dataset/68d9a6bf-3750-4f30-8154-0ffc60671e47/resource/5364b173-851a-4722-9c1f-563bbd919f48/download/theoryexam_ar_a3_data_yellow.xlsx",
+    "fr": "https://data.gov.il/dataset/53590f54-4efd-4a9b-8619-7e35d724dedd/resource/cbd353f3-94e4-41d6-9bbd-4c0751fa0a4b/download/theoryexamhe_a3_data_yellow_fr.xlsx",
+    "es": "https://data.gov.il/dataset/1ad4c703-ed78-4a30-b804-592ec94909bc/resource/b61c8402-a846-4943-8f08-7d45a36ce541/download/theoryexamhe_a3_data_yellow_sp.xlsx"
+  },
+  "skippedIncomplete": []
+}

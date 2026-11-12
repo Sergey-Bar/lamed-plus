@@ -1,0 +1,8 @@
+{
+  "id": "A3",
+  "nameKey": "category.A3",
+  "questionCount": 30,
+  "passThreshold": 26,
+  "timeMinutes": 40,
+  "languages": ["he", "en", "ar", "fr", "es"]
+}

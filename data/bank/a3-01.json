@@ -1,0 +1,2962 @@
+[
+  {
+    "id": "a3-0001",
+    "number": "A3-0001",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "laws",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "האם אופניים עם מנוע עזר נחשבים לרכב עפ\"י החוק?",
+        "options": [
+          "לא.",
+          "כן.",
+          "כן. בתנאי שהרוכב עליהם הוא בעל רישיון נהיגה.",
+          "כן. בתנאי שהם מופעלים ע\"י מנוע עזר."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "en": {
+        "stem": "Is an electric bicycle considered by law to be a vehicle?",
+        "options": [
+          "No.",
+          "Yes.",
+          "Yes. Provided the rider has a driving license.",
+          "Yes. Provided they are powered with a motor."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "ar": {
+        "stem": "هل الدراجة ذات المحرك كهربائي تعتبر مركبة حسب القانون?",
+        "options": [
+          "لا.",
+          "نعم.",
+          "نعم. بشرط أن يكون لدى الراكب رخصة قيادة.",
+          "نعم. بشرط أن يتم تشغيلها بواسطة محرك كهربائي."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "fr": {
+        "stem": "D’un point de vue légal, un vélo électrique est-il considéré comme un véhicule ?",
+        "options": [
+          "Non.",
+          "Oui.",
+          "Oui. À condition que le cycliste soit titulaire d’un permis de conduire.",
+          "Oui. À condition qu’il soit équipé d’un moteur."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "es": {
+        "stem": "Legalmente ¿una bicicleta eléctrica se considera un vehículo?",
+        "options": [
+          "No.",
+          "Sí.",
+          "Sí. Siempre que el ciclista tenga permiso de conducir.",
+          "Sí. siempre que esté propulsada por un motor."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0002",
+    "number": "A3-0002",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "laws",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "האם נוהג אופניים עם מנוע עזר נחשב כ \"עובר דרך\" עפ\"י החוק?",
+        "options": [
+          "לא.",
+          "כן.",
+          "כן .בתנאי שהוא רוכב בכביש.",
+          "כן. בתנאי שהוא בעל רישיון נהיגה לדרגה B לפחות."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "en": {
+        "stem": "Is a rider on an electric bicycle considered by law to be a “road user”?",
+        "options": [
+          "No.",
+          "Yes.",
+          "Yes. Provided he is riding on a road.",
+          "Yes.Provided he has a Class B driving license as a minimum."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "ar": {
+        "stem": "هل يعتبر سائق دراجة بمحرك كهربائي \"عابر طريق\" حسب القانون?",
+        "options": [
+          "لا.",
+          "نعم.",
+          "نعم .بشرط أن يقود على الطريق.",
+          "(B)نعم. بشرط أن يكون لديه على الأقل رخصة قيادة ذات درجة."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "fr": {
+        "stem": "D’un point de vue légal, le conducteur d’un vélo électrique est-il considéré comme un « usager de la route » ?",
+        "options": [
+          "Non.",
+          "Oui.",
+          "Oui. À condition de rouler sur une voie publique.",
+          "Oui. À condition d’être titulaire d’un permis de conduire de classe B ou plus."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "es": {
+        "stem": "Legalmente ¿un ciclista montando una bicicleta eléctrica se considera un «usuario de la vía»?",
+        "options": [
+          "No.",
+          "Sí.",
+          "Sí. Siempre que esté circulando por una vía.",
+          "Sí. Siempre que tenga un permiso de conducir de clase B como mínimo."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0003",
+    "number": "A3-0003",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "laws",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "עפ\"י החוק \"אופניים עם מנוע עזר\" הם:",
+        "options": [
+          "תלת אופן.",
+          "אופניים בעלי שני גלגלים המורכבים זה אחרי זה, שמותקן בהם מנוע חשמלי.",
+          "אופנוע.",
+          "כל התשובות נכונות."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "en": {
+        "stem": "According to the law, \"electric bicycle\" are:",
+        "options": [
+          "tricycle.",
+          "A bicycle with two wheels mounted one behind the other, in which an electric motor is installed.",
+          "motorcycle.",
+          "All answers are correct."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "ar": {
+        "stem": "وفقًا للقانون، \"الدراجات ذات المحرك الكهربائي\" هم:",
+        "options": [
+          "دراجة ثلاثية العجلات.",
+          "دراجة بعجلتين مثبتة واحدة خلف الأخرى، حيث يتم تركيب محرك كهربائي.",
+          "دراجة نارية.",
+          "جميع الإجابات صحيحة."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "fr": {
+        "stem": "Selon la loi, les « vélos électriques » sont :",
+        "options": [
+          "tricycle.",
+          "Vélo à deux roues montées l'une derrière l'autre, dans lequel est installé un moteur électrique.",
+          "motorcycle.",
+          "Toutes les réponses sont correctes."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "es": {
+        "stem": "Según la ley, las \"bicicletas con motor auxiliar\" son:",
+        "options": [
+          "triciclo.",
+          "Una bicicleta con dos ruedas montadas una detrás de la otra, en la que está instalado un motor eléctrico..",
+          "motocicleta.",
+          "Todas las respuestas son correctas.."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0004",
+    "number": "A3-0004",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "laws",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "האם נוהג אופניים עם מנוע עזר חייב לציית לתמרורים?",
+        "options": [
+          "לא.",
+          "כן.",
+          "בתנאי שהוא בן 18 ומעלה.",
+          "כן. בתנאי שהוא מחזיק רשיון נהיגה."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "en": {
+        "stem": "Is a rider on an electric bicycle required to obey traffic signs?",
+        "options": [
+          "No.",
+          "Yes.",
+          "Provided he is at least 18 years old.",
+          "Yes. Provided he has a driving license."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "ar": {
+        "stem": "هل يجب على سائق دراجة بمحرك كهربائي أن ينصاع لإشارات المرور?",
+        "options": [
+          "لا.",
+          "نعم.",
+          "بشرط أن يكون بعمر18 وما فوق.",
+          "نعم. بشرط أن يكون لديه رخصة قيادة ."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "fr": {
+        "stem": "Le conducteur d’un vélo électrique est-il tenu de respecter les panneaux de signalisation ?",
+        "options": [
+          "Non.",
+          "Oui.",
+          "Oui. À condition d’être âgé de 18 ans ou plus.",
+          "Oui. À condition d’être titulaire d’un permis de conduire."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "es": {
+        "stem": "¿Está obligado a obedecer las señales de tráfico un ciclista que monte una bicicleta eléctrica?",
+        "options": [
+          "No.",
+          "Sí.",
+          "Siempre que tenga como mínimo 18 años de edad.",
+          "Sí. Siempre que tenga permiso de conducir."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0005",
+    "number": "A3-0005",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "laws",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "האם מותר לחצות מעבר החצייה להולכי רגל בנהיגה באופניים עם מנוע עזר?",
+        "options": [
+          "לא. אולם מותר להולך רגל להוביל אופניים על מעבר החצייה.",
+          "כן. בתנאי שהרוכב בעל רשיון נהיגה.",
+          "כן. בתנאי שהרוכב הוא בן 18 לפחות.",
+          "כן. בתנאי שאין הולכי רגל במעבר החצייה."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "en": {
+        "stem": "Is a rider on an electric bicycle permitted to ride across a pedestrian crossing?",
+        "options": [
+          "No. However a pedestrian is permitted to guide his bicycle across a pedestrian crossing.",
+          "Yes. Provided the rider has a driving license.",
+          "Yes. Provided the rider is at least 18 years old.",
+          "Yes. Provided there are no pedestrians on the pedestrian crossing."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "ar": {
+        "stem": "هل يُسمح بعبور ممر المشاة أثناء قيادة دراجة بمحرك كهربائي?",
+        "options": [
+          "لا. مع ذلك مسموح لعابر طريق (مشاة) أن يحمل دراجة على ممر المشاة.",
+          "نعم. بشرط أن يكون لدى الراكب رخصة قيادة.",
+          "نعم. بشرط ألا يقل عمر الراكب عن 18 عاماً.",
+          "نعم. بشرط عدم وجود مشاة في ممر المشاة."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "fr": {
+        "stem": "Le conducteur d’un vélo électrique a-t-il le droit de traverser un passage piéton en roulant ?",
+        "options": [
+          "Non. Toutefois, un piéton est autorisé à guider son vélo en traversant un passage piéton.",
+          "Oui. À condition d’être titulaire d’un permis de conduire.",
+          "Oui. À condition d’être âgé de 18 ans ou plus.",
+          "Oui. À condition qu’il n’y ait pas de piétons sur le passage."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "es": {
+        "stem": "¿Está permitido que el ciclista con una bicicleta eléctrica cruce un paso de cebra montado en ella?",
+        "options": [
+          "No. Aunque está permitido que un peatón guíe su bicicleta por el paso de cebra.",
+          "Sí. Siempre que el ciclista tenga permiso de conducir.",
+          "Sí. Siempre que tenga como mínimo 18 años de edad.",
+          "Sí. Siempre que no haya peatones en el paso de cebra."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0006",
+    "number": "A3-0006",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "laws",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "האם נוהג אופניים עם מנוע עזר חייב לתת זכות קדימה להולכי רגל החוצים במעבר החצייה?",
+        "options": [
+          "כן.",
+          "לא.",
+          "כן. בתנאי שהוא בעל רישיון נהיגה.",
+          "כן. בתנאי שהוא בן 18 לפחות."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "en": {
+        "stem": "Is a rider on an electric bicycle required to give the right of way to pedestrians crossing at a pedestrian crossing?",
+        "options": [
+          "Yes.",
+          "No.",
+          "Yes. Provided he has a driving license.",
+          "Yes. Provided he is at least 18 years old."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "ar": {
+        "stem": "هل يجب على سائق دراجة بمحرك كهربائي إعطاء حق الأولوية للمشاة الذين يعبرون ممر المشاة?",
+        "options": [
+          "نعم.",
+          "لا.",
+          "نعم. بشرط أن يكون لديه رخصة قيادة.",
+          "نعم بشرط ألا يقل عمره عن 18 عاماً."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "fr": {
+        "stem": "Le conducteur d’un vélo électrique est-il tenu de céder la priorité aux piétons qui traversent un passage piéton ?",
+        "options": [
+          "Oui.",
+          "Non.",
+          "Oui. À condition d’être titulaire d’un permis de conduire.",
+          "Oui. À condition d’être âgé de 18 ans ou plus."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "es": {
+        "stem": "¿Está obligado un ciclista con una bicicleta eléctrica a ceder el paso a los peatones que crucen un paso de cebra?",
+        "options": [
+          "Sí.",
+          "No.",
+          "Sí. Siempre que tenga permiso de conducir.",
+          "Sí. Siempre que tenga como mínimo 18 años de edad."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0007",
+    "number": "A3-0007",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "laws",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "מאיזה גיל מותר לנהוג באופניים עם מנוע עזר?",
+        "options": [
+          "16 שנים.",
+          "14 שנים.",
+          "12 שנים.",
+          "18 שנים."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "en": {
+        "stem": "What is the minimum permitted age for riding an electric bicycle?",
+        "options": [
+          "16 years old.",
+          "14 years old.",
+          "12 years old.",
+          "18 years old."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "ar": {
+        "stem": "من أي عمر يُسمح بركوب دراجة بمحرك كهربائي?",
+        "options": [
+          "16 عاماً.",
+          "14عاماً.",
+          "12 عاماً.",
+          "18 عاماً."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "fr": {
+        "stem": "Quel est l’âge minimum autorisé pour conduire un vélo électrique ?",
+        "options": [
+          "16 ans.",
+          "14ans.",
+          "12 ans.",
+          "18ans."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "es": {
+        "stem": "¿Cuál es la edad mínima permitida para montar una bicicleta eléctrica?",
+        "options": [
+          "16 años de edad.",
+          "14 años de edad.",
+          "12 años de edad.",
+          "18 años de edad."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0008",
+    "number": "A3-0008",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "laws",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "האם מותר לרכב על אופניים כשהם אינם עומדים בדרישות התקן לאופניים עם מנוע עזר?",
+        "options": [
+          "כן.",
+          "לא.",
+          "כן. בתנאי שהנסיעה היא קצרה.",
+          "כן. בתנאי שהרכיבה תהיה על המדרכה בלבד."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "en": {
+        "stem": "Is it legal to ride a bicycle that is non-compliant with the standard requirements for an electric bicycle?",
+        "options": [
+          "Yes.",
+          "No.",
+          "Yes. Only if it is a short ride.",
+          "Yes. Only if the ride is done on the sidewalk."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "ar": {
+        "stem": "هل يُسمح بركوب الدراجات عندما لا تستوفي المتطلبات القياسية المطلوبة للدراجات ذات محرك كهربائي?",
+        "options": [
+          "نعم.",
+          "لا.",
+          "نعم. بشرط أن يكون الركوب لفترة قصيرة.",
+          "نعم بشرط أن يكون الركوب على الرصيف فقط."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "fr": {
+        "stem": "Est-il légal de conduire un vélo non conforme aux exigences standard ?",
+        "options": [
+          "Oui.",
+          "Non.",
+          "Oui. Uniquement sur un court trajet.",
+          "Oui. Uniquement si le vélo est conduit sur le trottoir."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "es": {
+        "stem": "¿Es legal montar una bicicleta que no cumpla los requisitos normativos de una bicicleta eléctrica?",
+        "options": [
+          "Sí.",
+          "No.",
+          "Sí. Solo si es un viaje corto.",
+          "Sí. Solo si se circula por la acera."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0009",
+    "number": "A3-0009",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "laws",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "האם מותר להסיע נוסע נוסף באופניים עם מנוע העזר?",
+        "options": [
+          "כן. בתנאי שהנוהג הוא בן 16 שנים ומעלה.",
+          "כן. בתנאי שהאופניים עשויים לכך ושניתן להסיע בהם אנשים.",
+          "כן. בתנאי שהרוכבים חובשים קסדה.",
+          "כל התשובות נכונות."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "en": {
+        "stem": "Is it legal to carry an additional passenger on an electric bicycle?",
+        "options": [
+          "Yes. Provided the rider is 16 years old or more.",
+          "Yes. Only if the electric bicycle is purpose-built for this, meaning that it is possible to transport an additional person on it.",
+          "Yes. Provided the riders are wearing a helmet.",
+          "All answers are correct."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "ar": {
+        "stem": "هل يجوز نقل راكب إضافي على دراجة بمحرك كهربائي?",
+        "options": [
+          "نعم. بشرط أن يكون عمر السائق 16 عاماً أو أكثر.",
+          "نعم. بشرط أن تكون الدراجة لهذا الغرض وأنه يمكن نقل الأشخاص عليها (على متنها).",
+          "نعم. بشرط أن يرتدي الراكبون خوذة.",
+          "جميع الإجابات صحيحة."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "fr": {
+        "stem": "Est-il légal de transporter un passager sur un vélo électrique ?",
+        "options": [
+          "Oui. À condition que le conducteur soit âgé de 16 ans ou plus.",
+          "Oui. Uniquement si le vélo électrique est construit à cet effet, c’est à dire s’il est possible de transporter une personne supplémentaire.",
+          "Oui. À condition que le conducteur et le passager portent un casque.",
+          "Toutes les réponses sont correctes."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "es": {
+        "stem": "¿Es legal llevar a un pasajero en una bicicleta eléctrica?",
+        "options": [
+          "Sí. Siempre que el ciclista tenga 16 años o más.",
+          "Sí. Solamente si la bicicleta eléctrica está creada expresamente para ello, lo que significa que es posible llevar a una persona adicional en ella.",
+          "Sí. Siempre que el ciclista y el pasajero lleven puesto un casco.",
+          "Todas las respuestas son correctas."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0010",
+    "number": "A3-0010",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "laws",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "האם מותר לגרור אדם באופניים עם מנוע עזר?",
+        "options": [
+          "לא.",
+          "כן.",
+          "כן .בתנאי שהוא חובש קסדה.",
+          "כן. בתנאי שהנסיעה היא לא על הכביש."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "en": {
+        "stem": "Is it legal to use an electric bicycle to tow another person?",
+        "options": [
+          "No.",
+          "Yes.",
+          "Yes. Provided he is wearing a helmet.",
+          "Yes. Provided the journey is not on roads."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "ar": {
+        "stem": "هل يجوز جر شخص على دراجة بمحرك كهربائي?",
+        "options": [
+          "لا.",
+          "نعم.",
+          "نعم. بشرط أن يرتدي خوذة.",
+          "نعم. بشرط أن لا يكون ركوب الدراجة على الطريق."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "fr": {
+        "stem": "Est-il légal d’utiliser un vélo électrique pour remorquer une personne ?",
+        "options": [
+          "Non.",
+          "Oui.",
+          "Oui. À condition que la personne remorquée porte un casque.",
+          "Oui. À condition que le trajet ne soit pas effectué sur la voie publique."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "es": {
+        "stem": "¿Es legal utilizar una bicicleta eléctrica para remolcar a una persona?",
+        "options": [
+          "No.",
+          "Sí.",
+          "Sí. Siempre que lleve puesto un casco.",
+          "Sí. Siempre que el viaje no sea sobre carretera."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0011",
+    "number": "A3-0011",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "laws",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "באיזה צד של הכביש על רוכב האופניים עם מנוע עזר לנסוע?",
+        "options": [
+          "במרכז הכביש.",
+          "קרוב ככל האפשר לצדו השמאלי של הכביש.",
+          "קרוב ככל האפשר לצדו הימני של הכביש.",
+          "אין חשיבות לצד הנסיעה."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "en": {
+        "stem": "On what side of the road must an electric bicycle rider ride?",
+        "options": [
+          "In the center of the road.",
+          "As close as possible to the left side of the road.",
+          "As close as possible to the right side of the road.",
+          "Any side of the road is permissible."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "ar": {
+        "stem": "في أي جانب من الطريق يجب على راكب الدراجة ذات المحرك الكهربائي القيادة?",
+        "options": [
+          "في وسط الطريق.",
+          "أقرب ما يمكن إلى الجانب الأيسر من الطريق.",
+          "أقرب ما يمكن إلى الجانب الأيمن من الطريق.",
+          "جانب السفر ليس مهماً."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "fr": {
+        "stem": "De quel côté de la route un conducteur de vélo électrique doit-il rouler ?",
+        "options": [
+          "Au centre de la route.",
+          "Aussi près de possible que du côté gauche de la route.",
+          "Aussi près possible que du côté droit de la route.",
+          "Les deux côtés de la route sont autorisés."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "es": {
+        "stem": "¿En qué lado de la carretera debe circular un ciclista con bicicleta eléctrica?",
+        "options": [
+          "En el centro de la carretera.",
+          "Lo más cerca posible al lado izquierdo de la carretera.",
+          "Lo más cerca posible al lado derecho de la carretera.",
+          "Está permitido cualquier lado de la carretera."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0012",
+    "number": "A3-0012",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "safety",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "מהי הסכנה הנשקפת לנוהג אופניים עם מנוע עזר במעבר בין טורי מכוניות העומדות לפני צומת?",
+        "options": [
+          "נהגי רכב משליכים בדלי סיגריות מהחלון, והללו עלולים לפגוע בו.",
+          "הוא עלול לפגוע בהולכי רגל החוצים את הכביש שלא במעבר חצייה מוסדר.",
+          "בראש הטור ובקדמת הצומת שוב לא נשאר מקום בשל ריבוי כלי רכב דו-גלגליים.",
+          "לא נשקפת לו כל סכנה. תמיד יהיה מרווח מספיק כדי לאפשר מעבר של אופניים חשמליים בנוחות ובבטחה."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "en": {
+        "stem": "What dangers is a rider on an electric bicycle exposed to when he advances between columns of cars waiting at an intersection?",
+        "options": [
+          "Car drivers flick cigarette butts from their windows, which might hit the electric bicycle rider.",
+          "He might collide with pedestrians crossing the road not on a proper pedestrian crossing.",
+          "There is no more space left at the head of the column and at the intersection stop line due to the large number of two-wheeled vehicles.",
+          "The rider is not exposed to any danger. There will always be sufficient clearance to enable safe, easy passage of an electric bicycle."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "ar": {
+        "stem": "ما هي خطورة قيادة دراجة بمحرك كهربائي عند المرور بين صفوف مركبات واقفة أمام مفترق?",
+        "options": [
+          "سائقي المركبات يلقون بأعقاب السجائر من النافذة وقد يصيبه ذلك.",
+          "قد يضر ذلك المشاة الذين يعبرون الطريق خارج معبر منظم.",
+          "في الجزء العلوي من العمود وأمام التقاطع لم يكن هناك متسع بسبب كثرة المركبات ذات العجلتين.",
+          "لا يوجد خطر. سيكون هناك دائمًا مساحة كافية للسماح بمرور الدراجات الكهربائية بشكل مريح وآمن."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "fr": {
+        "stem": "Quels sont les dangers auxquels s’expose un conducteur de vélo électrique lorsqu’il circule entre des colonnes de voitures attendant à un carrefour ?",
+        "options": [
+          "Les conducteurs de voitures jettent des mégots de cigarettes par la fenêtre, et ceux-ci pourraient le toucher.",
+          "Il risque d’entrer en collision avec des piétons traversant la rue en dehors des passages désignés.",
+          "Il n’y a plus de place en tête de colonne et à la ligne d’arrêt de l’intersection en raison du nombre élevé de véhicules deux-roues.",
+          "Le cycliste n’est exposé à aucun danger. L’espace est toujours suffisant afin de permettre un passage sûr et aisé à un vélo électrique."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "es": {
+        "stem": "¿A qué peligro está expuesto el ciclista con una bicicleta eléctrica cuando avanza entre filas de coches que esperan en un cruce?",
+        "options": [
+          "Los conductores de los coches tiran colillas de cigarrillos por la ventana y podrían alcanzar al ciclista con la bicicleta eléctrica.",
+          "Podría colisionar con los peatones que cruzan la carretera por una parte no habilitada para ello.",
+          "No queda más espacio en la parte frontal de la fila y en la línea de detención del cruce debido al gran número de vehículos de dos ruedas.",
+          "El ciclista no está expuesto a ningún peligro. Siempre habrá espacio suficiente para permitir el paso sencillo y seguro de una bicicleta eléctrica."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0013",
+    "number": "A3-0013",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "laws",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "האם מותר לנהוג באופניים עם מנועי עזר כשהנהג נמצא במצב השולל שליטה באופניים?",
+        "options": [
+          "מותר, לפי הוראת רופא בלבד.",
+          "אסור לחלוטין.",
+          "מותר, למרחק נסיעה קצר עד לבית.",
+          "מותר רק לצורך בדיקתם בלבד."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "en": {
+        "stem": "Is a rider allowed to ride an electric bicycle in a state that prevents him from maintaining full control of the bicycle?",
+        "options": [
+          "This is allowed only as advised by a doctor.",
+          "This is absolutely forbidden.",
+          "This is allowed only for a short ride home.",
+          "This is allowed only to test the electric bicycle."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "ar": {
+        "stem": "هل يجوز قيادة دراجة بمحركات كهربائية عندما يكون السائق في حالة تمنع السيطرة على الدراجة?",
+        "options": [
+          "مسموح بناء على طلب الطبيب فقط.",
+          "ممنوع إطلاقاً.",
+          "مسموح، لمسافة قصيرة حتى المنزل.",
+          "مسموح فقط لغرض فحص الدراجة."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "fr": {
+        "stem": "Un cycliste est-il autorisé à conduire un vélo électrique lorsqu’il n’est pas capable de maintenir le contrôle total du véhicule ?",
+        "options": [
+          "Cela n’est autorisé que sur les conseils d’un médecin.",
+          "Cela est strictement interdit.",
+          "Cela n’est autorisé que pour un court trajet vers son lieu de résidence.",
+          "Cela n’est autorisé que pour tester le vélo électrique."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "es": {
+        "stem": "¿Está permitido que el ciclista conduzca una bicicleta eléctrica en un estado que evite que tenga el control total de la bicicleta?",
+        "options": [
+          "Esto solamente está permitido según lo aconseje un médico.",
+          "Esto está absolutamente prohibido.",
+          "Esto solamente está permitido para un breve viaje a casa.",
+          "Esto solamente está permitido para probar la bicicleta eléctrica."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0014",
+    "number": "A3-0014",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "laws",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "האם שוטר רשאי לדרוש מנהג אופניים עם מנוע עזר לעבור בדיקת דם כדי לבדוק אם יש בדמו אלכוהול או סם מסוכן?",
+        "options": [
+          "לא. השוטר אינו רשאי לדרוש כל בדיקה ללא צו של בית המשפט.",
+          "לא. שוטר אינו רשאי לדרוש כל בדיקה של נהג, בכל מצב ובכל זמן.",
+          "כן. שוטר רשאי לדרוש בדיקת דם אם היה לו חשד סביר שהרוכב נוהג בהשפעת אלכוהול או סמים משכרים.",
+          "לא. שוטר אינו רשאי לדרוש בדיקת דם לקביעת כמות אלכוהול או סמים משכרים."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "en": {
+        "stem": "Is a policeman permitted to require an electric bicycle rider to undergo a blood test to check whether he is under the influence of alcohol or drugs?",
+        "options": [
+          "No. A policeman is not permitted to require a test without a court order.",
+          "No. A policeman is not permitted to require any test whatsoever under any circumstances.",
+          "Yes. A policeman is permitted to require a blood test if he has reasonable grounds for suspicion that the rider is under the influence of alcohol or drugs.",
+          "No. A policeman is not permitted to require a blood test to determine the amount of alcohol or drugs in his blood."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "ar": {
+        "stem": "هل يجوز لضابط الشرطة أن يطلب من سائق دراجة بمحرك كهربائي إجراء فحص دم للتأكد من وجود كحول أو مخدر خطير في دمه?",
+        "options": [
+          "لا. لا يجوز لضابط الشرطة أن يطلب أي اختبار دون أمر من المحكمة.",
+          "لا. لا يجوز لضابط الشرطة أن يطلب أي اختبار للسائق في أي موقف وفي أي وقت.",
+          "نعم. يجوز لضابط الشرطة أن يطلب فحص دم إذا كان لديه شك معقول في أن الراكب يقود تحت تأثير الكحول أو المخدرات الخطيرة.",
+          "لا. لا يُسمح لضابط الشرطة فحص الدم لتحديد كمية الكحول أو العقاقير المُسكرة."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "fr": {
+        "stem": "Un policier a-t-il le droit d’exiger d’un conducteur de vélo électrique qu’il se soumette à une prise de sang pour vérifier s’il est sous l’influence de drogues ou de l’alcool ?",
+        "options": [
+          "Non. Un policier n’a pas le droit d’exiger un test sans décision de justice.",
+          "Non. Un policier n’est pas autorisé à exiger un test, quel qu’il soit et quelles que soient les circonstances.",
+          "Oui. Un policier est autorisé à exiger une prise de sang s’il a des motifs raisonnables de suspecter que le conducteur est sous l’influence de drogues ou de l’alcool.",
+          "Non. Un policier n’est pas autorisé à exiger un test sanguin pour vérifier le niveau d’alcool ou de drogues."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "es": {
+        "stem": "¿La policía puede requerir a un ciclista con una bicicleta eléctrica que se someta a un análisis sanguíneo para comprobar si está bajo la influencia de alcohol o drogas?",
+        "options": [
+          "No. La policía no puede requerir un análisis sin la orden de un juez.",
+          "No. La policía no puede requerir ningún análisis bajo ninguna circunstancia.",
+          "Sí. La policía puede requerir un análisis sanguíneo si tiene motivos razonables para sospechar que el ciclista se encuentra bajo la influencia de alcohol o drogas.",
+          "No. La policía no puede requerir un análisis sanguíneo para determinar la cantidad de alcohol o drogas en su sangre."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0015",
+    "number": "A3-0015",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "safety",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "יכולת השליטה באופניים החשמליים:",
+        "options": [
+          "טובה יותר כשנוהגים במהירות סבירה.",
+          "משתפרת ככל שהמהירות גדלה.",
+          "אינה תלויה במהירות הנסיעה.",
+          "תלויה בתנאי הכביש בלבד ואינה תלויה בנהג או באופניים."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "en": {
+        "stem": "The ability to control an electric bicycle:",
+        "options": [
+          "Is better when driving at a reasonable speed.",
+          "Improves the faster you go.",
+          "Does not depend on the bicycle’s speed.",
+          "Depends on the road conditions and has nothing to do with the rider or the bicycle."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "ar": {
+        "stem": "القدرة على التحكم بالدراجة الكهربائية:",
+        "options": [
+          "أفضل عند القيادة بسرعة معقولة.",
+          "تتحسن مع زيادة السرعة.",
+          "لا تعتمد على سرعة القيادة.",
+          "تعتمد على حالة الطريق فقط ولا تعتمد على السائق أو الدراجة."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "fr": {
+        "stem": "La capacité à contrôler un vélo électrique :",
+        "options": [
+          "est meilleure lorsque l’on roule à une vitesse raisonnable.",
+          "s’améliore avec la vitesse.",
+          "ne dépend pas de la vitesse du vélo.",
+          "dépend de l’état de la route et n’a rien à voir avec le cycliste ou le vélo."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "es": {
+        "stem": "La capacidad para controlar una bicicleta eléctrica:",
+        "options": [
+          "Es mejor al conducir a una velocidad razonable.",
+          "Mejora cuando más rápido va.",
+          "No depende de la velocidad de la bicicleta.",
+          "Depende en el estado de la vía y no tiene nada que ver con el ciclista o con la bicicleta."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0016",
+    "number": "A3-0016",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "laws",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "האם מותר לעלות ולנהוג על מדרכה באופניים עם מנוע עזר?",
+        "options": [
+          "כן.",
+          "לא.",
+          "כן. בתנאי שאין הולכי רגל על המדרכה.",
+          "כן .בתנאי שהכביש חסום."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "en": {
+        "stem": "Is a rider on an electric bicycle allowed to ride on a sidewalk?",
+        "options": [
+          "Yes.",
+          "No.",
+          "Yes. Only if there are no pedestrians on the sidewalk.",
+          "Yes, if the road is blocked."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "ar": {
+        "stem": "هل يجوز ركوب دراجة بمحرك كهربائي على الرصيف?",
+        "options": [
+          "نعم.",
+          "لا.",
+          "نعم. بشرط عدم وجود مشاة على الرصيف.",
+          "نعم. إذا كان الطريق مسدوداً."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "fr": {
+        "stem": "Le conducteur d’un vélo électrique a-t-il le droit de rouler sur un trottoir ?",
+        "options": [
+          "Oui.",
+          "Non.",
+          "Oui. Uniquement s’il n’y a pas de piétons sur le trottoir.",
+          "Oui, si la route est barrée."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "es": {
+        "stem": "¿Está permitido que un ciclista con una bicicleta eléctrica conduzca por la acera?",
+        "options": [
+          "Sí.",
+          "No.",
+          "Sí. Solamente si no hay peatones en la acera.",
+          "Sí, si la carretera está bloqueada."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0018",
+    "number": "A3-0018",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "safety",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "לא ינהג אדם על אופניים בלילה אלא אם:",
+        "options": [
+          "מאיר בהם פנס קבוע מלפנים המפיץ אור לבן הנראה לעין במזג אוויר נאה ממרחק של 150 מטר לפחות מלפני הרכב.",
+          "מאיר בהם פנס קבוע המפיץ אור אדום מאחורי האופניים.",
+          "יש מחזירי אור בצבע צהוב על דוושות האופניים.",
+          "כל התשובות נכונות."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "en": {
+        "stem": "It is permitted to ride a bicycle in the dark only if:",
+        "options": [
+          "There is a white headlight mounted on the front of the bicycle and it is turned on and it sends a light beam forward to a distance of at least 150 meters under normal visibility conditions.",
+          "There is a red rear light mounted on the rear of the bicycle and it is turned on.",
+          "The bicycle has yellow reflectors on its pedals.",
+          "All answers are correct."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "ar": {
+        "stem": "لا يجوز لأي شخص ركوب دراجة في الليل إلا:",
+        "options": [
+          "وهي مضاءة بمصباح أمامي ثابت ينبعث منه ضوء أبيض يمكن رؤيته في الطقس المعتدل من مسافة 150 مترًا على الأقل أمام المركبة.",
+          "مصباح يدوي ثابت ينبعث منه ضوء أحمر خلف الدراجة يضيء عليها.",
+          "توجد عاكسات صفراء على دواسات الدراجة.",
+          "جميع الإجابات صحيحة."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "fr": {
+        "stem": "La conduite d’un vélo est autorisée dans l’obscurité, uniquement si :",
+        "options": [
+          "un phare blanc est installé et allumé à l’avant du vélo, envoyant un faisceau lumineux vers l’avant d’au moins 150 mètres dans des conditions de visibilité normales.",
+          "un feu arrière rouge est installé et allumé sur le vélo électrique.",
+          "le vélo est équipé de réflecteurs jaunes sur les pédales.",
+          "toutes les réponses sont correctes."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "es": {
+        "stem": "Se permite conducir una bicicleta en la oscuridad solamente si...",
+        "options": [
+          "Hay una luz delantera blanca instalada en la parte frontal de la bicicleta, está encendida y envía un haz de luz hacia delante a una distancia de, al menos 150 metros bajo condiciones de visibilidad normales.",
+          "Hay una luz trasera roja instalada en la parte trasera de la bicicleta y está encendida.",
+          "La bicicleta tiene reflectores amarillos en los pedales.",
+          "Todas las respuestas son correctas."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0019",
+    "number": "A3-0019",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "vehicle",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "לא ינהג אדם על אופניים אלא אם הם מצוידים בכל עת:",
+        "options": [
+          "בפעמון.",
+          "במנגנון בלימה יעיל לעצירה.",
+          "במחזיר אור של אחורי האופניים.",
+          "כל התשובות נכונות."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "en": {
+        "stem": "It is permitted to ride a bicycle only if the bicycle is equipped with the following at all times:",
+        "options": [
+          "Bell.",
+          "An efficient brake.",
+          "Rear reflector.",
+          "All answers are correct."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "ar": {
+        "stem": "لا يجوز لأي شخص ركوب دراجة إلا إذا كانت مجهزة في جميع الأوقات:",
+        "options": [
+          "بجرس.",
+          "مع آلية فرملة فعالة للتوقف.",
+          "العاكس الخلفي للدراجة.",
+          "جميع الإجابات صحيحة."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "fr": {
+        "stem": "La conduite d’un vélo n’est autorisée que si celui-ci est équipé des éléments suivants à tout moment :",
+        "options": [
+          "une sonnette ou klaxon.",
+          "des freins efficaces..",
+          "un réflecteur arrière.",
+          "toutes les réponses sont correctes."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "es": {
+        "stem": "Está permitido conducir una bicicleta solamente si está equipada con lo siguiente en todo momento:",
+        "options": [
+          "Timbre.",
+          "Un freno eficiente.",
+          "Reflector trasero.",
+          "Todas las respuestas son correctas."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0020",
+    "number": "A3-0020",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "laws",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "מתי חלה על נוהג אופניים עם מנוע עזר חובת איתות?",
+        "options": [
+          "כשהרוכב מתכוון לסטות מנתיב נסיעתו.",
+          "כשהרוכב מגיע לעלייה ארוכה.",
+          "כשהרוכב מגיע לירידה תלולה.",
+          "כשהרוכב מתקרב למפגש מסילת ברזל עם מחסום."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "en": {
+        "stem": "When is a rider on an electric bicycle required to signal?",
+        "options": [
+          "When the rider intends to swerve from his current path along the road.",
+          "When the rider reaches a long uphill slope.",
+          "When the rider reaches a steep downhill slope.",
+          "When the rider approaches a railway level crossing with a barrier."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "ar": {
+        "stem": "متى يجب على سائق الدراجة ذات محرك كهربائي واجب الإشارة بغماز?",
+        "options": [
+          "عندما ينوي راكب الانحراف عن مسار سفره.",
+          "عندما يصل راكب إلى ارتفاع طويل.",
+          "عندما يصل ركاب إلى منحدر حاد.",
+          "عندما يقترب راكب من تقاطع سكة حديد بحاجز."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "fr": {
+        "stem": "Quand le conducteur d’un vélo électrique est-il tenu de signaler sa présence ?",
+        "options": [
+          "Lorsqu’il a l’intention de dévier de sa trajectoire actuelle sur la route.",
+          "Lorsqu’il atteint une montée raide.",
+          "Lorsqu’il atteint une descente abrupte.",
+          "Lorsqu’il approche un passage à niveau doté d’une barrière."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "es": {
+        "stem": "¿Cuándo está obligado a señalizar un ciclista con una bicicleta eléctrica?",
+        "options": [
+          "Cuando el ciclista pretenda virar de su ruta actual por la carretera.",
+          "Cuando el ciclista alcance una cuesta arriba larga.",
+          "Cuando el ciclista alcance una cuesta abajo pronunciada.",
+          "Cuando el ciclista se acerque a un paso a nivel con barrera."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0021",
+    "number": "A3-0021",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "safety",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "מהי הסכנה הטמונה בעקיפת רכב בנסיעה מצדו הימני ע\"י רוכב אופניים?",
+        "options": [
+          "העוקף נמצא קרוב לאבני השפה ולרכב ועלול לאבד שיווי משקל.",
+          "העוקף נמצא בשטח \"מת\" לנעקף ואינו מבחין בו באמצעות המראות.",
+          "שהרכב הנעקף יסטה בפתאומיות ימינה.",
+          "כל התשובות נכונות."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "en": {
+        "stem": "What is dangerous about a bicycle rider overtaking a vehicle from the right?",
+        "options": [
+          "The overtaking rider is near the kerb on the one side and near the vehicle on the other side, meaning he could lose his balance.",
+          "The overtaking rider is in the vehicle’s “blind spot”, meaning the vehicle driver cannot see the bicycle rider in his mirrors.",
+          "The vehicle being overtaken might swerve suddenly to the right.",
+          "All answers are correct."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "ar": {
+        "stem": "ما هو الخطر الكامن في تجاوز مركبة تسير على الجانب الأيمن لراكب دراجة?",
+        "options": [
+          "عندما يكون المُتجاوز قريباً من حجارة الرصيف المركبة وقد يفقد التوازن.",
+          "عندما يكون المُتجاوز في المنطقة \"الميتة\" للتجاوز ولا تلاحظه المرايا.",
+          "أن مركبة التجاوز ستنحرف بشكل مفاجئ من جهة اليمين.",
+          "جميع الإجابات صحيحة."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "fr": {
+        "stem": "Quels dangers peuvent se présenter lorsqu’un cycliste dépasse un véhicule par la droite ?",
+        "options": [
+          "Le cycliste qui dépasse se trouve à la fois près de l’accotement et de la voiture et pourrait ainsi perdre l’équilibre.",
+          "Le cycliste qui dépasse peut se trouver dans l’angle mort du véhicule. Ainsi l’automobiliste n’aura aucune visibilité sur le cycliste dans son rétroviseur.",
+          "Le véhicule dépassé peut se déporter brusquement vers la droite.",
+          "Toutes les réponses sont correctes."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "es": {
+        "stem": "¿Cuáles son los peligros cuando un ciclista adelanta a un vehículo por la derecha?",
+        "options": [
+          "El ciclista que adelanta está cerca del bordillo por un lado y cerca del vehículo por el otro lado, lo que podría hacerle perder el equilibrio.",
+          "El ciclista que adelanta está en el «punto ciego» del vehículo, lo que significa que el conductor del vehículo no puede ver al ciclista en sus espejos.",
+          "El vehículo que está siendo adelantado podría girar de repente a la derecha.",
+          "Todas las respuestas son correctas."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0022",
+    "number": "A3-0022",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "vehicle",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "מהי המהירות המרבית {בקמ\"ש}שלאחריה חייב מנוע האופניים עם מנוע עזר להתנתק?",
+        "options": [
+          "10 קמ\"ש.",
+          "40 קמ\"ש.",
+          "25 קמ\"ש.",
+          "25 קמ״ש בדרך עירונית, 40 קמ\"ש בדרך שאינה עירונית ו-60 קמ\"ש בדרך עם שטח הפרדה בנוי."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "en": {
+        "stem": "What is the speed limit (in kilometers per hour [km/h]), above which the motor on the electric bicycle must disengage?",
+        "options": [
+          "10 km/h.",
+          "40 km/h.",
+          "25 km/h.",
+          "25 km/h on a road in a built-up area, 40 km/h on an open road, and 60 km/h on a physically-separated road."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "ar": {
+        "stem": "ما هي السرعة القصوى (كم/ ساعة) التي بعدها لا يمكن لدراجة كهربائية أن تتخطاها بسبب المحرك?",
+        "options": [
+          "10 كم/ ساعة.",
+          "40 كم/ ساعة.",
+          "25 كم/ ساعة.",
+          "25 كم/ ساعة على بلدية، و40 كم/ ساعة على طريق ليس بلدية و60 كم/ ساعة على طريق به منطقة فاصلة مبنية."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "fr": {
+        "stem": "Quelle est la vitesse limite (en kilomètres par heure [km/h]) au-delà de laquelle le moteur du vélo électrique doit être débrayé ? must disengage?",
+        "options": [
+          "10 km/h.",
+          "40 km/h.",
+          "25 km/h.",
+          "25 km/h sur une route en agglomération, 40 km/h sur une route à circulation libre et 60 km/h sur une route à chaussée séparée."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "es": {
+        "stem": "¿Cuál es el límite de velocidad (en kilómetros por hora [km/h]) sobre el que se debe desactivar el motor de la bicicleta eléctrica?",
+        "options": [
+          "10 km/h.",
+          "40 km/h.",
+          "25 km/h.",
+          "25 km/h en zona urbana, 40 km/h en carretera abierta y 60 km/h en una vía con separación física."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0023",
+    "number": "A3-0023",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "laws",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "כיצד ינהג רוכב אופניים עם מנוע עזר בהתקרבו לצומת שבו מוצב רמזור שמהבהב בו אור צהוב?",
+        "options": [
+          "יעצור בכל מקרה לפני מעבר החצייה.",
+          "יאיץ את נסיעתו לפני התחלפות האור לאדום ברמזור.",
+          "יאט את נסיעתו, ואף יעצור אם צריך – על פי התנועה שבסביבה.",
+          "יאט את הנסיעה ותן זכות קדימה לרכב הבא משמאל בלבד."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "en": {
+        "stem": "What must a rider on an electric bicycle do when he approaches an intersection in which there is a yellow flashing traffic light?",
+        "options": [
+          "In any case, he will stop before the pedestrian crossing.",
+          "He will accelerate to cross the intersection before the traffic light turns red.",
+          "He will slow down, and even come to a full stop if necessary - depending on the nearby traffic.",
+          "He will slow down and give right of way only to vehicles approaching from the left."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "ar": {
+        "stem": "كيف يتصرف راكب دراجة بمحرك كهربائي عند اقترابه من مفترق حيث توجد إشارة مرور بضوء أصفر وميض (ضوء متقطع)?",
+        "options": [
+          "سيتوقف في أي حال قبل ممر المشاة.",
+          "سوف يزيد سرعته قبل أن يتحول الضوء إلى اللون الأحمر عند إشارة المرور.",
+          "سوف يبطئ سرعته، بل وسيتوقف إذا لزم الأمر - حسب حركة المرور من حوله.",
+          "سيخفف سرعته ويعطي حق الأولوية للمركبة القادمة من اليسار فقط."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "fr": {
+        "stem": "Que doit faire le conducteur d’un vélo électrique lorsqu’il s’approche d’une intersection où se trouve un feu orange clignotant ?",
+        "options": [
+          "Dans tous les cas, il s’arrêtera avant le passage piéton.",
+          "Il accélère pour traverser l’intersection avant que le feu ne passe au rouge.",
+          "Il ralentit, voire s’arrête complètement si nécessaire, en fonction de la circulation environnante.",
+          "Il ralentit et ne donne la priorité qu’aux véhicules venant de la gauche."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "es": {
+        "stem": "¿Qué debe hacer un ciclista con una bicicleta eléctrica cuando se aproxime a un cruce en el que hay un semáforo con la luz ámbar intermitente?",
+        "options": [
+          "En cualquier caso, detenerse antes del paso de cebra.",
+          "Aumentar la velocidad para cruzar la intersección antes de que la luz del semáforo se ponga roja.",
+          "Disminuir la velocidad e incluso detenerse completamente si es necesario, dependiendo del tráfico cercano.",
+          "Disminuir la velocidad y ceder el paso solamente a los vehículos que se acerquen por la izquierda."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0024",
+    "number": "A3-0024",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "safety",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "באיזה מן המקומות להלן אסורה הנהיגה באופניים עם מנוע עזר?",
+        "options": [
+          "מנהרה.",
+          "דרך מהירה.",
+          "מדרכה.",
+          "כל התשובות נכונות."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "en": {
+        "stem": "Which of the following places are forbidden for electric bicycles?",
+        "options": [
+          "Tunnel.",
+          "Fast road.",
+          "Sidewalk.",
+          "All answers are correct."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "ar": {
+        "stem": "في أي مكان من الأماكن التالية يُمنع قيادة دراجة بمحرك كهربائي?",
+        "options": [
+          "نفق.",
+          "طريق سريع.",
+          "رصيف.",
+          "جميع الإجابات صحيحة."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "fr": {
+        "stem": "Parmi les lieux suivants, lesquels sont interdits aux vélos électriques ?",
+        "options": [
+          "Les tunnels.",
+          "Les voies rapides.",
+          "Le trottoir.",
+          "Toutes les réponses sont correctes.."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "es": {
+        "stem": "¿Cuáles de los lugares siguientes están prohibidos para las bicicletas eléctricas?",
+        "options": [
+          "Túnel.",
+          "Vía rápida.",
+          "Acera.",
+          "Todas las respuestas son correctas."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0025",
+    "number": "A3-0025",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "laws",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "האם מותר לרוכב האופניים לנהוג בשוליים?",
+        "options": [
+          "אסור בהחלט.",
+          "מותר.",
+          "חובה כשהרכיבה היא בדרך שאינה עירונית, שבה שול הדרך פנוי ומיוצב באספלט.",
+          "מותר בתנאי שהרוכב הוא בעל רישיון נהיגה."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "en": {
+        "stem": "Is an electric bicycle rider allowed to ride on the shoulder?",
+        "options": [
+          "This is absolutely forbidden.",
+          "Allowed.",
+          "This is mandatory when riding along an intercity road, where the shoulder is clear and surfaced with asphalt.",
+          "Allowed, provided the rider has a driving license."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "ar": {
+        "stem": "هل يجوز لراكب الدراجة الهوائية القيادة على الرصيف?",
+        "options": [
+          "ًيمنع منعاً باتا.",
+          "مسموح.",
+          "إلزامي عند القيادة على طريق ليس بلدية، حيث يكون جانب الطريق خاليًا ومرصوفًا بالإسفلت.",
+          "مسموح به بشرط أن يكون لدى الراكب رخصة قيادة."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "fr": {
+        "stem": "Le conducteur d’un vélo électrique a-t-il le droit de rouler sur l’accotement ?",
+        "options": [
+          "Cela est strictement interdit.",
+          "Cela est autorisé.",
+          "Cela est obligatoire si le cycliste roule sur une route interurbaine, où l’accotement est dégagé et revêtu d’asphalte.",
+          "Cela est autorisé, à condition que le cycliste soit titulaire d’un permis de conduire.."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "es": {
+        "stem": "¿Está permitido que un ciclista con bicicleta eléctrica conduzca por el arcén?",
+        "options": [
+          "Esto está absolutamente prohibido.",
+          "Permitido.",
+          "Esto es obligatorio al conducir por una vía interurbana, cuando el arcén esté despejado y cubierto de asfalto.",
+          "Permitido, siempre que el ciclista tenga permiso de conducir."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0026",
+    "number": "A3-0026",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "vehicle",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "האם ההוראות בתקנות והתמרורים החלות על נהגי רכבים יחולו גם על רוכבי אופניים חשמליים?",
+        "options": [
+          "כן, אך בנסיעה בכביש בלבד.",
+          "כן, אבל רק אם הרוכב הוא בעל רישיון נהיגה.",
+          "כן.",
+          "לא."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "en": {
+        "stem": "Are the instructions in the regulations and according to the road signs, which are applicable to car drivers, also applicable to electric bicycle riders?",
+        "options": [
+          "Yes, but only when riding on the road.",
+          "Yes, but only if the rider has a driving license.",
+          "Yes.",
+          "No."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "ar": {
+        "stem": "هل التعليمات الواردة في اللوائح وإشارات الطريق التي تنطبق على سائقي المركبات تنطبق أيضًا على راكبي الدراجات الكهربائية?",
+        "options": [
+          "نعم، ولكن فقط عند القيادة على الطريق.",
+          "نعم، ولكن فقط إذا كان لدى الراكب رخصة قيادة.",
+          "نعم.",
+          "لا."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "fr": {
+        "stem": "La législation et les panneaux de signalisation conçus pour les automobilistes s’appliquent-ils également aux conducteurs de vélos électriques ? drivers, also applicable to Vélo électrique riders?",
+        "options": [
+          "Oui, mais uniquement sur la route.",
+          "Oui, mais uniquement si le conducteur est titulaire d’un permis de conduire..",
+          "Oui.",
+          "Non."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "es": {
+        "stem": "¿Las instrucciones, normativas y las señales de tráfico aplicables a los conductores de vehículos se aplican también a los ciclistas con bicicletas eléctricas?",
+        "options": [
+          "Sí, pero solo al conducir por la carretera.",
+          "Sí, pero solo si el ciclista tiene permiso de conducir.",
+          "Sí.",
+          "No."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0028",
+    "number": "A3-0028",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "vehicle",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "האם רשאי שוטר להפסיק נסיעה של אופניים חשמליים הנוסעים בניגוד להוראות החוק?",
+        "options": [
+          "לא. שוטר אינו רשאי להפסיק את נסיעתם של אופניים, אלא כאשר הרוכב הוא בעל רישיון.",
+          "לא. רק קצין משטרה מדרגת מפקח ומעלה רשאי להפסיק את נסיעתם של אופניים .",
+          "כן. שוטר רשאי להוציא את האוויר ואת השסתומים כדי למנוע המשך רכיבה עליהם תוך הפרת הוראה כאמור.",
+          "כן. רק אם הרוכב הוא בן 18 שנים ויותר."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "en": {
+        "stem": "Is a policeman allowed to stop and end an electric bicycle ride if the rider is breaking the law?",
+        "options": [
+          "No. A policeman is not allowed to stop and end a bicycle ride, unless the rider has a driving license.",
+          "No. Only a police officer, ranked Inspector or higher, is allowed to stop and end a bicycle ride .",
+          "Yes. A policeman is allowed to deflate the tires and remove the valves to prevent further riding them illegally.",
+          "Yes. Only if the rider is 18 years old or more.."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "ar": {
+        "stem": "هل يجوز لضابط شرطة إيقاف دراجة كهربائية بسبب مخالفة لأحكام القانون?",
+        "options": [
+          "لا. لا يُسمح للشرطي إيقاف ركوب الدراجة إلا إذا كان الراكب يحمل رخصة.",
+          "لا. يحق فقط لضابط شرطة برتبة مفتش فما فوق من إيقاف حركة الدراجة .",
+          "نعم. يجوز لضابط الشرطة إزالة الهواء والصمامات لمنع استمرار الركوب عليها بالمخالفة للتعليمات المذكورة أعلاه.",
+          "نعم. فقط إذا كان الراكب يبلغ من العمر 18 عامًا أو أكبر."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "fr": {
+        "stem": "Un policier a-t-il le droit d’arrêter ou de mettre fin à une promenade en vélo électrique si le cycliste est en infraction ?",
+        "options": [
+          "Non. Un policier n’est pas autorisé à arrêter ou mettre fin à une promenade en vélo, à moins que le conducteur ne possède un permis de conduire.",
+          "Non. Seul un officier de police, de grade inspecteur ou supérieur, est autorisé à interrompre ou mettre fin à une promenade en vélo.",
+          "oui. Un policier a le droit de dégonfler les pneus et retirer les valves pour empêcher un cycliste de continuer à conduire illégalement.",
+          "oui. À condition que le cycliste soit âgé de 18 ans ou plus."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "es": {
+        "stem": "¿Está permitido que un policía detenga y no permita continuar el viaje a una bicicleta eléctrica si el ciclista está infringiendo la ley?",
+        "options": [
+          "No. La policía no puede detener y evitar que una bicicleta continúe el viaje, a menos que el ciclista tenga permiso de conducir.",
+          "No. Solamente un agente de policía con el rango de inspector o superior puede detener y evitar que una bicicleta continúe el viaje .",
+          "Sí. La policía puede desinflar los neumáticos y retirar las válvulas para evitar seguir conduciendo la bicicleta ilegalmente.",
+          "Sí. Solo si el conductor tiene 18 años o más."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0031",
+    "number": "A3-0031",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "laws",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "האם מותר להרכיב ילד שטרם מלאו לו 8 שנים על אופניים?",
+        "options": [
+          "אסור בהחלט.",
+          "מותר.",
+          "מותר. בתנאי שהאופניים מצוידים במושב נפרד המבטיח את שלום הילד המורכב עליהם והילד חובש קסדה מתאימה.",
+          "מותר. בתנאי שהרוכב הוא בעל רישיון נהיגה."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "en": {
+        "stem": "Is it permitted to transport a child under the age of 8 on a bicycle?",
+        "options": [
+          "This is absolutely forbidden.",
+          "Allowed.",
+          "Permitted. Provided the bicycle is equipped with a separate seat ensuring the child’s safety. In addition, the child must wear a suitable helmet.",
+          "Allowed, provided the rider has a driving license."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "ar": {
+        "stem": "هل يُسمح لطفل تحت عمر8 بركوب دراجة?",
+        "options": [
+          "يمنع منعاً باتاً.",
+          "مسموح.",
+          "مسموح. بشرط أن تكون الدراجة مزودة بمقعد منفصل يضمن سلامة الطفل الذي يركبها وأن يرتدي الطفل خوذة مناسبة.",
+          "مسموح. بشرط أن يكون لدى الراكب رخصة قيادة."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "fr": {
+        "stem": "Est-il autorisé de transporter un enfant de moins de 8 ans sur un vélo ?",
+        "options": [
+          "Cela est strictement interdit.",
+          "Oui.",
+          "Cela est autorisé. À condition que le vélo soit équipé d’un siège séparé assurant la sécurité de l’enfant. De plus, l’enfant doit porter un casque approprié.",
+          "Cela est autorisé, à condition que le conducteur soit titulaire d’un permis de conduire.."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "es": {
+        "stem": "¿Se permite transportar a un niño de menos de 8 años en una bicicleta?",
+        "options": [
+          "Esto está absolutamente prohibido.",
+          "Permitido.",
+          "Permitido. Siempre que la bicicleta esté equipada con un asiento separado que asegure la seguridad del niño. Además, el niño debe llevar un casco adecuado.",
+          "Permitido, siempre que el ciclista tenga permiso de conducir."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0032",
+    "number": "A3-0032",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "safety",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "מהו הרווח שעל רוכב אופניים עם מנוע עזר לשמור מרכב הנוסע לפניו?",
+        "options": [
+          "רווח של שני מטרים.",
+          "אין חשיבות לרווח.",
+          "רווח שיאפשר לרוכב להיעצר מיד וללא חשש של תאונה במקרה של עצירה או מתן אות על ידי הרכב שלפניו.",
+          "רווח של שתי שניות."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "en": {
+        "stem": "What is the distance a rider on an electric bicycle must keep from a vehicle in front of him?",
+        "options": [
+          "Two meters distance.",
+          "Distance is not important.",
+          "A distance that will enable the rider to come to an immediate stop, without risking an accident, in case the car in front stops or if the car in front gives a turn signal..",
+          "Two seconds distance."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "ar": {
+        "stem": "ما هي المسافة التي يجب أن يحافظ عليها راكب دراجة بمحرك كهربائي عن المركبة التي أمامه?",
+        "options": [
+          "مسافة مترين.",
+          "الحفاظ على المسافة غير مهم.",
+          "مسافة تسمح للراكب بالتوقف فورًا ودون خوف من وقوع حادث في حالة التوقف أو إعطاء إشارة للمركبة التي أمامه.",
+          "مسافة ثانيتين."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "fr": {
+        "stem": "Quelle est la distance à respecter par le conducteur d’un vélo électrique par rapport au véhicule qui le précède ?",
+        "options": [
+          "Deux mètres.",
+          "La distance n’est pas importante.",
+          "Une distance permettant au cycliste de s’arrêter immédiatement, sans risquer un accident, si la voiture qui le précède s’arrête ou met son clignotant.",
+          "Une distance couverte en deux secondes."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "es": {
+        "stem": "¿Qué distancia debe mantener el ciclista con una bicicleta eléctrica con el vehículo que tiene delante?",
+        "options": [
+          "Dos metros de distancia.",
+          "La distancia no es importante.",
+          "Una distancia que permita al ciclista detenerse de forma inmediata, sin riesgo de accidente, en caso de que el coche de delante se detenga o si el coche de delante señaliza un giro.",
+          "Dos segundos de distancia."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0033",
+    "number": "A3-0033",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "safety",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "מהם הסכנות ברכיבה על אופניים עם מנוע עזר לעומת נסיעה ברכב?",
+        "options": [
+          "כל התשובות נכונות.",
+          "לאופניים אין מרכב החוצץ בין הרוכב לבין הדרך.",
+          "קיימת סכנה לאיבוד שווי משקל והחלקה.",
+          "אינם בולטים מספיק לעומת רכבים וקשה להבחין בהם."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "en": {
+        "stem": "What are the dangers facing electric bicycle riders as opposed to car drivers and passengers?",
+        "options": [
+          "All answers are correct.",
+          "Bicycle riders are exposed to the elements.",
+          "Bicycle riders risk losing balance and skidding..",
+          "They are less easily-visible than cars and are difficult to see."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "ar": {
+        "stem": "ما هي مخاطر ركوب الدراجة بمحرك كهربائي مقارنة بقيادة مركبة?",
+        "options": [
+          "جميع الإجابات صحيحة.",
+          "لا تحتوي الدراجات على إطار يفصل بين الراكب والطريق.",
+          "هناك خطر فقدان التوازن والإنزلاق.",
+          "ليست بارزة بدرجة كافية مقارنة بالمركبات ويصعب تمييزها."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "fr": {
+        "stem": "Quels sont les dangers auxquels les conducteurs de vélos électriques sont exposés par rapport aux automobilistes et à leurs passagers ?",
+        "options": [
+          "Toutes les réponses sont correctes.",
+          "Les cyclistes sont exposés aux intempéries.",
+          "Les cyclistes peuvent perdre l’équilibre et déraper.",
+          "Ils sont moins visibles que les voitures."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "es": {
+        "stem": "¿Cuáles son los peligros a los que se enfrentan los ciclistas con bicicletas eléctricas en oposición a los de los conductores y pasajeros de coches?",
+        "options": [
+          "Todas las respuestas son correctas.",
+          "Los ciclistas están expuestos a los elementos.",
+          "Los ciclistas se arriesgan a perder el equilibrio y patinar.",
+          "Son menos fácilmente visibles que los coches."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0034",
+    "number": "A3-0034",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "safety",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "מהן היתרונות בשמירת רווח צד מרכבים חונים בעת רכיבה על אופניים עם מנוע עזר?",
+        "options": [
+          "כל התשובות נכונות.",
+          "רכב עלול לצאת בפזיזות מהחנייה ולפגוע ברוכב.",
+          "הנהג או הנוסע עלולים לפתוח דלת בלי להסתכל ולפגוע ברוכב.",
+          "הולכי-רגל, ילדים ובעלי-חיים עלולים להתפרץ מבין המכוניות ולגרום לתאונה עם הרוכב."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "en": {
+        "stem": "What are the advantages of keeping side-distance from parked cars when riding an electric bicycle?",
+        "options": [
+          "All answers are correct.",
+          "A car might abruptly exit the parking space and collide with the rider.",
+          "The driver or passenger might open a car door without looking, hitting the rider.",
+          "Pedestrians, children and animals might burst out onto the road from between the cars and cause the rider to collide with them."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "ar": {
+        "stem": "ما هي إيجابيات الاحتفاظ بمسافة جانبية عن المركبة المتوقفة عند ركوب دراجة بمحرك كهربائي?",
+        "options": [
+          "جميع الإجابات صحيحة.",
+          "قد تنطلق المركبة بتهور من موقف المركبات وتصطدم براكب الدراجة.",
+          "يمكن أن يقوم السائق أو الراكب بفتح الباب دون النظر وإصابة راكب الدراجة.",
+          "يمكن أن يقوم المشاة، الأطفال والحيوانات بالقفز والظهور المفاجئ من بين المركبات ويتسبب في وقوع حادث مع الراكب."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "fr": {
+        "stem": "Quels sont les avantages du respect de la distance latérale par rapport aux voitures en stationnement lorsqu’on roule en vélo électrique ?",
+        "options": [
+          "Toutes les réponses sont correctes.",
+          "Une voiture peut sortir brusquement d’une place de stationnement et entrer en collision avec le cycliste.",
+          "Un conducteur ou son passager peut ouvrir la portière sans regarder, heurtant le cycliste.",
+          "Des piétons, des enfants et des animaux peuvent surgir sur la route, entre les voitures, provoquant une collision avec le cycliste."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "es": {
+        "stem": "¿Cuáles son los peligros a los que se enfrentan los ciclistas con bicicletas eléctricas en oposición a los de los conductores y pasajeros de coches?",
+        "options": [
+          "Todas las respuestas son correctas.",
+          "Un coche podría salir de repente de un aparcamiento y colisionar con el ciclista.",
+          "Un conductor o un pasajero podrían abrir la puerta de un coche sin mirar, golpeando al ciclista.",
+          "Peatones, niños y animales podrían aparecer de repente en la carretera entre los coches y hacer que el ciclista choque con ellos."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0035",
+    "number": "A3-0035",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "laws",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "מהו המשפט הנכון לגבי רכיבה בקבוצה על אופניים בדרך שאינה עירונית?",
+        "options": [
+          "ברכיבה בקבוצה של יותר מ-10 רוכבים בדרך שאינה עירונית נדרש רכב מלווה שינהג מאחורי הרוכבים ויפעיל את ארבעת מחווני הכיוון.",
+          "ברכיבה בקבוצה של יותר מ-10 רוכבים לא נדרש רכב ליווי.",
+          "ברכיבה בקבוצה של יותר מ-10רוכבים נדרשים שני רכבי ליווי האחד מלפנים והשני מאחור.",
+          "ברכיבה בקבוצה של יותר מ-10 רוכבים נדרש רכב ליווי רק בלילה."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "en": {
+        "stem": "Which of the following statements is correct regarding riding a bicycle in a group, on an intercity road?",
+        "options": [
+          "When riding in a group of more than ten riders on an intercity road, a vehicle escort is required to accompany them from behind with the four indicator lights flashing..",
+          "When riding in a group of more than ten riders, a vehicle escort is not required.",
+          "When riding in a group of more than ten riders, two vehicle escorts are required - one in front and one behind.",
+          "When riding in a group of more than ten riders, a vehicle escort is required only at night."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "ar": {
+        "stem": "ما هي الجملة الصحيحة عن ركوب الدراجات في مجموعة في طريق ليس بلدية?",
+        "options": [
+          "عند الركوب في مجموعة تضم أكثر من 10 ركاب على طريق ليس بلدية، يلزم وجود مركبة مصاحبة للقيادة خلف الراكبين وتفعيل غمازات المركبة (الفلاشر).",
+          "عند الركوب في مجموعة تضم أكثر من 10 ركاب، لا يلزم وجود مركبة مرافقة.",
+          "عند الركوب في مجموعة تضم أكثر من 10 ركاب، يلزم وجود مركبتين مرافقتين، واحدة في الأمام والأخرى في الخلف.",
+          "عند الركوب في مجموعة تضم أكثر من 10 ركاب، لا يلزم وجود مركبة مرافقة إلا في الليل."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "fr": {
+        "stem": "Laquelle des affirmations suivantes est correcte en ce qui concerne la conduite d’un vélo en groupe sur une route interurbaine ?",
+        "options": [
+          "Lorsque vous roulez en groupe de plus de dix personnes sur une route interurbaine, un véhicule d’accompagnement avec feux de warning allumés est requis à l’arrière du groupe.",
+          "Lorsque vous roulez en groupe de plus de dix personnes, un véhicule d’accompagnement n’est pas requis.",
+          "Lorsque vous roulez en groupe de plus de dix personnes, deux véhicules d’accompagnement sont requis : un à l’avant et l’autre à l’arrière.",
+          "Lorsque vous roulez en groupe de plus de dix personnes, un véhicule d’accompagnement est requis la nuit uniquement."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "es": {
+        "stem": "¿Cuál de las siguientes afirmaciones es correcta con relación al conducir una bicicleta en grupo en una vía interurbana?",
+        "options": [
+          "Al conducir en un grupo de más de diez ciclistas en una vía interurbana se requiere un vehículo acompañante para que vaya detrás de ellos con los cuatro intermitentes activados.",
+          "Al conducir en un grupo de más de diez ciclistas no se requiere un vehículo acompañante.",
+          "Al conducir en un grupo de más de diez ciclistas se requieren dos vehículos acompañantes, uno delante y otro detrás.",
+          "Al conducir en un grupo de más de diez ciclistas solo se requiere un vehículo acompañante por la noche."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0036",
+    "number": "A3-0036",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "vehicle",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "מהי הסכנה בעת בלימה פתאומית בירידה תלולה בעת רכיבה על אופניים עם מנוע עזר?",
+        "options": [
+          "סכנה של נעילת הגלגלים ואיבוד שליטה על האופניים.",
+          "חימום יתר של הבלמים ולבלימה חלשה לעומת המצב הרגיל.",
+          "נעילת הגלגל הקדמי והתהפכות הרוכב.",
+          "כל התשובות נכונות."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "en": {
+        "stem": "What is the danger in a sudden braking while descending along a steep downhill slope on an electric bicycle?",
+        "options": [
+          "Danger of the wheels locking and losing control over the bicycle.",
+          "Overheating of the brake pads and weakening of the deceleration, compared to normal conditions.",
+          "The front wheel locking, thereby overturning the rider.",
+          "All answers are correct."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "ar": {
+        "stem": "ما هو الخطر عند الفرملة فجأة في منحدر شديد أثناء ركوب دراجة بمحرك كهربائي?",
+        "options": [
+          "خطر قفل العجلات وفقدان السيطرة على الدراجة.",
+          "إرتفاع درجة حرارة الفرامل وضعف الفرملة مقارنة بالوضع الطبيعي.",
+          "قفل العجلة الأمامية وقلب الراكب.",
+          "جميع الإجابات صحيحة."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "fr": {
+        "stem": "Quels sont les risques d’un freinage brusque lors de la descente d’une pente raide en vélo électrique ?",
+        "options": [
+          "Le blocage des roues et la perte de contrôle du vélo.",
+          "La surchauffe des plaquettes de frein et l’affaiblissement de la décélération par rapport à des conditions normales.",
+          "La roue avant se bloque, renversant le cycliste.",
+          "Toutes les réponses sont correctes."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "es": {
+        "stem": "¿Cuál es el peligro de frenar repentinamente mientras desciende una cuesta abajo pronunciada en una bicicleta eléctrica?",
+        "options": [
+          "El peligro de que se bloqueen las ruedas y perder el control de la bicicleta.",
+          "El sobrecalentamiento de las zapatas de freno y que esto afecte a la deceleración, comparada con condiciones normales.",
+          "Que se bloquee la rueda delantera y el ciclista salga volando por delante.",
+          "Todas las respuestas son correctas."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0037",
+    "number": "A3-0037",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "safety",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "למה תגרום בלימה חזקה בזמן פנייה באופניים עם מנוע עזר?",
+        "options": [
+          "להחלקת החלק הקדמי.",
+          "למהירות גבוהה יותר של האופניים.",
+          "להרמת הגלגל הקדמי באוויר.",
+          "להחלקת הגלגל האחורי."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "en": {
+        "stem": "What will an abrupt braking cause while turning with an electric bicycle?",
+        "options": [
+          "Skidding of the front wheel.",
+          "Increased bicycle speed..",
+          "Front wheel rising off the ground.",
+          "Skidding of the rear wheel."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "ar": {
+        "stem": "ما الذي تفعله الفرملة القوية عند الالتفاف بدراجة ذات المحرك الكهربائي?",
+        "options": [
+          "إنزلاق الجزء الأمامي.",
+          "لسرعة أعلى للدراجة.",
+          "لرفع العجلة الأمامية في الهواء.",
+          "إنزلاق العجلة الخلفية."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "fr": {
+        "stem": "Que provoque un freinage brusque lors d’un virage avec un vélo électrique ?",
+        "options": [
+          "Un dérapage de la roue avant.",
+          "Une augmentation de la vitesse du vélo.",
+          "Le décollement de la roue avant du sol.",
+          "Un dérapage de la roue arrière.."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "es": {
+        "stem": "¿Qué provocará un frenazo repentino mientras gira una bicicleta eléctrica?",
+        "options": [
+          "Que patine la rueda delantera.",
+          "Aumentar la velocidad de la bicicleta.",
+          "Que la rueda delantera se levante del suelo.",
+          "Que patine la rueda trasera."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0038",
+    "number": "A3-0038",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "safety",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "כיצד ישפיע משקף הקסדה על רכיבה באופניים עם מנוע עזר בחושך?",
+        "options": [
+          "משקף קסדה שרוט או מלוכלך מקל את הרכיבה בחושך.",
+          "משקף שרוט או מלוכלך שובר את קרני האור ופוגע באיכות הראייה בחשכה פגיעה ניכרת.",
+          "משקף מעצבן את הרוכב – גם אם הרוכב אינו מודה בכך.",
+          "רכיבה על רכב דו-גלגלי ללא משקף תורמת תמיד לשיפור הראייה בחושך."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "en": {
+        "stem": "How will the helmet visor affect riding on an electric bicycle in the dark?",
+        "options": [
+          "A scratched or dirty helmet visor makes riding in the dark easier.",
+          "A scratched or dirty helmet visor deflects the light and severely reduces vision in the dark.",
+          "The visor aggravates the rider - even if the rider is unaware of this.",
+          "Riding on a two-wheeled vehicle without a visor always helps improve vision in the dark."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "ar": {
+        "stem": "كيف سيؤثر عاكس الخوذة على ركوب الدراجة بمحرك كهربائي في الظلام?",
+        "options": [
+          "عاكس خوذة مخدوش أو متسخ يجعل الركوب في الظلام أسهل.",
+          "عاكس مخدوش أو متسخ يكسر أشعة الضوء ويضعف جودة الرؤية في الظلام، وهو ضعف ملحوظ.",
+          "العاكسات تزعج الراكب - حتى لو لم يعترف بها الراكب.",
+          "دائمًا ما يساهم ركوب مركبة ذات عجلتين بدون عاكس في تحسين الرؤية في الظلام."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "fr": {
+        "stem": "Quelle est l’incidence de la visière du casque sur la conduite d’un vélo électrique dans l’obscurité ?",
+        "options": [
+          "Une visière de casque rayée ou sale facilite la conduite.",
+          "Une visière de casque rayée ou sale dévie la lumière et réduit fortement la vision.",
+          "La visière gêne le cycliste, même s’il n’en est pas conscient..",
+          "Rouler sur un deux-roues sans visière améliore toujours la vision."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "es": {
+        "stem": "¿Cómo afectará la visera del casco al conducir una bicicleta eléctrica en la oscuridad?",
+        "options": [
+          "Una visera arañada o sucia hace más fácil conducir en la oscuridad.",
+          "Una visera arañada o sucia refleja la luz y reduce gravemente la visión en la oscuridad.",
+          "La visera empeora la visión del ciclista, aunque el ciclista no sea consciente de ello.",
+          "Montar en un vehículo de dos ruedas sin visera ayuda siempre a mejorar la visión en la oscuridad."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0039",
+    "number": "A3-0039",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "vehicle",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "אם רוכב מרגיש שבלם היד אינו בולם את האופניים בזמן נסיעה, עליו",
+        "options": [
+          "להפסיק את הנסיעה באופניים מיד.",
+          "להחליף גלגלים בין הקדמי לאחורי.",
+          "לגשת לתחנת הדלק הקרובה ולהגדיל את לחץ האוויר בגלגלים.",
+          "להוציא מעט אוויר מן הגלגלים כדי להתגבר על התקלה."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "en": {
+        "stem": "If a rider feels that his hand brake is not braking the bicycle while riding, he must:",
+        "options": [
+          "Immediately stop riding the bicycle.",
+          "Switch the front and rear wheels.",
+          "Go to the nearest gas station and increase air pressure in the wheels.",
+          "Release a little bit of air from the tires to overcome the problem."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "ar": {
+        "stem": "إذا شعر الراكب أن فرملة اليد لا توقف الدراجة أثناء الركوب، عليه",
+        "options": [
+          "توقف عن قيادة الدراجة على الفور.",
+          "تغيير العجلات الأمامية والخلفية.",
+          "توجه إلى أقرب محطة وقود وقم بزيادة ضغط الهواء في الإطارات.",
+          "قم بإخراج بعض الهواء من العجلات للتغلب على المشكلة."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "fr": {
+        "stem": "Si un cycliste a l’impression que son frein ne fonctionne pas lorsqu’il conduit un vélo électrique, il doit :",
+        "options": [
+          "cesser immédiatement de conduire le vélo.",
+          "inverser les roues arrières et avant.",
+          "se rendre à la station service la plus proche et augmenter la pression d’air dans les pneus.",
+          "relâcher un peu d’air des pneus."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "es": {
+        "stem": "Si el ciclista cree que sus frenos no funcionan mientras conduce la bicicleta, debe:",
+        "options": [
+          "Dejar de conducir la bicicleta inmediatamente.",
+          "Intercambiar las ruedas delantera y trasera.",
+          "Ir a la gasolinera más cercana y aumentar la presión de aire de las ruedas.",
+          "Soltar un poco de aire de los neumáticos para atajar el problema."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0040",
+    "number": "A3-0040",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "safety",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "מהי הסכנה העיקרית הצפויה ברכיבה על אופניים בחושך?",
+        "options": [
+          "הקושי לנתח באופן רצוף את טיב הדרך ולזהות מכשולים מבעוד מועד.",
+          "הקושי לזהות את כלי הרכב האחרים הנעים מאחור.",
+          "הטמפרטורות הנמוכות שאליהן נחשף הרוכב.",
+          "הטמפרטורות הנמוכות שאליהן נחשפות האופניים."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "en": {
+        "stem": "What is the main danger in riding a bicycle in the dark?",
+        "options": [
+          "The difficulty in continually making out the road ahead and detecting obstacles in time.",
+          "The difficulty seeing the other vehicles behind you.",
+          "The low temperatures to which the rider is exposed.",
+          "The low temperatures to which the bicycle is exposed."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "ar": {
+        "stem": "ما هو الخطر الرئيسي المتوقع في ركوب الدراجة في الظلام?",
+        "options": [
+          "صعوبة التحليل المستمر لطبيعة الطريق وتحديد العوائق قبل الموعد المحدد.",
+          "صعوبة التعرف على المركبات الأخرى التي تسير في الخلف.",
+          "درجات الحرارة المنخفضة التي يتعرض لها راكب الدراجة.",
+          "درجات الحرارة المنخفضة التي تتعرض لها الدراجة."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "fr": {
+        "stem": "Quel est le principal danger de conduire un vélo dans l’obscurité ?",
+        "options": [
+          "La difficulté à continuellement distinguer la route et à détecter les obstacles à temps.",
+          "La difficulté de voir les véhicules approchant à l’arrière.",
+          "Les basses températures auxquelles le vélo est exposé.",
+          "Les basses températures auxquelles le cycliste est exposé."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      },
+      "es": {
+        "stem": "¿Cuál es el peligro principal al conducir una bicicleta en la oscuridad?",
+        "options": [
+          "La dificultad de distinguir continuamente la carretera que tiene por delante y detectar los obstáculos a tiempo.",
+          "La dificultad de ver a los demás vehículos que circulan detrás.",
+          "Las bajas temperaturas a las que está expuesta la bicicleta.",
+          "Las bajas temperaturas a las que está expuesto el ciclista."
+        ],
+        "correctIndexes": [
+          0
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0041",
+    "number": "A3-0041",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "laws",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "מתי תחזור באופניים לנתיב הנסיעה שלך בסיום העקיפה?",
+        "options": [
+          "ברכיבה על אופניים אין צורך לחזור לנתיב הנסיעה הקודם.",
+          "לאחר בדיקה במראות והפניית מבט קצר לאחור דרך כתף ימין לבדיקה נוספת.",
+          "לאחר שתראה את הרכב הנעקף בשתי מראות האופניים.",
+          "בחלוף זמן סביר מהמעבר על פני הרכב הנעקף."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "en": {
+        "stem": "When should a bicycle rider return to his regular lane at the end of an overtake?",
+        "options": [
+          "When riding a bicycle there is no need to return to the original lane.",
+          "After checking the rear view mirrors and after a short glance backwards over the right-hand shoulder to double-check that the space is clear.",
+          "After you are able to see the vehicle you have overtaken in both rear-view mirrors.",
+          "After a reasonable length of time after passing the vehicle you are overtaking."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "ar": {
+        "stem": "متى تعود الدراجة إلى مسلك السير في نهاية الانعطاف?",
+        "options": [
+          "عند ركوب الدراجات، ليست هناك حاجة للعودة إلى المسلك السابق.",
+          "بعد فحص المرايا وإلقاء نظرة سريعة على الكتف الأيمن لفحص آخر.",
+          "بعد أن ترى المركبة التي تجاوزت في كلا مرايا الدراجة.",
+          "بعد مرور فترة زمنية معقولة على تجاوز المركبة."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "fr": {
+        "stem": "À quel moment doit un cycliste revenir sur sa voie habituelle à la fin d’un dépassement ?",
+        "options": [
+          "Il n’est pas nécessaire de revenir dans la voie initiale.",
+          "Après avoir vérifié les rétroviseurs et avoir jeté un bref coup d’œil à l’arrière, par-dessus l’épaule droite, pour s’assurer que la voie est libre.",
+          "Lorsque l’on peut voir le véhicule dépassé dans chacun des rétroviseurs.",
+          "Après un délai raisonnable à la suite d’un dépassement de véhicule."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "es": {
+        "stem": "¿Cuándo debería volver a su carril habitual un ciclista al finalizar un adelantamiento?",
+        "options": [
+          "Al conducir una bicicleta no es necesario volver al carril original.",
+          "Tras comprobar los espejos retrovisores y después de echar una rápida mirada hacia atrás sobre el hombro derecho para comprobar de nuevo si el espacio está despejado.",
+          "Cuando puede ver al vehículo que ha adelantado por ambos espejos retrovisores.",
+          "Tras un espacio razonable de tiempo después de pasar al vehículo que está adelantando."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0043",
+    "number": "A3-0043",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "safety",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "כיצד נמנע החלקה של האופניים עם מנוע עזר בדרך?",
+        "options": [
+          "על ידי סיבוב הכידון ימינה לייצוב האופניים.",
+          "בעזרת לחיצה חזקה וממושכת על דוושת הבלם הקדמי.",
+          "בנסיעה במהירות סבירה ובשימוש נכון ומבוקר בבלמים והאצה מבוקרת.",
+          "על ידי החזקת הכידון בחזקה בשתי הידיים ועל ידי נסיעה במהירות דומה למהירותם של יתר כלי הרכב בדרך."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "en": {
+        "stem": "How can you prevent an electric bicycle from skidding on the road?",
+        "options": [
+          "By swerving the handlebar to the right to stabilize the bicycle.",
+          "By pressing long and hard on the front brake pedal.",
+          "By maintaining reasonable speed and by correct, controlled use of the brakes and by controlled acceleration.",
+          "By gripping the handlebar firmly with both hands and by riding at a speed similar to that of the rest of the vehicles on the road."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "ar": {
+        "stem": "كيف تمنع إنزلاق الدراجة ذات المحرك كهربائي على الطريق?",
+        "options": [
+          "عن طريق تدوير المقود إلى اليمين لتثبيت الدراجة.",
+          "بمساعدة الضغط القوي والمطول على دواسة الفرامل الأمامية.",
+          "عند القيادة بسرعة معقولة واستخدام الفرامل بشكل صحيح وتسارع متحكم فيه.",
+          "من خلال إمساك المقود بإحكام بكلتا يديه والقيادة بسرعة مماثلة لسرعة المركبات الأخرى على الطريق."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "fr": {
+        "stem": "Comment éviter qu’un vélo électrique ne dérape sur la route ?",
+        "options": [
+          "En déplaçant le guidon vers la droite pour stabiliser le vélo.",
+          "En appuyant longuement et fortement sur la pédale de frein avant.",
+          "En maintenant une vitesse raisonnable, en utilisant les freins de façon correcte et en accélérant de manière contrôlée.",
+          "En tenant fermement le guidon des deux mains et en roulant à la même vitesse que celle des autres véhicules sur la route."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      },
+      "es": {
+        "stem": "¿Cómo se puede evitar que una bicicleta eléctrica patine en la carretera?",
+        "options": [
+          "Girando el manillar a la derecha para estabilizar la bicicleta.",
+          "Presionando de forma prolongada y brusca el freno delantero.",
+          "Manteniendo una velocidad razonable, con el uso correcto y controlado de los frenos y con una aceleración controlada.",
+          "Asiendo firmemente el manillar con ambas manos y conduciendo a una velocidad similar a la del resto de vehículos en la carretera."
+        ],
+        "correctIndexes": [
+          2
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0046",
+    "number": "A3-0046",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "safety",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "כיצד ירכב רוכב אופניים עם מנוע עזר בכביש רטוב?",
+        "options": [
+          "כמו בכביש יבש. אין הבדל.",
+          "יאט ויסע במהירות המתאימה, לפי הנסיבות.",
+          "ילחץ על דוושת הבלם לסירוגין.",
+          "יגביר מהירות עד לסיום הקטע הרטוב – להגברת הבטיחות."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "en": {
+        "stem": "How will an electric bicycle rider ride when the road is wet?",
+        "options": [
+          "Same as on a dry road. No difference.",
+          "He will slow down to a sensible speed as the circumstances permit.",
+          "He will intermittently press the brake pedal.",
+          "He will accelerate until he has passed the wet stretch - to increase safety."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "ar": {
+        "stem": "كيف يقود راكب دراجة بمحرك كهربائي في طريق رطب?",
+        "options": [
+          "مثل ما يقود على طريق جاف. ليس هناك فرق.",
+          "يخفف ويقود بالسرعة المناسبة حسب الظروف.",
+          "الضغط على دواسة الفرامل بشكل متقطع.",
+          "زيادة السرعة حتى نهاية القسم الرطب - لزيادة السلامة."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "fr": {
+        "stem": "Comment un conducteur de vélo électrique devrait-il rouler lorsque la route est mouillée ?",
+        "options": [
+          "Il doit rouler comme sur une route sèche. Aucune différence.",
+          "Il doit ralentir jusqu’à une vitesse raisonnable si les circonstances le permettent.",
+          "Il doit appuyer sur la pédale de frein par intermittence.",
+          "Il doit accélérer jusqu’à qu’il ait dépassé le tronçon mouillé pour améliorer sa sécurité."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      },
+      "es": {
+        "stem": "¿Cómo debe conducir un ciclista con bicicleta eléctrica cuando la vía está mojada?",
+        "options": [
+          "Igual que en una carretera seca. Sin diferencias.",
+          "Disminuirá a una velocidad sensata según permitan las circunstancias.",
+          "Presionará intermitentemente el pedal de freno.",
+          "Acelerará hasta que haya pasado la parte mojada para aumentar su seguridad."
+        ],
+        "correctIndexes": [
+          1
+        ]
+      }
+    }
+  },
+  {
+    "id": "a3-0047",
+    "number": "A3-0047",
+    "categories": [
+      "A3"
+    ],
+    "topicId": "safety",
+    "type": "single",
+    "difficulty": 2,
+    "source": "official",
+    "status": "published",
+    "translations": {
+      "he": {
+        "stem": "בנסיעה באופניים בכביש רטוב נשקפת סכנה של:",
+        "options": [
+          "החלקה והתהפכות של האופניים ככל שהמהירות גבוהה יותר.",
+          "התהפכות האופניים אם יפעיל הרוכב פתאום את ידית הבלם.",
+          "כניסה לשלולית מים ואיבוד שליטה על האופניים.",
+          "כל התשובות נכונות."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "en": {
+        "stem": "When riding a bicycle on a wet road, there is a danger of:",
+        "options": [
+          "Skidding and overturning of the bicycle - the danger increases with speed.",
+          "Bicycle overturning if the rider has to brake suddenly.",
+          "Entering a puddle and losing control of the bicycle.",
+          "All answers are correct."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "ar": {
+        "stem": "عند ركوب دراجة على طريق مبلل هناك خطر بأن:",
+        "options": [
+          "إنزلاق وقلب الدراجة كلما كانت السرعة عالية.",
+          "إنقلاب الدراجة إذا قام الراكب فجأة بالضغط على ذراع الفرامل.",
+          "دخول بركة من الماء وفقدان السيطرة على الدراجة.",
+          "جميع الإجابات صحيحة."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "fr": {
+        "stem": "Lorsque vous roulez sur une route mouillée, vous risquez de :",
+        "options": [
+          "déraper et de renverser le vélo. Le danger augmente avec la vitesse.",
+          "renverser le vélo si le conducteur doit freiner soudainement..",
+          "pénétrer dans une flaque d’eau et perdre le contrôle du vélo.",
+          "toutes les réponses sont correctes."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      },
+      "es": {
+        "stem": "Al conducir una bicicleta sobre una vía mojada, existe el peligro de:",
+        "options": [
+          "Patinar y volcar la bicicleta; el peligro aumenta con la velocidad.",
+          "Que vuelque la bicicleta si el ciclista tiene que frenar de repente.",
+          "Pisar un charco y perder el control de la bicicleta.",
+          "Todas las respuestas son correctas."
+        ],
+        "correctIndexes": [
+          3
+        ]
+      }
+    }
+  }
+]

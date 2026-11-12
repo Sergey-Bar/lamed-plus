@@ -1,0 +1,114 @@
+/* ------------------------------------------------------------------ */
+/* Accessible reading modes                                            */
+/* ------------------------------------------------------------------ */
+
+html {
+  font-size: calc(16px * var(--a11y-text-scale, 1));
+}
+
+body {
+  font-size: 1rem;
+}
+
+/* Strong, non-colour-only focus for keyboard and switch users. */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* High contrast uses near-black/near-white pairs and solid borders. */
+:root[data-contrast='high'] {
+  --bg: #ffffff;
+  --bg-2: #f2f2f2;
+  --surface: #ffffff;
+  --surface-2: #f2f2f2;
+  --surface-3: #e6e6e6;
+  --ink: #000000;
+  --ink-soft: #111111;
+  --muted: #333333;
+  --line: #000000;
+  --line-strong: #000000;
+  --accent: #005a57;
+  --accent-strong: #003f3d;
+  --accent-2: #6b4b00;
+  --accent-soft: #e5f2f1;
+  --accent-glow: rgb(0 90 87 / 0.3);
+  --accent-ink: #ffffff;
+  --success: #006b3f;
+  --success-soft: #e5f5ec;
+  --danger: #a30000;
+  --danger-soft: #fbe9e9;
+  --info: #004b8d;
+  --info-soft: #e7f0fa;
+  --warning: #6b4b00;
+  --warning-soft: #fff4d6;
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+}
+
+[data-theme='dark'][data-contrast='high'] {
+  --bg: #000000;
+  --bg-2: #050505;
+  --surface: #0a0a0a;
+  --surface-2: #141414;
+  --surface-3: #1f1f1f;
+  --ink: #ffffff;
+  --ink-soft: #f2f2f2;
+  --muted: #d6d6d6;
+  --line: #ffffff;
+  --line-strong: #ffffff;
+  --accent: #7fffd4;
+  --accent-strong: #b8ffe8;
+  --accent-2: #ffd166;
+  --accent-soft: #123a34;
+  --accent-glow: rgb(127 255 212 / 0.35);
+  --accent-ink: #000000;
+  --success: #7dffb0;
+  --success-soft: #0d2b19;
+  --danger: #ffb3b3;
+  --danger-soft: #331111;
+  --info: #9ecbff;
+  --info-soft: #0d2036;
+  --warning: #ffd166;
+  --warning-soft: #33280d;
+}
+
+[data-a11y-links='underline'] a:not(.btn-primary, .btn-secondary, .btn-ghost, .btn-icon, .row-card, .sidebar-link) {
+  text-decoration: underline;
+  text-decoration-thickness: 0.12em;
+  text-underline-offset: 0.18em;
+}
+
+[data-a11y-reading='comfortable'] body,
+[data-a11y-reading='comfortable'] p,
+[data-a11y-reading='comfortable'] li,
+[data-a11y-reading='comfortable'] .legend,
+[data-a11y-reading='comfortable'] .lesson-body p {
+  line-height: 1.9;
+  letter-spacing: 0.015em;
+  word-spacing: 0.06em;
+}
+
+[data-a11y-reading='comfortable'] .lesson-body p {
+  max-width: 68ch;
+}
+
+[data-a11y-motion='reduce'] html {
+  scroll-behavior: auto;
+}
+
+[data-a11y-motion='reduce'] *,
+[data-a11y-motion='reduce'] *::before,
+[data-a11y-motion='reduce'] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

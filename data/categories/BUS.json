@@ -1,0 +1,8 @@
+{
+  "id": "BUS",
+  "nameKey": "category.BUS",
+  "questionCount": 30,
+  "passThreshold": 26,
+  "timeMinutes": 40,
+  "languages": ["he", "en", "ru", "ar"]
+}
