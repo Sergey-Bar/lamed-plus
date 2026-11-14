@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useI18n } from '../lib/i18n/useI18n'
 import { CATEGORIES, getCategory } from '../lib/content/categories'
+import { availableQuestionCount } from '../lib/content/bankStats'
 import { useProgress } from '../lib/progress/ProgressProvider'
 import { Icon } from '../components/Icon'
 import type { IconName } from '../components/Icon'
@@ -9,6 +10,7 @@ import type { IconName } from '../components/Icon'
 const LINKS: Array<{ to: string; icon: IconName; label: string; body: string }> = [
   { to: '/stats', icon: 'chart', label: 'profile.stats', body: 'stats.sub' },
   { to: '/achievements', icon: 'trophy', label: 'profile.achievements', body: 'achPage.sub' },
+  { to: '/games', icon: 'play', label: 'nav.games', body: 'gamesPage.sub' },
   { to: '/settings/language', icon: 'globe', label: 'profile.language', body: 'settings.languageSub' },
   { to: '/settings', icon: 'gear', label: 'profile.settings', body: 'settings.privacyBody' },
 ]
@@ -162,7 +164,7 @@ export function Profile() {
               >
                 <span className="block truncate">{t(item.nameKey)}</span>
                 <span className="mt-0.5 block text-[10px] font-normal text-muted">
-                  {item.questionCount} {t('common.questions')}
+                  {availableQuestionCount(item.id)} {t('common.questions')}
                 </span>
               </button>
             )

@@ -7,7 +7,7 @@ const DATA = path.join(ROOT, 'data')
 const PUBLIC = path.join(ROOT, 'public')
 
 const CONTENT_LANGS = ['he', 'en', 'ru', 'ar', 'fr', 'es']
-const UI_LANGS = ['he', 'en', 'ru', 'ar', 'fr', 'es']
+const UI_LANGS = ['he', 'en', 'ru', 'ar', 'fr', 'es', 'ro', 'yi', 'am', 'pl', 'lad', 'ady']
 const QUESTION_TYPES = ['single', 'multi', 'boolean', 'image']
 const STATUSES = ['draft', 'reviewed', 'published']
 const SOURCES = ['official', 'authored', 'community']
@@ -160,7 +160,9 @@ for (const file of bankFiles) {
     if (!STATUSES.includes(q.status)) fail(`${where}: invalid status "${q.status}"`)
     if (!Number.isInteger(q.difficulty) || q.difficulty < 1 || q.difficulty > 5)
       fail(`${where}: difficulty must be an integer 1..5`)
-    if (q.source === 'official') officialQuestions++
+    // Product rule: questions may come only from the official Ministry bank.
+    if (q.source !== 'official') fail(`${where}: only official questions may ship (found "${q.source}")`)
+    officialQuestions++
     if (q.type === 'image') imageQuestions++
 
     if (q.type === 'image') {
@@ -231,6 +233,37 @@ for (const file of bankFiles) {
   }
 }
 
+// --- explanations ---
+// Authored explanations live outside the bank so a re-import never drops them.
+let explainedQuestions = 0
+const explanationsFile = path.join(DATA, 'explanations.json')
+if (!existsSync(explanationsFile)) {
+  fail('explanations.json is missing')
+} else {
+  const doc = readJson(explanationsFile)
+  const entries = doc?.questions
+  if (!entries || typeof entries !== 'object' || Array.isArray(entries)) {
+    fail('explanations.json: "questions" must be an object keyed by question id')
+  } else {
+    for (const [id, entry] of Object.entries(entries)) {
+      if (!questionIds.has(id)) fail(`explanations.json: unknown question "${id}"`)
+      if (!entry || typeof entry !== 'object') {
+        fail(`explanations.json: entry "${id}" must be an object`)
+        continue
+      }
+      if (!entry.he) fail(`explanations.json: entry "${id}" needs the Hebrew source text`)
+      if (!entry.en) fail(`explanations.json: entry "${id}" needs the English text`)
+      for (const [lang, text] of Object.entries(entry)) {
+        if (!UI_LANGS.includes(lang))
+          fail(`explanations.json: entry "${id}" has unsupported language "${lang}"`)
+        if (typeof text !== 'string' || text.trim().length < 20)
+          fail(`explanations.json: entry "${id}" [${lang}] must be a meaningful sentence`)
+      }
+      explainedQuestions++
+    }
+  }
+}
+
 // --- report ---
 console.log('--- LAMED+ data validation ---')
 console.log(`Categories:       ${categories.size}`)
@@ -240,6 +273,7 @@ console.log(`Questions:        ${questionsChecked}`)
 console.log(`Official:         ${officialQuestions}`)
 console.log(`Image questions:  ${imageQuestions}`)
 console.log(`i18n catalogs:    ${Object.keys(catalogs).join(', ')}`)
+console.log(`Explanations:     ${explainedQuestions}`)
 console.log('By topic:', perTopic)
 console.log('By category:', perCategory)
 

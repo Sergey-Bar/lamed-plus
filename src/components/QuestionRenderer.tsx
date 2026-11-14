@@ -50,6 +50,8 @@ export function QuestionRenderer({
       if (event.metaKey || event.ctrlKey || event.altKey) return
       const target = event.target as HTMLElement | null
       if (target && /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName)) return
+      // A modal dialog owns the keyboard while it is open.
+      if (document.querySelector('dialog[open]')) return
       const n = Number(event.key)
       if (Number.isInteger(n) && n >= 1 && n <= optionCount) {
         event.preventDefault()

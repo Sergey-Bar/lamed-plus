@@ -309,5 +309,13 @@
   "blitz.false": "Falso",
   "blitz.tap": "Elige verdadero o falso",
   "question.imageAlt": "Pregunta {number} imagen",
-  "question.imageCaption": "Imagen oficial del Ministerio para la pregunta {number}"
+  "question.imageCaption": "Imagen oficial del Ministerio para la pregunta {number}",
+  "nav.primary": "Navegación principal",
+  "settings.importLabel": "Importar el progreso desde un archivo",
+  "common.importDone": "Progreso restaurado.",
+  "common.importError": "Ese archivo no es válido.",
+  "practice.statTopics": "Temas",
+  "practice.statQuestions": "Preguntas",
+  "practice.statSeen": "Vistas",
+  "practice.statUnseen": "No vistas"
 }

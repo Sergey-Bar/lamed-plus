@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useI18n } from '../lib/i18n/useI18n'
 import { canShowAd, registerAdShown } from '../lib/ads/config'
 import { Icon } from './Icon'
+import { track } from '../lib/analytics/track'
 
 interface AdSlotProps {
   placement: 'home' | 'lesson' | 'exam-results' | 'games'
@@ -14,14 +15,16 @@ interface AdSlotProps {
  */
 export function AdSlot({ placement, className = '' }: AdSlotProps) {
   const { t } = useI18n()
-  const [visible, setVisible] = useState(false)
+  const [visible] = useState(() => canShowAd())
   const [dismissed, setDismissed] = useState(false)
+  const shownRef = useRef(false)
 
   useEffect(() => {
-    if (!canShowAd()) return
-    setVisible(true)
+    if (!visible || shownRef.current) return
+    shownRef.current = true
     registerAdShown()
-  }, [])
+    track('ad_impression', { placement })
+  }, [visible, placement])
 
   if (!visible || dismissed) return null
 

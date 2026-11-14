@@ -1,15 +1,5 @@
 import { Icon } from './Icon'
-import type { IconName } from './Icon'
-
-const CATEGORY_ICONS: Record<string, IconName> = {
-  B: 'car',
-  A: 'motorcycle',
-  A3: 'motorcycle',
-  C1: 'truck',
-  C: 'truck',
-  BUS: 'bus',
-  TRACTOR: 'tractor',
-}
+import { CATEGORY_ICONS } from './categoryIcon'
 
 const SIZES = {
   sm: { box: 'h-9 w-9 rounded-lg', icon: 'h-4.5 w-4.5' },
@@ -41,8 +31,4 @@ export function CategoryMark({
       <Icon name={CATEGORY_ICONS[id] ?? 'car'} className={s.icon} />
     </span>
   )
-}
-
-export function categoryIcon(id: string): IconName {
-  return CATEGORY_ICONS[id] ?? 'car'
 }

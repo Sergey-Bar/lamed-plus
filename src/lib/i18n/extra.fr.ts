@@ -83,7 +83,7 @@ export const FR_EXTRA: I18nCatalog = {
   "learn.practiceBody": "De vraies questions de la banque officielle sur ce que vous venez d'apprendre.",
   "learn.startPractice": "Pratiquez ce sujet",
   "learn.checkTitle": "Contrôle des connaissances",
-  "learn.checkBody": "Un court tour avec un retour instantané et une explication pour chaque réponse.",
+  "learn.checkBody": "Un court tour avec un retour instantané et une explication pour chaque erreur.",
   "learn.note": "Le contenu des cours est rédigé en hébreu et basé sur les principes du ministère des Transports. Vérifiez les détails contraignants par rapport à la loi en vigueur.",
   "learn.lesson": "Leçon {current} de {total}",
   "learn.of": "de",

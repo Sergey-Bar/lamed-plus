@@ -1,7 +1,7 @@
-import { createContext, useContext, useEffect, useMemo, useReducer, useRef } from 'react'
+import { useEffect, useMemo, useReducer, useRef } from 'react'
 import type { ReactNode } from 'react'
 import type { ProgressState, ProgressApi, AnswerInput, FinishExamInput, PowerupKind } from './context'
-import { defaultState } from './context'
+import { defaultState, ProgressContext } from './context'
 import {
   loadProgress,
   saveProgress,
@@ -15,6 +15,7 @@ import {
 import {
   recordAnswer,
   spendPowerup,
+  loseLife,
   finishExam,
   ensureDaily,
   completeOnboarding,
@@ -35,6 +36,7 @@ type ProgressAction =
   | { type: 'INIT'; payload: ProgressState }
   | { type: 'RECORD_ANSWER'; payload: AnswerInput }
   | { type: 'SPEND_POWERUP'; payload: PowerupKind }
+  | { type: 'LOSE_LIFE' }
   | { type: 'FINISH_EXAM'; payload: FinishExamInput }
   | { type: 'ENSURE_DAILY'; payload: string[] }
   | {
@@ -67,6 +69,9 @@ function progressReducer(state: ProgressState, action: ProgressAction): Progress
     case 'SPEND_POWERUP': {
       const result = spendPowerup(state, action.payload)
       return result.state
+    }
+    case 'LOSE_LIFE': {
+      return loseLife(state).state
     }
     case 'FINISH_EXAM': {
       const result = finishExam(state, action.payload)
@@ -114,8 +119,6 @@ interface ProgressProviderProps {
   children: ReactNode
 }
 
-const ProgressContext = createContext<ProgressApi | null>(null)
-
 export function ProgressProvider({ children }: ProgressProviderProps) {
   const [state, dispatch] = useReducer(progressReducer, defaultState())
   const stateRef = useRef(state)
@@ -127,6 +130,50 @@ export function ProgressProvider({ children }: ProgressProviderProps) {
   }, [state])
 
   const effects = useMemo(() => createEffectHandlers(toast, t), [toast, t])
+
+  // Coalescing persistence queue. Rapid successive actions (an exam grades all
+  // its questions in one tick) would otherwise race their IndexedDB writes, so
+  // every save reads the latest state and only one write per microtask runs.
+  const pendingPersist = useRef<ProgressState | null>(null)
+  const persistFlush = useRef(false)
+  const persistResolvers = useRef<Array<() => void>>([])
+  const schedulePersist = useMemo(
+    () => (): Promise<void> => {
+      pendingPersist.current = stateRef.current
+      return new Promise<void>((resolve) => {
+        persistResolvers.current.push(resolve)
+        if (persistFlush.current) return
+        persistFlush.current = true
+        const flush = () => {
+          persistFlush.current = false
+          const snapshot = pendingPersist.current
+          pendingPersist.current = null
+          const resolvers = persistResolvers.current
+          persistResolvers.current = []
+          const done = () => {
+            for (const finish of resolvers) finish()
+          }
+          if (!snapshot) {
+            done()
+            return
+          }
+          void saveProgress({
+            xp: snapshot.xp,
+            streak: snapshot.streak,
+            inventory: snapshot.inventory,
+            mastery: Object.values(snapshot.mastery),
+            srs: Object.values(snapshot.srs),
+            achievements: snapshot.achievements,
+            daily: snapshot.daily ?? undefined,
+            stats: snapshot.stats,
+            exams: snapshot.exams,
+          }).then(done, done)
+        }
+        void Promise.resolve().then(flush)
+      })
+    },
+    [],
+  )
 
 useEffect(() => {
     let cancelled = false
@@ -153,18 +200,11 @@ useEffect(() => {
     () => async (input: AnswerInput) => {
       const prev = stateRef.current
       const result = recordAnswer(prev, input)
+      stateRef.current = result.state
       dispatch({ type: 'RECORD_ANSWER', payload: input })
 
       await Promise.all([
-        saveProgress({
-          xp: result.state.xp,
-          streak: result.state.streak,
-          inventory: result.state.inventory,
-          mastery: Object.values(result.state.mastery),
-          srs: Object.values(result.state.srs),
-          achievements: result.state.achievements,
-          daily: result.state.daily,
-        }),
+        schedulePersist(),
         appendHistory({
           category: input.category,
           topicId: input.topicId,
@@ -182,7 +222,7 @@ useEffect(() => {
 
       applyEffects(prev, result.state, effects)
     },
-    [effects],
+    [effects, schedulePersist],
   )
 
   const handleSpendPowerup = useMemo(
@@ -190,32 +230,38 @@ useEffect(() => {
       const prev = stateRef.current
       const result = spendPowerup(prev, kind)
       if (!result.success) return false
+      stateRef.current = result.state
       dispatch({ type: 'SPEND_POWERUP', payload: kind })
-      await saveProgress({ inventory: result.state.inventory })
+      await schedulePersist()
       return true
     },
-    [],
+    [schedulePersist],
+  )
+
+  const handleLoseLife = useMemo(
+    () => async (): Promise<{ lives: number; shielded: boolean }> => {
+      const prev = stateRef.current
+      const result = loseLife(prev)
+      stateRef.current = result.state
+      dispatch({ type: 'LOSE_LIFE' })
+      await schedulePersist()
+      return { lives: result.lives, shielded: result.shielded }
+    },
+    [schedulePersist],
   )
 
   const handleFinishExam = useMemo(
     () => async (input: FinishExamInput) => {
       const prev = stateRef.current
       const result = finishExam(prev, input)
+      stateRef.current = result.state
       dispatch({ type: 'FINISH_EXAM', payload: input })
 
-      await Promise.all([
-        saveProgress({
-          streak: result.state.streak,
-          inventory: result.state.inventory,
-          stats: result.state.stats,
-          exams: result.state.exams,
-          achievements: result.state.achievements,
-        }),
-      ])
+      await schedulePersist()
 
       applyEffects(prev, result.state, effects)
     },
-    [effects],
+    [effects, schedulePersist],
   )
 
   const handleEnsureDaily = useMemo(
@@ -223,15 +269,12 @@ useEffect(() => {
       const prev = stateRef.current
       const result = ensureDaily(prev, topics)
       if (result.daily) {
+        stateRef.current = result.state
         dispatch({ type: 'ENSURE_DAILY', payload: topics })
-        await saveProgress({
-          streak: prev.streak,
-          inventory: prev.inventory,
-          daily: result.daily,
-        })
+        await schedulePersist()
       }
     },
-    [],
+    [schedulePersist],
   )
 
   const handleCompleteOnboarding = useMemo(
@@ -242,8 +285,15 @@ useEffect(() => {
       displayName = '',
       studyStage = 'starting',
     ) => {
-      const state = stateRef.current
-      completeOnboarding(state, category, goal, testDate, displayName, studyStage)
+      const next = completeOnboarding(
+        stateRef.current,
+        category,
+        goal,
+        testDate,
+        displayName,
+        studyStage,
+      )
+      stateRef.current = next
       dispatch({
         type: 'COMPLETE_ONBOARDING',
         payload: { category, goal, testDate, displayName, studyStage },
@@ -258,6 +308,7 @@ useEffect(() => {
       const prev = stateRef.current
       if (prev.lessons.includes(lessonId)) return
       const next = completeLesson(prev, lessonId)
+      stateRef.current = next
       dispatch({ type: 'COMPLETE_LESSON', payload: lessonId })
       await saveLessons(next.lessons)
     },
@@ -267,6 +318,7 @@ useEffect(() => {
   const handleSetDisplayName = useMemo(
     () => async (name: string) => {
       const next = setDisplayName(stateRef.current, name)
+      stateRef.current = next
       dispatch({ type: 'SET_DISPLAY_NAME', payload: next.displayName })
       await persistDisplayName(next.displayName)
     },
@@ -275,6 +327,8 @@ useEffect(() => {
 
   const handleSetStudyStage = useMemo(
     () => async (stage: string) => {
+      const next = setStudyStage(stateRef.current, stage)
+      stateRef.current = next
       dispatch({ type: 'SET_STUDY_STAGE', payload: stage })
       await persistStudyStage(stage)
     },
@@ -283,6 +337,7 @@ useEffect(() => {
 
   const handleSetDailyGoal = useMemo(
     () => async (goal: number) => {
+      stateRef.current = setDailyGoal(stateRef.current, goal)
       dispatch({ type: 'SET_DAILY_GOAL', payload: goal })
       await import('./persistence').then((m) => m.saveDailyGoal(goal))
     },
@@ -291,6 +346,7 @@ useEffect(() => {
 
   const handleSetDefaultCategory = useMemo(
     () => async (category: string) => {
+      stateRef.current = setDefaultCategory(stateRef.current, category)
       dispatch({ type: 'SET_DEFAULT_CATEGORY', payload: category })
       await import('./persistence').then((m) => m.saveDefaultCategory(category))
     },
@@ -299,6 +355,7 @@ useEffect(() => {
 
   const handleSetTestDate = useMemo(
     () => async (date: string | null) => {
+      stateRef.current = setTestDate(stateRef.current, date)
       dispatch({ type: 'SET_TEST_DATE', payload: date })
       await import('./persistence').then((m) => m.saveTestDate(date))
     },
@@ -317,6 +374,7 @@ useEffect(() => {
       ...state,
       recordAnswer: handleRecordAnswer,
       spendPowerup: handleSpendPowerup,
+      loseLife: handleLoseLife,
       finishExam: handleFinishExam,
       ensureDaily: handleEnsureDaily,
       completeOnboarding: handleCompleteOnboarding,
@@ -332,6 +390,7 @@ useEffect(() => {
       state,
       handleRecordAnswer,
       handleSpendPowerup,
+      handleLoseLife,
       handleFinishExam,
       handleEnsureDaily,
       handleCompleteOnboarding,
@@ -346,12 +405,4 @@ useEffect(() => {
   )
 
   return <ProgressContext.Provider value={value}>{children}</ProgressContext.Provider>
-}
-
-export function useProgress(): ProgressApi {
-  const context = useContext(ProgressContext)
-  if (!context) {
-    throw new Error('useProgress must be used within a ProgressProvider')
-  }
-  return context
 }

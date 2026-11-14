@@ -1,6 +1,7 @@
 import type { LanguageId } from './schema'
 import type { Question, QuestionTranslation } from './schema'
 import { TOPICS } from './topics'
+import { answerIsCorrect } from '../progress/engine'
 
 const bankFiles = import.meta.glob<{ default: Question[] }>('/data/bank/*.json')
 
@@ -61,7 +62,12 @@ export async function loadCategoryQuestions(category: string): Promise<Question[
 }
 
 export function isPlayable(question: Question): boolean {
-  return question.status === 'published' && (question.type !== 'image' || Boolean(question.image))
+  // Product rule: only the official Ministry bank is ever shown to a learner.
+  return (
+    question.status === 'published' &&
+    question.source === 'official' &&
+    (question.type !== 'image' || Boolean(question.image))
+  )
 }
 
 export async function loadTopicQuestions(
@@ -89,8 +95,8 @@ export function translate(
 ): QuestionTranslation | undefined {
   return (
     question.translations[lang] ??
-    question.translations.en ??
-    question.translations.he
+    question.translations.he ??
+    question.translations.en
   )
 }
 
@@ -100,13 +106,30 @@ export function contentLanguage(
   lang: LanguageId,
 ): LanguageId | undefined {
   if (question.translations[lang]) return lang
-  if (question.translations.en) return 'en'
   if (question.translations.he) return 'he'
+  if (question.translations.en) return 'en'
   return undefined
 }
 
 export function isPublished(question: Question): boolean {
   return question.status === 'published'
+}
+
+/**
+ * Grade a selection against the translation the learner is reading.
+ *
+ * The official bank reorders options per language, so `correctIndexes` is
+ * language-specific. Grading against a single language's key silently marks
+ * correct answers wrong for everyone else.
+ */
+export function isSelectionCorrect(
+  question: Question,
+  language: LanguageId,
+  selected: number[],
+): boolean {
+  const translation = translate(question, language)
+  if (!translation) return false
+  return answerIsCorrect(translation.correctIndexes, selected)
 }
 
 export function publishedCount(questions: Question[]): number {

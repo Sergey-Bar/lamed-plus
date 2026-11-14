@@ -309,5 +309,13 @@
   "blitz.false": "غير صحيح",
   "blitz.tap": "اختر صحيحًا أو غير صحيح",
   "question.imageAlt": "صورة السؤال {number}",
-  "question.imageCaption": "صورة رسمية من وزارة المواصلات للسؤال {number}"
+  "question.imageCaption": "صورة رسمية من وزارة المواصلات للسؤال {number}",
+  "nav.primary": "التنقل الرئيسي",
+  "settings.importLabel": "استيراد التقدم من ملف",
+  "common.importDone": "تمت استعادة التقدم.",
+  "common.importError": "الملف غير صالح.",
+  "practice.statTopics": "المواضيع",
+  "practice.statQuestions": "الأسئلة",
+  "practice.statSeen": "تمت مشاهدتها",
+  "practice.statUnseen": "لم تُشاهد"
 }

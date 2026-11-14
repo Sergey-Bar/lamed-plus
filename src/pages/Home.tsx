@@ -2,6 +2,8 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useI18n } from '../lib/i18n/useI18n'
 import { CATEGORIES, getCategory } from '../lib/content/categories'
+import { availableQuestionCount } from '../lib/content/bankStats'
+import { loadCategoryQuestions } from '../lib/content/questions'
 import { TOPICS } from '../lib/content/topics'
 import { LESSONS, getSubjectLessons, localizeLesson, subjectProgress } from '../lib/content/curriculum'
 import { masteryKey } from '../lib/progress/engine'
@@ -49,6 +51,24 @@ export function Home() {
   useEffect(() => {
     ensureDaily(topicIds)
   }, [ensureDaily, topicIds])
+
+  // Warm the current category's bank while the browser is idle. The first
+  // practice round then opens instantly instead of waiting for a chunk.
+  useEffect(() => {
+    const run = () => {
+      void loadCategoryQuestions(category.id)
+    }
+    const idleWindow = window as Window & {
+      requestIdleCallback?: (callback: () => void, options?: { timeout: number }) => number
+      cancelIdleCallback?: (id: number) => void
+    }
+    if (idleWindow.requestIdleCallback) {
+      const id = idleWindow.requestIdleCallback(run, { timeout: 4000 })
+      return () => idleWindow.cancelIdleCallback?.(id)
+    }
+    const id = window.setTimeout(run, 2500)
+    return () => window.clearTimeout(id)
+  }, [category.id])
 
   useEffect(() => {
     let cancelled = false
@@ -165,7 +185,7 @@ export function Home() {
         <div>
           <p className="eyebrow flex items-center gap-2">
             <Icon name="seal" className="h-3.5 w-3.5 text-accent" />
-            {category.questionCount} {t('common.questions')} · {t('exams.category')} {category.id}
+            {availableQuestionCount(category.id)} {t('common.questions')} · {t('exams.category')} {category.id}
           </p>
           <h1 className="h1 mt-1.5">
             {greeting}
@@ -188,18 +208,16 @@ export function Home() {
       </header>
 
       <div className="grid gap-4 lg:grid-cols-[minmax(0,1.25fr)_minmax(320px,0.75fr)]">
-        <section className="next-action relative overflow-hidden rounded-2xl border border-accent/25 p-4 sm:p-6">
-          <span className="next-action-glow" aria-hidden="true" />
-          <span className="absolute inset-y-0 start-0 w-1 bg-accent" aria-hidden="true" />
+        <section className="card p-4 sm:p-5">
           <div className="flex items-center justify-between gap-3">
-            <p className="eyebrow text-accent">
+            <p className="eyebrow">
               <Icon name="arrow-left-right" className="h-3.5 w-3.5" />
               {t('dash.next')}
             </p>
             <span className="chip">{nextAction.meta}</span>
           </div>
           <div className="mt-4 flex items-start gap-3.5">
-            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent-soft text-accent">
+            <span className="icon-tile tint-teal shrink-0">
               <Icon name={nextAction.icon} className="h-6 w-6" />
             </span>
             <div className="min-w-0 flex-1">
@@ -253,7 +271,7 @@ export function Home() {
               <p className="mt-1 text-[11px] leading-relaxed text-muted">{t('readiness.sub')}</p>
               {report && report.sample > 0 && (
                 <p className="tnum mt-1.5 text-[11px] font-semibold text-ink-soft">
-                  {report.sample} / {report.totalQuestions} {t('common.questions')}
+                  {report.sample} / {report.coverageTarget} {t('common.questions')}
                 </p>
               )}
             </div>
@@ -261,11 +279,11 @@ export function Home() {
           <div className="mt-4 space-y-2">
             {parts.map((part) => (
               <div key={part.key} className="flex items-center gap-2">
-                <span className="w-24 shrink-0 text-[10px] font-semibold text-muted">{t(part.key)}</span>
+                <span className="w-24 shrink-0 text-[11px] font-semibold text-muted">{t(part.key)}</span>
                 <span className="progress-track flex-1">
                   <span className="progress-fill" style={{ width: `${part.value}%` }} />
                 </span>
-                <span className="tnum w-8 text-end text-[10px] font-bold text-ink-soft">{Math.round(part.value)}%</span>
+                <span className="tnum w-8 text-end text-[11px] font-bold text-ink-soft">{Math.round(part.value)}%</span>
               </div>
             ))}
           </div>

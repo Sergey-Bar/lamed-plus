@@ -1,0 +1,354 @@
+{
+  "lessons": {
+    "laws-speed": {
+      "title": "Velocidad, distancia de frenado y mantenimiento de la distancia.",
+      "summary": "¿Por qué el límite de velocidad es un techo y no un objetivo y cómo se construye una distancia de seguridad real?",
+      "blocks": [
+        {
+          "heading": "La velocidad es una decisión, no un hábito",
+          "body": "La velocidad máxima indicada por una señal o por ley es el límite superior en condiciones ideales. En una carretera mojada, en la oscuridad, con niebla o cuando la visibilidad está bloqueada, la velocidad segura es menor. Conducir al límite de velocidad no garantiza detenerse a tiempo."
+        },
+        {
+          "heading": "Las tres distancias que debes conocer",
+          "body": "La distancia de reacción es la distancia recorrida desde que se detecta un peligro hasta que se pisan los frenos. La distancia de frenado es la distancia recorrida por el automóvil desde el momento de frenar hasta que se detiene. Juntos forman la distancia de frenado.",
+          "bullets": [
+            "Cuanto mayor es la velocidad, la distancia de frenado aumenta muy rápidamente.",
+            "Al doble de velocidad, la distancia de frenado se cuadriplica aproximadamente.",
+            "En carreteras mojadas o resbaladizas, la distancia de frenado es aún mayor."
+          ]
+        },
+        {
+          "heading": "retención de ganancias real",
+          "body": "La regla sencilla es mantener una distancia de al menos dos segundos con el vehículo que circula delante. En mojado, en la oscuridad o cuando el vehículo que circula delante es pesado: aumente los beneficios. Elija un punto de referencia al costado de la carretera y cuente hasta que el vehículo que va delante lo pase."
+        },
+        {
+          "heading": "Cómo conducir a una velocidad segura",
+          "body": "Mirar hacia adelante, reconocer los peligros a tiempo y reducir la velocidad antes de una curva, un cruce o un paso de peatones, y no en el último momento. Mantener una velocidad uniforme y predecible también lo hace más fácil para quienes conducen a su alrededor."
+        }
+      ],
+      "keyPoints": [
+        "El límite de velocidad es un máximo, no un objetivo.",
+        "Una ganancia de al menos dos segundos, y más en condiciones difíciles.",
+        "Reduzca la velocidad antes del peligro, no después de él."
+      ]
+    },
+    "laws-right-of-way": {
+      "title": "derecho de paso e intersecciones",
+      "summary": "Quién es realmente el primero en la intersección y cómo se puede evitar una situación en la que dos conductores hagan suposiciones diferentes.",
+      "blocks": [
+        {
+          "heading": "El derecho de paso es una regla, no un derecho",
+          "body": "El derecho de vía tiene como objetivo evitar una situación en la que dos conductores decidan de manera diferente en el mismo momento. Incluso cuando se le permite pasar, debe acercarse a la intersección lentamente, mirar a ambos lados y estar preparado para detenerse."
+        },
+        {
+          "heading": "¿Quién llega primero a la intersección?",
+          "body": "Una señal de alto o ceda el paso es vinculante según su significado. Un vehículo que gira está obligado a ceder el paso a los peatones que cruzan la vía por la que entra. Un vehículo que entre en la vía deberá ceder el paso a la persona que ya lo conduce.",
+          "bullets": [
+            "En una intersección sin semáforo: reducir la velocidad, mirar y ceder el paso según las normas de circulación.",
+            "No confíes sólo en el hecho de que \"lo merezco\"; asegúrate de que la otra persona se detenga.",
+            "Un vehículo que viaja hacia atrás debe ceder el paso a todo el tráfico."
+          ]
+        },
+        {
+          "heading": "Peatones, bicicletas y semáforos",
+          "body": "Un semáforo en verde no garantiza que el cruce esté libre. Antes de entrar en la intersección, asegúrese de que no haya peatones, ciclistas o vehículos atrapados en su interior. En un cruce de peatones, un peatón que comienza a cruzar obtiene el derecho de paso."
+        },
+        {
+          "heading": "Cuando algo no está claro",
+          "body": "Si hay alguna duda sobre quién es el primero, disminuya la velocidad y déjese llevar. La renuncia al derecho de paso no es un fracaso; Es la forma más segura de resolver las incertidumbres en el camino."
+        }
+      ],
+      "keyPoints": [
+        "Reduzca la velocidad antes de cada intersección, incluso cuando esté en una carretera principal.",
+        "Puna da paso a los peatones y a los que ya están en el cruce.",
+        "En caso de duda, sigamos adelante."
+      ]
+    },
+    "laws-signals": {
+      "title": "Señales, carriles y circunvalación",
+      "summary": "¿Cómo hacerle saber al otro lo que piensas hacer y cómo desviarte sin sorprender a nadie?",
+      "blocks": [
+        {
+          "heading": "Una señal es una advertencia.",
+          "body": "Señalan antes de cambiar de carril, girar o detenerse, y no durante la ejecución. La señal debe darse con suficiente antelación para que otro conductor reaccione y se detenga una vez completado el giro."
+        },
+        {
+          "heading": "Uso correcto de carriles",
+          "body": "Conduzca por el carril derecho tanto como sea posible y abandone el carril izquierdo para adelantar o girar. El cambio de carril se realiza únicamente cuando el carril está libre, con señal, espejo y mirando al punto ciego."
+        },
+        {
+          "heading": "Bypass seguro",
+          "body": "Adelantar sólo cuando haya buena visibilidad, el carril contrario esté libre y la ley lo permita. No adelantar antes de un paso de peatones, en una intersección, en una curva o cuando la visibilidad esté bloqueada. Si no hay certeza, no se puede adelantar.",
+          "bullets": [
+            "Antes de adelantar: comprobar los retrovisores, señalar y observar el terreno.",
+            "Durante el adelantamiento: mantener una velocidad y distancia estables con el vehículo que adelanta.",
+            "Al final: regresar al carril sólo cuando el vehículo que adelanta sea visible por el espejo."
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Señalizar antes, no durante.",
+        "Conduzca por la derecha y salga por la izquierda para adelantar.",
+        "El desvío es una decisión de certeza, no de paciencia."
+      ]
+    },
+    "signs-shapes": {
+      "title": "¿Cómo se lee una señal de tráfico antes de leer la inscripción?",
+      "summary": "La forma y el color lo dicen casi todo: advertencia, prohibición, obligación o información.",
+      "blocks": [
+        {
+          "heading": "Un lenguaje de formas y colores.",
+          "body": "Una señal triangular con un marco rojo es una señal de advertencia: te prepara para un peligro inminente. Un círculo con un marco rojo es una prohibición o restricción, y un círculo azul es una instrucción u obligación. Un letrero cuadrado o rectangular proporciona información u orientación."
+        },
+        {
+          "heading": "Señales de tráfico que son inusuales.",
+          "body": "La señal de alto tiene una forma única de octágono y la señal de derecho de paso tiene la forma de un triángulo invertido. La forma permite identificarlos incluso cuando la inscripción está cubierta o cuando la visibilidad es mala.",
+          "bullets": [
+            "Un fondo amarillo en una señal de advertencia suele indicar obras o una situación temporal.",
+            "Un cartel informativo puede orientar hacia un lugar, aparcamiento o servicio.",
+            "Las marcas en la carretera complementan las señales de tráfico y no las reemplazan."
+          ]
+        },
+        {
+          "heading": "¿Qué haces cuando ves una señal de tráfico?",
+          "body": "Reconozca la forma, traduzca el significado y ajuste la conducción en consecuencia. Una señal de advertencia requiere reducir la velocidad y estar preparado para las condiciones cambiantes de la carretera; Una señal de prohibición no es una recomendación."
+        }
+      ],
+      "keyPoints": [
+        "Triángulo rojo: advertencia. Círculo rojo: Prohibición. Círculo azul: Obligatorio.",
+        "La forma de la señal de tráfico es parte del significado.",
+        "También es obligatoria una señal amarilla temporal."
+      ]
+    },
+    "signs-warning": {
+      "title": "Señales de advertencia: el peligro antes de verlo",
+      "summary": "Una curva, un cruce, un paso de peatones, niños, una carretera lisa o obras: lo que te pide cada señal.",
+      "blocks": [
+        {
+          "heading": "Una señal de advertencia no es una decoración.",
+          "body": "Una señal de advertencia anuncia un peligro que quizás aún no se haya visto. Requiere ajustar la velocidad, aumentar la ganancia y aumentar la observación. Si seguimos a la misma velocidad, el cartel no cumplió su función."
+        },
+        {
+          "heading": "Ejemplos que vale la pena reconocer de inmediato",
+          "body": "Curva cerrada, intersección, paso de peatones, niños en la vía, vía lisa, pendiente peligrosa, obras en la vía y cruce de animales. En una carretera, una señal de advertencia suele indicar el siguiente tramo, por lo que no debes esperar hasta ver el peligro real.",
+          "bullets": [
+            "Niños cerca de la carretera: desaceleración significativa y disposición a detenerse.",
+            "Carretera suave: reduciendo la velocidad y evitando curvas cerradas y frenadas fuertes.",
+            "Obras en la vía: Cruzar un carril definido, manteniendo baja velocidad."
+          ]
+        },
+        {
+          "heading": "¿Qué pasa cuando pasas un semáforo?",
+          "body": "Si has detectado un semáforo retrasado, no frenes bruscamente ni realices una maniobra brusca. Reduzca la velocidad gradualmente y avance con precaución. Una frenada brusca puede suponer un peligro mayor que el peligro que advierte la señal."
+        }
+      ],
+      "keyPoints": [
+        "Advertencia = reducir la velocidad y mirar, no sólo saber.",
+        "El peligro en una señal de advertencia está delante de usted.",
+        "¿Falta un semáforo? Reduzca la velocidad gradualmente, no con frenadas bruscas."
+      ]
+    },
+    "signs-control": {
+      "title": "Parar, ceder y prohibiciones.",
+      "summary": "Las señales de tráfico que requieren una acción inmediata y cuál es la diferencia entre ellas.",
+      "blocks": [
+        {
+          "heading": "detenerse delante ceder el paso",
+          "body": "En una señal de alto, es obligatorio detenerse por completo antes de la línea de alto o antes de la intersección, incluso si la carretera parece despejada. En la señal de ceder el paso, no existe una obligación absoluta de detenerse, sino una obligación de ceder el paso a quienes tienen derecho a ello y, si es necesario, de detenerse."
+        },
+        {
+          "heading": "Prohibiciones y restricciones",
+          "body": "Una señal circular roja prohíbe la acción: entrar, girar, adelantar, estacionar o exceder el límite de velocidad permitido. La restricción se aplica en el lugar donde se colocó la señal, hasta la señal que la anule o hasta la intersección si así se determina."
+        },
+        {
+          "heading": "Instrucciones obligatorias",
+          "body": "Una señal azul determina lo que se debe hacer: girar en una dirección determinada, conducir en un carril determinado o utilizar una carretera determinada. Debe planificar la ruta con antelación y no girar tarde.",
+          "bullets": [
+            "Una señal de tráfico no elimina la necesidad de mirar y conducir según las condiciones.",
+            "Un semáforo y una señal de tráfico pueden funcionar juntos; Ambos deben ser respetados.",
+            "Si la señal de tráfico está bloqueada o no está clara, conduzca con extrema precaución."
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Parar = punto final. Dar la derecha = dar hacia adelante y, si es necesario, detenerse.",
+        "Un círculo rojo prohíbe; Círculo azul obligatorio.",
+        "Planificación de una ruta antes de la intersección."
+      ]
+    },
+    "safety-belts": {
+      "title": "Cinturones, sillas para niños y asientos adecuados",
+      "summary": "Qué le sucede al cuerpo en una frenada brusca y cómo se dispone el asiento para que funcione la protección.",
+      "blocks": [
+        {
+          "heading": "El cinturón es un sistema, no un accesorio.",
+          "body": "Durante una parada repentina, el cuerpo continúa avanzando. El cinturón distribuye la fuerza sobre los huesos fuertes del cuerpo y evita daños al cuerpo o salirse del asiento. Es obligatorio utilizarlo en cada viaje, incluso en la parte trasera y en un viaje corto."
+        },
+        {
+          "heading": "Niños - según la ley y la medida.",
+          "body": "Los niños que no tengan la altura o edad adecuada para un cinturón de seguridad normal deberán utilizar un asiento de seguridad o un elevador adecuado, de acuerdo con la ley. No mueva a un niño al asiento delantero antes de que esté permitido, y en cualquier caso el asiento deberá ajustarse a su altura y peso.",
+          "bullets": [
+            "Un asiento de seguridad se adapta a la edad, el peso y la altura, no sólo a la edad.",
+            "Un airbag no sustituye a un cinturón ni a un asiento de seguridad.",
+            "El asiento debe estar reforzado según las instrucciones del fabricante."
+          ]
+        },
+        {
+          "heading": "Una posición sentada que te protege",
+          "body": "El reposacabezas debe sostener la cabeza al nivel de los ojos o las orejas, y la espalda debe estar cerca del reposacabezas. Los objetos pesados ​​que no estén asegurados en el habitáculo pueden convertirse en proyectiles al estar detenido."
+        }
+      ],
+      "keyPoints": [
+        "Un cinturón de seguridad para cada viaje y para todos los pasajeros.",
+        "Silla para niños según la edad, el peso y la altura, y no según la comodidad.",
+        "El reposacabezas y el asiento ajustables reducen las lesiones."
+      ]
+    },
+    "safety-weather": {
+      "title": "Lluvia, niebla y falta de visibilidad",
+      "summary": "¿Por qué cambia la carretera cuando empieza a llover y qué cambia al conducir?",
+      "blocks": [
+        {
+          "heading": "El momento en que empieza a llover es el más peligroso.",
+          "body": "Al comienzo de la lluvia, el polvo y el aceite de la carretera se mezclan con el agua y forman una capa resbaladiza. Reduzca la velocidad antes de que el camino se sienta suave, aumente la distancia y evite maniobras bruscas de dirección."
+        },
+        {
+          "heading": "Conducir bajo la lluvia y a través del agua",
+          "body": "El agua en la carretera puede provocar pérdida de agarre (hidroplaneo). En tal caso, no frene bruscamente ni gire bruscamente el volante; Soltar un poco de gas, mantener el volante firme y dejar que los neumáticos recuperen agarre.",
+          "bullets": [
+            "Los limpiaparabrisas y las luces se activan según las condiciones de visibilidad.",
+            "Aumente la distancia durante al menos dos segundos y bajo lluvia intensa.",
+            "Evite cruzar charcos de profundidad desconocida."
+          ]
+        },
+        {
+          "heading": "Niebla y poca visibilidad",
+          "body": "En la niebla, conduzca lentamente, con las luces adecuadas y busque líneas de acera o una cerca para mantener el carril. No se deje deslumbrar por las luces altas de otro vehículo. Si la visibilidad es demasiado baja, deténgase en un lugar seguro hasta que mejoren las condiciones."
+        }
+      ],
+      "keyPoints": [
+        "Reduzca la velocidad al comienzo de la lluvia, no después del deslizamiento.",
+        "Hidroplaneo: menos gasolina, dirección estable, sin frenadas bruscas.",
+        "En condiciones de poca visibilidad, reduzca la velocidad, encienda las luces y, si es necesario, deténgase."
+      ]
+    },
+    "safety-fatigue": {
+      "title": "Fatiga, distracciones y conducción segura",
+      "summary": "El mayor peligro no siempre está en la carretera, a veces está en el interior del vehículo.",
+      "blocks": [
+        {
+          "heading": "La fatiga es una disminución de la capacidad, incluso sin conciliar el sueño.",
+          "body": "La fatiga ralentiza el tiempo de reacción y perjudica la capacidad de estimar distancias. Los bostezos, la pesadez en los ojos, la falta de evacuación intestinal y la dificultad para mantener un carril son señales de advertencia. Una breve parada en la caja o una taza de café no sustituyen al sueño."
+        },
+        {
+          "heading": "distracción",
+          "body": "Un mensaje, una navegación, una comida o una conversación intensa desvían tu vista y tu mente de la carretera. Antes de partir, configura la navegación, silencia las notificaciones y organiza el vehículo. Conducir requiere total atención.",
+          "bullets": [
+            "No escriba ni lea mensajes mientras conduce.",
+            "Los pasajeros pueden ayudar con la navegación y las alertas.",
+            "Pasajeros ruidosos o molestos: pidiendo un momento de silencio."
+          ]
+        },
+        {
+          "heading": "El diseño previene la fatiga",
+          "body": "Salga después de haber dormido lo suficiente, planifique descansos en un viaje largo y evite conducir durante las horas en que el cuerpo está acostumbrado a dormir. Si está cansado, deténgase en un lugar seguro, no continúe \"sólo un poco más\"."
+        }
+      ],
+      "keyPoints": [
+        "La fatiga afecta la respuesta antes de que se sienta el mareo.",
+        "Las pantallas y alertas se apagan antes de partir.",
+        "Es mejor hacer un descanso en un lugar seguro que continuar un viaje cansado."
+      ]
+    },
+    "vehicle-tires": {
+      "title": "Neumáticos: tu único agarre en la carretera",
+      "summary": "Presión del aire, profundidad de las ranuras y desgaste desigual: qué se controla y cuándo.",
+      "blocks": [
+        {
+          "heading": "Presión de aire correcta",
+          "body": "La presión del aire se determina según las instrucciones del fabricante, no según la apariencia del neumático. Revísalo cuando los neumáticos estén fríos, antes de un viaje largo o al menos una vez al mes. La baja presión aumenta la distancia de frenado, el consumo de combustible y el desgaste de las paredes."
+        },
+        {
+          "heading": "profundidad de surcos y erosión",
+          "body": "Las ranuras poco profundas reducen la evacuación de agua y aumentan el riesgo de resbalones. El desgaste desigual, los golpes, las grietas o un objeto atascado en el neumático requieren una inspección profesional. La llanta de refacción también debe estar en buenas condiciones e inflada.",
+          "bullets": [
+            "Revisa ambos lados y la pared de cada neumático.",
+            "El pulido de un lado suele indicar un problema de alineación o presión.",
+            "Los neumáticos se cambian según las instrucciones del fabricante y la ley, no sólo cuando están completamente desgastados."
+          ]
+        },
+        {
+          "heading": "Neumáticos estacionales",
+          "body": "En condiciones invernales severas, los neumáticos deben adaptarse a las condiciones de la carretera. Un neumático de verano no sustituye a un neumático de invierno cuando la carretera está especialmente mojada o fría."
+        }
+      ],
+      "keyPoints": [
+        "La presión del aire se comprueba cuando el neumático está frío, según las indicaciones del fabricante.",
+        "Ranuras poco profundas = menos evacuación de agua y más deslizamiento.",
+        "El desgaste desigual es una señal de inspección."
+      ]
+    },
+    "vehicle-lights": {
+      "title": "luces, frenos y tablero",
+      "summary": "Cómo identificar una avería antes de que se convierta en una avería en la carretera.",
+      "blocks": [
+        {
+          "heading": "La visibilidad es seguridad",
+          "body": "Las luces delanteras, las luces traseras, las luces de freno y las señales de giro son sus medios de comunicación con otros conductores. Se revisan antes de conducir, especialmente después de que el vehículo haya estado estacionado o después de reparaciones. Una bombilla fundida es un fallo de seguridad."
+        },
+        {
+          "heading": "Frenos: ¿qué sientes?",
+          "body": "Un pedal de freno suave, vibraciones, chirridos continuos o tirones hacia un lado al frenar son señales que hay que comprobar. No los ignores. El ABS está diseñado para evitar el bloqueo de las ruedas, pero no acorta la distancia de frenado en ninguna condición.",
+          "bullets": [
+            "Luz de freno roja encendida: parada segura y verificación.",
+            "La luz del motor parpadea; evite la sobrecarga y verifíquela lo antes posible.",
+            "Si el freno se siente diferente, no continúe conduciendo como de costumbre."
+          ]
+        },
+        {
+          "heading": "Una breve rutina de prueba",
+          "body": "Antes de conducir: luces, neumáticos, espejos, líquido lavaparabrisas y cinturón de seguridad. Después de conducir: estacionamiento seguro, freno de mano, cierre de ventanillas e inspección del vehículo. Una breve rutina evita sorpresas."
+        }
+      ],
+      "keyPoints": [
+        "Las luces adecuadas son comunicación con el resto de la vía.",
+        "Un cambio en la sensación de los frenos requiere inspección.",
+        "Un breve control antes de conducir evita averías."
+      ]
+    },
+    "vehicle-load": {
+      "title": "Compartimentos de carga, carga y carga",
+      "summary": "Cómo una carga no asegurada se convierte en un peligro y qué no se debe olvidar antes de viajar.",
+      "blocks": [
+        {
+          "heading": "La carga debe permanecer en su lugar",
+          "body": "En una parada repentina, una carga no asegurada continúa moviéndose. La carga pesada debe asegurarse en el maletero o con la ayuda de cinturones y redes, y la carga pesada debe mantenerse baja y lo más cerca posible del centro del vehículo."
+        },
+        {
+          "heading": "Límites de peso",
+          "body": "Cada vehículo tiene un límite de peso total y un límite de carga por eje. La sobrecarga cambia el comportamiento del vehículo, alarga la distancia de frenado y aumenta el desgaste de los neumáticos. No cargue más allá de lo permitido incluso si el vehículo está \"en marcha\".",
+          "bullets": [
+            "Una carga en altura puede cambiar el centro de gravedad y aumentar el vuelco.",
+            "Una baca aumenta el consumo de combustible y la sensibilidad al viento.",
+            "Asegúrese de que la carga no interfiera con la visión o la iluminación."
+          ]
+        },
+        {
+          "heading": "antes de salir",
+          "body": "Compruebe que la carga esté asegurada, que las puertas y ventanas estén cerradas, que no haya ningún objeto tapando la matrícula o la luz y que los neumáticos sean adecuados para la carga. Conduzca a una velocidad adecuada y gire con cuidado."
+        }
+      ],
+      "keyPoints": [
+        "Una carga no asegurada es un peligro incluso en un viaje corto.",
+        "No exceda los límites de peso del vehículo.",
+        "Carga baja, sujeta y sin bloquear la visibilidad."
+      ]
+    }
+  },
+  "subjects": {
+    "laws": "Las normas de circulación, la velocidad, el derecho de paso y las señales son la base de cualquier decisión en la carretera.",
+    "signs": "Señales viales y marcas viales: forma, color y significado, sin memorizar.",
+    "safety": "Seguridad práctica: cinturones de seguridad, clima, fatiga y distracciones.",
+    "vehicle": "Conocer el vehículo: neumáticos, frenos, luces y carga: qué se controla y por qué."
+  }
+}

@@ -1,18 +1,45 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { useI18n } from '../lib/i18n/useI18n'
 import { TOPIC_MAP } from '../lib/content/topics'
 import { getLesson, getSubjectLessons, localizeLesson } from '../lib/content/curriculum'
+import { isSelectionCorrect, loadTopicQuestions, translate } from '../lib/content/questions'
+import { rankByRelevance } from '../lib/content/relevance'
 import { useProgress } from '../lib/progress/ProgressProvider'
 import { Icon } from '../components/Icon'
+import { QuestionRenderer } from '../components/QuestionRenderer'
 import { ReadAloudButton } from '../components/ReadAloudButton'
+import type { Question } from '../lib/content/schema'
+
+const CHECK_COUNT = 2
+
+/**
+ * Stable shuffle so a lesson always shows the same knowledge check while its
+ * questions are spread across the topic.
+ */
+function seededPick<T>(items: T[], seed: string, count: number): T[] {
+  let hash = 0
+  for (let i = 0; i < seed.length; i += 1) hash = (hash * 31 + seed.charCodeAt(i)) >>> 0
+  const pool = [...items]
+  for (let i = pool.length - 1; i > 0; i -= 1) {
+    hash = (hash * 1103515245 + 12345) >>> 0
+    const j = hash % (i + 1)
+    ;[pool[i], pool[j]] = [pool[j], pool[i]]
+  }
+  return pool.slice(0, Math.min(count, pool.length))
+}
 
 export function Lesson() {
   const { t, language } = useI18n()
   const { topicId = '', lessonId = '' } = useParams<{ topicId: string; lessonId: string }>()
-  const { lessons: completed, completeLesson } = useProgress()
+  const { defaultCategory, lessons: completed, completeLesson, recordAnswer } = useProgress()
   const navigate = useNavigate()
   const [finishing, setFinishing] = useState(false)
+  const [checks, setChecks] = useState<Question[]>([])
+  const [checkIndex, setCheckIndex] = useState(0)
+  const [answers, setAnswers] = useState<boolean[]>([])
+  const [selected, setSelected] = useState<number[]>([])
+  const [revealed, setRevealed] = useState(false)
   const topic = TOPIC_MAP[topicId]
   const lessonSource = getLesson(lessonId)
   const lesson = lessonSource ? localizeLesson(lessonSource, language) : undefined
@@ -21,6 +48,70 @@ export function Lesson() {
   const prev = index > 0 ? subjectLessons[index - 1] : undefined
   const next = index >= 0 ? subjectLessons[index + 1] : undefined
   const done = completed.includes(lessonId)
+  const check = checks[checkIndex]
+  const checksReady = checks.length === 0 || answers.length >= checks.length
+  // A stable string keeps the effect from re-running on every render.
+  const lessonText = lesson
+    ? [lesson.title, lesson.summary, ...lesson.keyPoints].join(' ')
+    : ''
+
+  // Reset the retrieval-check state during render when the lesson or language
+  // changes, instead of syncing it inside the loading effect.
+  const resetKey = `${defaultCategory}|${topicId}|${lessonId}|${language}|${lessonText}`
+  const [loadedKey, setLoadedKey] = useState('')
+  if (loadedKey !== resetKey) {
+    setLoadedKey(resetKey)
+    setChecks([])
+    setCheckIndex(0)
+    setAnswers([])
+    setSelected([])
+    setRevealed(false)
+  }
+
+  // Reading alone is not learning: every lesson ends with a short retrieval
+  // check built from the official questions of the same topic.
+  useEffect(() => {
+    if (!TOPIC_MAP[topicId]) return
+    let cancelled = false
+    void loadTopicQuestions(defaultCategory, topicId)
+      .then((pool) => {
+        if (cancelled) return
+        const relevant = rankByRelevance(
+          pool,
+          (question) => translate(question, language)?.stem ?? '',
+          lessonText,
+        ).slice(0, CHECK_COUNT * 20)
+        setChecks(seededPick(relevant, lessonId, CHECK_COUNT))
+      })
+      .catch(() => {
+        if (!cancelled) setChecks([])
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [defaultCategory, topicId, lessonId, language, lessonText])
+
+  function chooseCheck(optionIndex: number) {
+    if (!check || revealed) return
+    const correct = isSelectionCorrect(check, language, [optionIndex])
+    setSelected([optionIndex])
+    setRevealed(true)
+    setAnswers((list) => [...list, correct])
+    recordAnswer({
+      category: defaultCategory,
+      topicId: check.topicId,
+      questionId: check.id,
+      correct,
+      mode: 'study',
+    })
+  }
+
+  function nextCheck() {
+    if (checkIndex >= checks.length - 1) return
+    setCheckIndex((value) => value + 1)
+    setSelected([])
+    setRevealed(false)
+  }
 
   if (!topic || !lesson || index < 0) {
     return (
@@ -153,7 +244,7 @@ export function Lesson() {
             <button
               type="button"
               onClick={() => void finish()}
-              disabled={finishing}
+              disabled={finishing || !checksReady}
               className="btn-primary px-5 py-2.5 text-sm"
             >
               {t('learn.finish')}
@@ -172,6 +263,70 @@ export function Lesson() {
           )}
         </footer>
       </article>
+
+      {check && (
+        <section className="card overflow-hidden">
+          <header className="flex flex-wrap items-center justify-between gap-2 border-b border-line p-4 sm:px-5">
+            <div>
+              <h2 className="text-sm font-bold text-ink">{t('learn.checkTitle')}</h2>
+            </div>
+            <span className="tnum chip">
+              {Math.min(checkIndex + 1, checks.length)} / {checks.length}
+            </span>
+          </header>
+          <div className="p-4 sm:p-5">
+            <QuestionRenderer
+              question={check}
+              lang={language}
+              selected={selected}
+              onToggle={chooseCheck}
+              reveal={revealed}
+            />
+            {revealed && (
+              <div
+                role="status"
+                aria-live="polite"
+                className="mt-4 flex flex-wrap items-center gap-3 border-t border-line pt-4"
+              >
+                <Icon
+                  name={answers[answers.length - 1] ? 'check-circle' : 'x-circle'}
+                  weight="fill"
+                  className={`h-5 w-5 shrink-0 ${
+                    answers[answers.length - 1] ? 'text-success' : 'text-danger'
+                  }`}
+                />
+                <p className="min-w-0 flex-1 text-sm font-semibold text-ink">
+                  {answers[answers.length - 1]
+                    ? t('practice.feedbackCorrect')
+                    : t('practice.feedbackWrong')}
+                </p>
+                {checkIndex < checks.length - 1 ? (
+                  <button
+                    type="button"
+                    onClick={nextCheck}
+                    className="btn-primary rounded-xl px-4 py-2 text-sm font-bold"
+                  >
+                    {t('practice.next')}
+                    <Icon name="arrow-forward" className="h-4 w-4 rtl:rotate-180" />
+                  </button>
+                ) : (
+                  !done && (
+                    <button
+                      type="button"
+                      onClick={() => void finish()}
+                      disabled={finishing}
+                      className="btn-primary rounded-xl px-4 py-2 text-sm font-bold"
+                    >
+                      {t('learn.finish')}
+                      <Icon name="check" className="h-4 w-4" />
+                    </button>
+                  )
+                )}
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       {done && (
         <section className="animate-pop-in grid gap-3 rounded-2xl border border-success/25 bg-success-soft p-4 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center">
@@ -196,22 +351,6 @@ export function Lesson() {
           </div>
         </section>
       )}
-
-      <section className="card p-4 sm:p-5">
-        <div className="flex items-start gap-3">
-          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-surface-2 text-accent">
-            <Icon name="brain" className="h-5 w-5" />
-          </span>
-          <div className="min-w-0 flex-1">
-            <h2 className="text-sm font-bold text-ink">{t('learn.checkTitle')}</h2>
-            <p className="mt-1 text-xs leading-relaxed text-muted">{t('learn.checkBody')}</p>
-            <Link to={`/practice?topic=${topicId}`} className="btn-secondary mt-3 px-3.5 py-2 text-xs font-semibold">
-              {t('learn.startPractice')}
-              <Icon name="arrow-forward" className="h-3.5 w-3.5 rtl:rotate-180" />
-            </Link>
-          </div>
-        </div>
-      </section>
 
       <p className="flex items-start gap-2 rounded-xl border border-line bg-surface-2 p-3.5 text-[11px] leading-relaxed text-muted">
         <Icon name="info" className="mt-0.5 h-3.5 w-3.5 shrink-0" />

@@ -367,7 +367,9 @@ async function main() {
   console.log(`Wrote ${files.length} bank files and data/official-meta.json`)
 }
 
-main().catch((error) => {
+try {
+  await main()
+} catch (error) {
   console.error(error)
   process.exit(1)
-})
+}

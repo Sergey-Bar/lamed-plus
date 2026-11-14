@@ -309,5 +309,13 @@
   "blitz.false": "Неверно",
   "blitz.tap": "Выберите верно или неверно",
   "question.imageAlt": "Изображение к вопросу {number}",
-  "question.imageCaption": "Официальное изображение Министерства транспорта к вопросу {number}"
+  "question.imageCaption": "Официальное изображение Министерства транспорта к вопросу {number}",
+  "nav.primary": "Основная навигация",
+  "settings.importLabel": "Импорт прогресса из файла",
+  "common.importDone": "Прогресс восстановлен.",
+  "common.importError": "Файл недействителен.",
+  "practice.statTopics": "Темы",
+  "practice.statQuestions": "Вопросы",
+  "practice.statSeen": "Просмотрено",
+  "practice.statUnseen": "Не просмотрено"
 }

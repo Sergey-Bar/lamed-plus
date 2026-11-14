@@ -3,11 +3,14 @@ import type { ReactNode } from 'react'
 import type { I18nCatalog, LanguageId } from '../content/schema'
 import { get, put } from '../store/store'
 import { loadCatalog } from './catalog'
+import { isolateBrand } from './bidi'
 import { I18nContext } from './context'
 import type { I18nState } from './context'
 import { detectLanguage, LANGUAGES } from './languages'
 import { EXTRA_CATALOG, EXTRA_FALLBACK } from './extra'
 import { ADDITIONS } from './additions'
+import { EXPLANATION_COPY } from './explanations'
+import { PRODUCT_COPY } from './product'
 
 const PREF_KEY = 'language'
 
@@ -15,10 +18,25 @@ function withExtras(lang: LanguageId, catalog: I18nCatalog): I18nCatalog {
   return {
     ...catalog,
     ...EXTRA_FALLBACK,
-    ...(EXTRA_CATALOG[lang] ?? {}),
-    ...ADDITIONS.en,
+    ...EXTRA_CATALOG[lang],
+    ...ADDITIONS.he,
     ...ADDITIONS[lang],
+    ...EXPLANATION_COPY.he,
+    ...EXPLANATION_COPY[lang],
+    ...PRODUCT_COPY.he,
+    ...PRODUCT_COPY[lang],
   }
+}
+
+async function loadLanguageCatalog(lang: LanguageId): Promise<I18nCatalog> {
+  const [catalog, hebrew] = await Promise.all([
+    loadCatalog(lang),
+    lang === 'he' ? Promise.resolve(null) : loadCatalog('he'),
+  ])
+
+  // Hebrew is the product fallback: every UI language sits on top of the
+  // Hebrew base, so a partially translated locale never exposes raw keys.
+  return withExtras(lang, { ...hebrew, ...catalog })
 }
 
 export function I18nProvider({ children }: { children: ReactNode }) {
@@ -34,10 +52,10 @@ export function I18nProvider({ children }: { children: ReactNode }) {
         PREF_KEY,
       )
       const lang = stored?.value ?? detectLanguage()
-      const cat = await loadCatalog(lang)
+      const cat = await loadLanguageCatalog(lang)
       if (cancelled) return
       setLanguageState(lang)
-      setCatalog(withExtras(lang, cat))
+      setCatalog(cat)
       setReady(true)
     })()
     return () => {
@@ -47,10 +65,18 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 
   const setLanguage = useCallback(async (lang: LanguageId) => {
     setLanguageState(lang)
-    const cat = await loadCatalog(lang)
-    setCatalog(withExtras(lang, cat))
+    const cat = await loadLanguageCatalog(lang)
+    setCatalog(cat)
     void put('prefs', { id: PREF_KEY, value: lang })
   }, [])
+
+  const dir = LANGUAGES[language].dir
+
+  useEffect(() => {
+    if (!ready) return
+    // No bidi isolation here: the control characters show up in the tab title.
+    document.title = `${catalog['app.name'] ?? 'LAMED+'} — ${catalog['app.tagline'] ?? ''}`.trim()
+  }, [ready, catalog])
 
   const t = useCallback(
     (key: string, vars?: Record<string, string | number>) => {
@@ -60,12 +86,10 @@ export function I18nProvider({ children }: { children: ReactNode }) {
           text = text.replaceAll(`{${k}}`, String(v))
         }
       }
-      return text
+      return dir === 'rtl' ? isolateBrand(text) : text
     },
-    [catalog],
+    [catalog, dir],
   )
-
-  const dir = LANGUAGES[language].dir
 
   useEffect(() => {
     document.documentElement.lang = language

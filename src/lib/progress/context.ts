@@ -63,7 +63,7 @@ export interface AnswerInput {
   topicId: string
   questionId: string
   correct: boolean
-  mode: 'study' | 'practice' | 'review' | 'exam'
+  mode: 'study' | 'practice' | 'review' | 'exam' | 'game'
   perfectRound?: boolean
   shielded?: boolean
 }
@@ -71,6 +71,7 @@ export interface AnswerInput {
 export interface ProgressApi extends ProgressState {
   recordAnswer: (input: AnswerInput) => void
   spendPowerup: (kind: PowerupKind) => Promise<boolean>
+  loseLife: () => Promise<{ lives: number; shielded: boolean }>
   finishExam: (input: FinishExamInput) => void
   ensureDaily: (topics: string[]) => void
   completeOnboarding: (

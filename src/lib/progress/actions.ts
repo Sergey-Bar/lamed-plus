@@ -139,12 +139,55 @@ export function spendPowerup(
   if (!prev.ready || prev.inventory.energy < cost) {
     return { state: prev, success: false }
   }
+  // Buying a shield stores it as a charge; the next wrong answer in a game
+  // consumes the charge instead of a life.
+  const shield =
+    kind === 'shield'
+      ? Math.min(GAME.maxShield, prev.inventory.shield + 1)
+      : prev.inventory.shield
   const inventory: InventoryRecord = {
     ...prev.inventory,
     energy: prev.inventory.energy - cost,
+    shield,
     used: { ...prev.inventory.used, [kind]: (prev.inventory.used[kind] ?? 0) + 1 },
   }
   return { state: { ...prev, inventory }, success: true }
+}
+
+export interface LoseLifeResult {
+  state: ProgressState
+  lives: number
+  shielded: boolean
+}
+
+/**
+ * Spend a life in a game round. A shield charge absorbs the hit instead.
+ * Lives regenerate over time, so the timestamp is preserved when possible.
+ */
+export function loseLife(prev: ProgressState): LoseLifeResult {
+  if (!prev.ready) {
+    return { state: prev, lives: prev.inventory.lives, shielded: false }
+  }
+  const now = Date.now()
+  const refilled: InventoryRecord = {
+    ...prev.inventory,
+    ...refillLives(prev.inventory, now),
+  }
+
+  if (refilled.shield > 0) {
+    return {
+      state: { ...prev, inventory: { ...refilled, shield: refilled.shield - 1 } },
+      lives: refilled.lives,
+      shielded: true,
+    }
+  }
+
+  const lives = Math.max(0, refilled.lives - 1)
+  return {
+    state: { ...prev, inventory: { ...refilled, lives } },
+    lives,
+    shielded: false,
+  }
 }
 
 export interface FinishExamResult {

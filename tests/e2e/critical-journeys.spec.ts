@@ -18,7 +18,19 @@ test.describe('Critical LAMED+ journeys', () => {
     await seedPrefs(page)
     await page.goto('/#/learn/laws/laws-speed')
 
-    await page.getByRole('button', { name: 'Finish lesson' }).click()
+    // Reading alone does not complete a lesson: the retrieval check that closes
+    // it must be answered before the lesson can be marked done.
+    const finish = page.getByRole('button', { name: 'Finish lesson' }).last()
+    await expect(page.locator('[role="radio"]').first()).toBeVisible({ timeout: 20000 })
+    for (let attempt = 0; attempt < 3; attempt += 1) {
+      if (await finish.isEnabled()) break
+      await page.locator('[role="radio"]').first().click()
+      const nextCheck = page.getByRole('button', { name: 'Next question', exact: true })
+      if (await nextCheck.count()) await nextCheck.click()
+    }
+    await expect(finish).toBeEnabled()
+
+    await finish.click()
     await expect(page.getByText('Lesson complete')).toBeVisible()
 
     await expect.poll(() => readPref(page, 'lessons')).toContain('laws-speed')

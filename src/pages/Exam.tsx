@@ -2,76 +2,20 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useI18n } from '../lib/i18n/useI18n'
 import { CATEGORIES, getCategory } from '../lib/content/categories'
-import { isPlayable, loadCategoryQuestions, translate } from '../lib/content/questions'
-import { assetUrl } from '../lib/content/assets'
-import { answerIsCorrect } from '../lib/progress/engine'
+import { isPlayable, isSelectionCorrect, loadCategoryQuestions, translate } from '../lib/content/questions'
 import { useProgress } from '../lib/progress/ProgressProvider'
+import { track } from '../lib/analytics/track'
 import { Confetti } from '../components/Confetti'
 import { Icon } from '../components/Icon'
 import { QuestionRenderer } from '../components/QuestionRenderer'
 import { CategoryMark } from '../components/CategoryMark'
-import { ProgressRing } from '../components/ui/ProgressRing'
 import { Dialog } from '../components/ui/Dialog'
-import type { LanguageId, Question } from '../lib/content/schema'
-
-type Phase = 'intro' | 'active' | 'result'
-
-interface QuestionResult {
-  question: Question
-  selected: number[]
-  correct: boolean
-  correctIndexes: number[]
-}
-
-interface Result {
-  score: number
-  total: number
-  passed: boolean
-  threshold: number
-  durationSec: number
-  results: QuestionResult[]
-}
-
-interface Draft {
-  category: string
-  ids: string[]
-  selections: number[][]
-  flags: number[]
-  index: number
-  deadline: number
-}
-
-const DRAFT_KEY = 'theoria-exam-draft'
-
-function shuffle<T>(items: T[]): T[] {
-  const array = [...items]
-  for (let i = array.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[array[i], array[j]] = [array[j], array[i]]
-  }
-  return array
-}
-
-function readDraft(category?: string): Draft | null {
-  if (!category) return null
-  try {
-    const raw = localStorage.getItem(DRAFT_KEY)
-    if (!raw) return null
-    const draft = JSON.parse(raw) as Draft
-    if (
-      draft.category !== category ||
-      !Array.isArray(draft.ids) ||
-      draft.ids.length === 0 ||
-      typeof draft.deadline !== 'number' ||
-      draft.deadline <= Date.now()
-    ) {
-      return null
-    }
-    return draft
-  } catch {
-    return null
-  }
-}
+import { ExamIntro } from './exam/ExamIntro'
+import { ResultScreen } from './exam/ResultScreen'
+import type { ExamReadyInfo } from './exam/ExamIntro'
+import { DRAFT_KEY, LEGACY_DRAFT_KEY, readDraft, shuffle } from './exam/examShared'
+import type { Draft, Phase, QuestionResult, Result } from './exam/examShared'
+import type { Question } from '../lib/content/schema'
 
 export function Exam() {
   const { category: categoryId } = useParams<{ category: string }>()
@@ -89,24 +33,30 @@ export function Exam() {
   const [deadline, setDeadline] = useState(0)
   const [timeLeft, setTimeLeft] = useState(0)
   const [result, setResult] = useState<Result | null>(null)
-  const [ready, setReady] = useState<{
-    recommended: boolean
-    estimatedAccuracy: number
-    sample: number
-  } | null>(null)
+  const [ready, setReady] = useState<ExamReadyInfo | null>(null)
   const [draft, setDraft] = useState<Draft | null>(null)
   const [burst, setBurst] = useState(false)
   const [confirmOpen, setConfirmOpen] = useState(false)
   const [showReview, setShowReview] = useState(false)
+  const [loadedCategory, setLoadedCategory] = useState<string | null>(null)
   const submittedRef = useRef(false)
   const submitRef = useRef<() => void>(() => {})
 
   const totalSeconds = (category?.timeMinutes ?? 40) * 60
 
+  // Reset category-scoped state during render when the category changes,
+  // instead of syncing it inside the loading effect.
+  if (loadedCategory !== (categoryId ?? null)) {
+    setLoadedCategory(categoryId ?? null)
+    setLoading(true)
+    setAvailable([])
+    setDraft(null)
+    setReady(null)
+  }
+
   useEffect(() => {
     if (!categoryId) return
     let cancelled = false
-    setLoading(true)
     void loadCategoryQuestions(categoryId).then((all) => {
       if (cancelled) return
       setAvailable(all.filter(isPlayable))
@@ -121,12 +71,12 @@ export function Exam() {
     }
   }, [categoryId, getReadyInfo])
 
+  // Clear the celebration flag after the confetti animation finishes.
   useEffect(() => {
-    if (phase !== 'result' || !result?.passed) return
-    setBurst(true)
+    if (!burst) return
     const id = window.setTimeout(() => setBurst(false), 1700)
     return () => window.clearTimeout(id)
-  }, [phase, result])
+  }, [burst])
 
   useEffect(() => {
     if (phase !== 'active') return
@@ -150,6 +100,7 @@ export function Exam() {
     }
     try {
       localStorage.setItem(DRAFT_KEY, JSON.stringify(payload))
+      localStorage.removeItem(LEGACY_DRAFT_KEY)
     } catch {
       // Draft autosave is best-effort.
     }
@@ -176,6 +127,7 @@ export function Exam() {
 
   function begin() {
     if (!category || available.length < category.questionCount) return
+    track('exam_start', { category: category.id })
     const sampled = shuffle(available).slice(0, category.questionCount)
     setQuestions(sampled)
     setSelections(sampled.map(() => []))
@@ -186,10 +138,12 @@ export function Exam() {
     setTimeLeft(category.timeMinutes * 60)
     setResult(null)
     setShowReview(false)
+    setBurst(false)
     setPhase('active')
     submittedRef.current = false
     try {
       localStorage.removeItem(DRAFT_KEY)
+      localStorage.removeItem(LEGACY_DRAFT_KEY)
     } catch {
       // Ignore storage failures.
     }
@@ -221,6 +175,7 @@ export function Exam() {
   function discardDraft() {
     try {
       localStorage.removeItem(DRAFT_KEY)
+      localStorage.removeItem(LEGACY_DRAFT_KEY)
     } catch {
       // Ignore storage failures.
     }
@@ -256,9 +211,12 @@ export function Exam() {
     if (submittedRef.current || questions.length === 0 || !category) return
     submittedRef.current = true
     const questionResults: QuestionResult[] = questions.map((question, position) => {
-      const translation = translate(question, 'he')
+      // Grade against the translation the learner is actually reading: the
+      // official bank reorders options per language, so the Hebrew answer key
+      // is wrong for every other language.
+      const translation = translate(question, language)
       const selection = selections[position] ?? []
-      const correct = translation ? answerIsCorrect(translation.correctIndexes, selection) : false
+      const correct = isSelectionCorrect(question, language, selection)
       recordAnswer({
         category: category.id,
         topicId: question.topicId,
@@ -275,6 +233,7 @@ export function Exam() {
     })
     const score = questionResults.filter((entry) => entry.correct).length
     const passed = score >= category.passThreshold
+    if (passed) setBurst(true)
     finishExam({
       category: category.id,
       score,
@@ -282,6 +241,7 @@ export function Exam() {
       passed,
       durationSec: Math.max(0, totalSeconds - timeLeft),
     })
+    track('exam_finish', { category: category.id, score, total: questions.length, passed })
     setResult({
       score,
       total: questions.length,
@@ -294,13 +254,18 @@ export function Exam() {
     setPhase('result')
     try {
       localStorage.removeItem(DRAFT_KEY)
+      localStorage.removeItem(LEGACY_DRAFT_KEY)
     } catch {
       // Ignore storage failures.
     }
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
-  submitRef.current = submit
+  // Keep the timeout handler pointing at the latest submit without mutating a
+  // ref during render.
+  useEffect(() => {
+    submitRef.current = submit
+  })
 
   if (!categoryId) {
     return (
@@ -340,110 +305,17 @@ export function Exam() {
   }
 
   if (phase === 'intro') {
-    const valid = available.length >= category.questionCount
     return (
-      <div className="animate-fade-in space-y-5">
-        <nav className="flex items-center gap-2 text-sm text-muted" aria-label="Breadcrumb">
-          <Link to="/app" className="hover:text-ink">
-            {t('nav.home')}
-          </Link>
-          <span aria-hidden="true">/</span>
-          <span className="font-semibold text-ink">{t(category.nameKey)}</span>
-        </nav>
-
-        <section className="cinematic-hero rounded-2xl p-5 sm:p-8">
-          <div className="relative z-[1] grid gap-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(260px,0.9fr)] lg:items-center">
-            <div>
-              <div className="flex items-center gap-3">
-                <CategoryMark id={category.id} size="lg" tone="accent" />
-                <div>
-                  <p className="eyebrow">{t('exam.official')}</p>
-                  <h1 className="h1 mt-0.5">{t('exam.introTitle')}</h1>
-                </div>
-              </div>
-              <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-muted">{t('exam.introSub')}</p>
-
-              <div className="mt-6 grid max-w-md grid-cols-3 gap-2.5">
-                {[
-                  { value: String(category.questionCount), label: t('exam.questions') },
-                  { value: `${category.timeMinutes}′`, label: t('exam.time') },
-                  { value: String(category.passThreshold), label: t('exam.threshold') },
-                ].map((stat) => (
-                  <div key={stat.label} className="rounded-xl border border-line bg-surface/70 px-3 py-3 text-center">
-                    <p className="tnum font-display text-2xl font-bold text-ink">{stat.value}</p>
-                    <p className="text-[11px] font-semibold text-muted">{stat.label}</p>
-                  </div>
-                ))}
-              </div>
-
-              {!valid && !loading && (
-                <p className="mt-4 flex items-center gap-2 rounded-xl border border-warning/30 bg-warning-soft p-3 text-sm text-ink">
-                  <Icon name="alert" className="h-5 w-5 shrink-0 text-warning" />
-                  {t('exam.availableWhen', { count: category.questionCount })}
-                </p>
-              )}
-
-              <div className="mt-6 flex flex-wrap items-center gap-2.5">
-                <button
-                  type="button"
-                  onClick={begin}
-                  disabled={!valid || loading}
-                  className="btn-primary touch-target rounded-xl px-6 py-3 font-bold"
-                >
-                  <Icon name="flag-checkered" className="h-4 w-4" />
-                  {t('exam.begin')}
-                </button>
-                <Link to="/learn" className="btn-secondary touch-target rounded-xl px-4 py-3 text-sm font-semibold">
-                  {t('nav.study')}
-                </Link>
-              </div>
-            </div>
-
-            <div className="surface rounded-2xl p-4 sm:p-5">
-              <div className="flex items-center gap-4">
-                <ProgressRing
-                  value={ready ? Math.round(ready.estimatedAccuracy * 100) : 0}
-                  size={104}
-                  stroke={9}
-                  label={t('readiness.ring')}
-                  tone={ready?.recommended ? 'success' : 'accent'}
-                />
-                <div className="min-w-0">
-                  <p className="font-display text-base font-bold text-ink">
-                    {ready?.recommended ? t('ready.ready') : t('ready.notReady')}
-                  </p>
-                  <p className="mt-1 text-xs leading-relaxed text-muted">
-                    {ready && ready.sample > 0
-                      ? t('home.readinessSub', { count: ready.sample })
-                      : t('home.readinessEmpty')}
-                  </p>
-                </div>
-              </div>
-              <p className="mt-4 flex items-center gap-2 border-t border-line pt-3 text-xs font-semibold text-muted">
-                <Icon name="info" className="h-4 w-4" />
-                {t('exam.autosaved')}
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {draft && (
-          <section className="card flex flex-wrap items-center justify-between gap-4 rounded-2xl border-warning/30 p-4 sm:p-5">
-            <div className="min-w-0">
-              <p className="font-display text-base font-bold text-ink">{t('exam.resumeTitle')}</p>
-              <p className="mt-1 text-sm text-muted">{t('exam.resumeSub')}</p>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              <button type="button" onClick={resume} className="btn-primary rounded-xl px-4 py-2.5 text-sm font-bold">
-                {t('exam.resume')}
-              </button>
-              <button type="button" onClick={discardDraft} className="btn-secondary rounded-xl px-4 py-2.5 text-sm font-semibold">
-                {t('exam.discard')}
-              </button>
-            </div>
-          </section>
-        )}
-      </div>
+      <ExamIntro
+        category={category}
+        availableCount={available.length}
+        loading={loading}
+        ready={ready}
+        hasDraft={draft !== null}
+        onBegin={begin}
+        onResume={resume}
+        onDiscard={discardDraft}
+      />
     )
   }
 
@@ -673,239 +545,5 @@ export function Exam() {
   )
 }
 
-function ResultScreen({
-  result,
-  categoryName,
-  language,
-  showReview,
-  onToggleReview,
-  onRetry,
-}: {
-  result: Result
-  categoryName: string
-  language: LanguageId
-  showReview: boolean
-  onToggleReview: () => void
-  onRetry: () => void
-}) {
-  const { t } = useI18n()
-  const percent = Math.round((result.score / Math.max(1, result.total)) * 100)
-  const wrong = result.results.filter((entry) => !entry.correct && entry.selected.length > 0).length
-  const skipped = result.results.filter((entry) => entry.selected.length === 0).length
-  const minutes = Math.floor(result.durationSec / 60)
-  const seconds = String(result.durationSec % 60).padStart(2, '0')
-
-  const byTopic = new Map<string, { correct: number; total: number }>()
-  for (const entry of result.results) {
-    const current = byTopic.get(entry.question.topicId) ?? { correct: 0, total: 0 }
-    current.total += 1
-    if (entry.correct) current.correct += 1
-    byTopic.set(entry.question.topicId, current)
-  }
-  const topicRows = [...byTopic.entries()]
-    .map(([id, value]) => ({ id, ...value }))
-    .sort((a, b) => a.correct / a.total - b.correct / b.total)
-  const weakestTopic = topicRows.find((row) => row.correct / row.total < 0.7)?.id
-
-  return (
-    <div className="animate-fade-in mx-auto max-w-3xl space-y-6">
-      <section
-        className={`rounded-2xl border p-5 text-center sm:p-8 ${
-          result.passed ? 'border-success/35 bg-success-soft' : 'border-danger/35 bg-danger-soft'
-        }`}
-      >
-        <span
-          className={`mx-auto flex h-14 w-14 items-center justify-center rounded-2xl ${
-            result.passed ? 'bg-success text-white' : 'bg-danger text-white'
-          }`}
-        >
-          <Icon name={result.passed ? 'check' : 'x'} className="h-7 w-7" />
-        </span>
-        <p className="eyebrow mt-4">{t('exam.resultsTitle')} · {categoryName}</p>
-        <h1 className="h1 mt-1">{result.passed ? t('exam.pass') : t('exam.fail')}</h1>
-        <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-ink-soft">
-          {result.passed
-            ? t('exam.passSub')
-            : t(
-                Math.max(0, result.threshold - result.score) === 1 ? 'exam.failSubOne' : 'exam.failSub',
-                { count: Math.max(0, result.threshold - result.score) },
-              )}
-        </p>
-
-        <div className="mx-auto mt-5 flex max-w-md items-center justify-center gap-5">
-          <ProgressRing
-            value={percent}
-            size={132}
-            stroke={11}
-            label={t('exam.score')}
-            tone={result.passed ? 'success' : 'danger'}
-          />
-          <div className="text-start">
-            <p className="tnum font-display text-3xl font-bold text-ink">
-              {result.score}
-              <span className="text-lg text-muted">/{result.total}</span>
-            </p>
-            <p className="text-xs font-semibold text-muted">
-              {t('exam.threshold')}: {result.threshold}
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-6 grid grid-cols-2 gap-2.5 sm:grid-cols-4">
-          {[
-            { value: result.score, label: t('exam.correct'), tone: 'text-success' },
-            { value: wrong, label: t('exam.wrong'), tone: 'text-danger' },
-            { value: skipped, label: t('exam.skipped'), tone: 'text-muted' },
-            { value: `${minutes}:${seconds}`, label: t('exam.duration'), tone: 'text-ink' },
-          ].map((stat) => (
-            <div key={stat.label} className="rounded-xl border border-line bg-surface/80 p-3">
-              <p className={`tnum font-display text-xl font-bold ${stat.tone}`}>{stat.value}</p>
-              <p className="text-[11px] font-semibold text-muted">{stat.label}</p>
-            </div>
-          ))}
-        </div>
-
-        {topicRows.length > 0 && (
-          <div className="mt-5 text-start">
-            <h2 className="text-sm font-bold text-ink">{t('exam.byTopic')}</h2>
-            <ul className="mt-2.5 space-y-2">
-              {topicRows.map((row) => {
-                const topicPercent = Math.round((row.correct / row.total) * 100)
-                return (
-                  <li key={row.id} className="rounded-xl border border-line bg-surface/80 p-3">
-                    <div className="flex items-center justify-between gap-3">
-                      <span className="text-xs font-semibold text-ink">{t(`topic.${row.id}`)}</span>
-                      <span className="tnum text-xs font-bold text-muted">
-                        {row.correct}/{row.total}
-                      </span>
-                    </div>
-                    <span className="progress-track mt-2 block">
-                      <span
-                        className={`progress-fill ${topicPercent >= 70 ? 'bg-success' : 'bg-danger'}`}
-                        style={{ width: `${topicPercent}%` }}
-                      />
-                    </span>
-                  </li>
-                )
-              })}
-            </ul>
-            {weakestTopic && (
-              <Link
-                to={`/learn/${weakestTopic}`}
-                className="btn-secondary mt-3 px-4 py-2.5 text-sm font-semibold"
-              >
-                <Icon name="book" className="h-4 w-4" />
-                {t('exam.workOnTopic')}
-              </Link>
-            )}
-          </div>
-        )}
-
-        <div className="mt-6 flex flex-wrap justify-center gap-2.5">
-          <button type="button" onClick={onToggleReview} className="btn-secondary rounded-xl px-4 py-2.5 text-sm font-semibold">
-            <Icon name={showReview ? 'chevron-down' : 'clipboard'} className="h-4 w-4" />
-            {showReview ? t('exam.hideAnswers') : t('exam.reviewAnswers')}
-          </button>
-          <Link to="/review" className="btn-secondary rounded-xl px-4 py-2.5 text-sm font-semibold">
-            {t('exams.review')}
-          </Link>
-          <button type="button" onClick={onRetry} className="btn-primary rounded-xl px-4 py-2.5 text-sm font-bold">
-            {t('exam.retake')}
-          </button>
-          <Link to="/app" className="btn-ghost rounded-xl px-4 py-2.5 text-sm font-semibold">
-            {t('nav.home')}
-          </Link>
-        </div>
-      </section>
-
-      {showReview && (
-        <section className="space-y-3">
-          <h2 className="h2">{t('exam.reviewAnswers')}</h2>
-          {result.results.map((entry, position) => {
-            const translation = translate(entry.question, language)
-            if (!translation) return null
-            const image = entry.question.image ? assetUrl(entry.question.image) : undefined
-            return (
-              <article key={entry.question.id} className="card rounded-2xl p-4 sm:p-5">
-                <div className="flex items-start justify-between gap-3">
-                  <span className="tnum chip">#{entry.question.number ?? position + 1}</span>
-                  <span
-                    className={`chip ${
-                      entry.correct
-                        ? 'border-success/30 bg-success-soft text-success'
-                        : entry.selected.length === 0
-                          ? 'border-line bg-surface-2 text-muted'
-                          : 'border-danger/30 bg-danger-soft text-danger'
-                    }`}
-                  >
-                    <Icon
-                      name={entry.correct ? 'check' : entry.selected.length === 0 ? 'info' : 'x'}
-                      className="h-3 w-3"
-                    />
-                    {entry.correct
-                      ? t('exam.correct')
-                      : entry.selected.length === 0
-                        ? t('exam.noAnswer')
-                        : t('exam.wrong')}
-                  </span>
-                </div>
-                <div className="mt-2 flex gap-3">
-                  {image && (
-                    <img
-                      src={image}
-                      alt={t('question.imageAlt', { number: entry.question.number ?? '' })}
-                      className="h-16 w-16 shrink-0 rounded-lg border border-line object-cover"
-                    />
-                  )}
-                  <p className="font-display text-[15px] font-semibold leading-snug text-ink">{translation.stem}</p>
-                </div>
-                <ul className="mt-3 space-y-1.5">
-                  {translation.options.map((option, optionIndex) => {
-                    const isCorrect = entry.correctIndexes.includes(optionIndex)
-                    const isSelected = entry.selected.includes(optionIndex)
-                    return (
-                      <li
-                        key={optionIndex}
-                        className={`flex items-start gap-2 rounded-lg border px-3 py-2 text-sm ${
-                          isCorrect
-                            ? 'border-success/35 bg-success-soft text-ink'
-                            : isSelected
-                              ? 'border-danger/35 bg-danger-soft text-ink'
-                              : 'border-line bg-surface text-muted'
-                        }`}
-                      >
-                        <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-current text-[10px] font-bold">
-                          {String.fromCharCode(65 + optionIndex)}
-                        </span>
-                        <span className="flex-1">{option}</span>
-                        {isCorrect && <Icon name="check" className="h-4 w-4 shrink-0 text-success" />}
-                        {isSelected && !isCorrect && <Icon name="x" className="h-4 w-4 shrink-0 text-danger" />}
-                      </li>
-                    )
-                  })}
-                </ul>
-                {!entry.correct && (
-                  <>
-                    <p className="mt-2 text-xs font-semibold text-muted">
-                      {t('exam.correctAnswer')}:{' '}
-                      {translation.options[entry.correctIndexes[0]] ?? '—'}
-                    </p>
-                    <Link
-                      to={`/learn/${entry.question.topicId}`}
-                      className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-accent hover:underline"
-                    >
-                      <Icon name="book" className="h-3.5 w-3.5" />
-                      {t('exam.workOnTopic')}
-                    </Link>
-                  </>
-                )}
-              </article>
-            )
-          })}
-        </section>
-      )}
-    </div>
-  )
-}
 
 export default Exam

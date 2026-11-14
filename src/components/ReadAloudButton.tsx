@@ -11,6 +11,12 @@ const SPEECH_LANG: Record<LanguageId, string> = {
   ar: 'ar-SA',
   fr: 'fr-FR',
   es: 'es-ES',
+  ro: 'ro-RO',
+  yi: 'yi',
+  am: 'am-ET',
+  pl: 'pl-PL',
+  lad: 'lad',
+  ady: 'ady',
 }
 
 interface ReadAloudButtonProps {

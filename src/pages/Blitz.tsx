@@ -8,6 +8,7 @@ import { answerIsCorrect } from '../lib/progress/engine'
 import { useProgress } from '../lib/progress/ProgressProvider'
 import { shuffle } from '../lib/utils'
 import { Confetti } from '../components/Confetti'
+import { GamifiedHud } from '../components/GamifiedHud'
 import { Icon } from '../components/Icon'
 import type { Question } from '../lib/content/schema'
 
@@ -22,7 +23,7 @@ const ROUND_SIZE = 20
 
 export function Blitz() {
   const { t, language } = useI18n()
-  const { defaultCategory } = useProgress()
+  const { defaultCategory, recordAnswer, loseLife } = useProgress()
   const category = getCategory(defaultCategory)
   const [phase, setPhase] = useState<Phase>('ready')
   const [base, setBase] = useState<Question[]>([])
@@ -33,6 +34,7 @@ export function Blitz() {
   const [streak, setStreak] = useState(0)
   const [bestStreak, setBestStreak] = useState(0)
   const [burst, setBurst] = useState(false)
+  const [reason, setReason] = useState<'deck' | 'lives'>('deck')
   const [best, setBest] = useState(() => Number(localStorage.getItem('blitz-best') ?? 0))
 
   useEffect(() => {
@@ -66,11 +68,13 @@ export function Blitz() {
     setBestStreak(0)
     setIndex(0)
     setAnswer(null)
+    setReason('deck')
     setPhase(next.length > 0 ? 'play' : 'ready')
   }
 
-  function finishScore(finalScore: number) {
+  function finishScore(finalScore: number, why: 'deck' | 'lives' = 'deck') {
     setPhase('over')
+    setReason(why)
     setBurst(true)
     window.setTimeout(() => setBurst(false), 1500)
     if (finalScore > best) {
@@ -84,6 +88,13 @@ export function Blitz() {
     const isCorrectOption = answerIsCorrect(translation.correctIndexes, [item.optionIndex])
     const right = value === isCorrectOption
     setAnswer(value)
+    recordAnswer({
+      category: category?.id ?? defaultCategory,
+      topicId: item.question.topicId,
+      questionId: item.question.id,
+      correct: right,
+      mode: 'game',
+    })
     if (right) {
       const nextStreak = streak + 1
       const bonus = nextStreak >= 3 && nextStreak % 3 === 0 ? 2 : 0
@@ -93,6 +104,9 @@ export function Blitz() {
       setScore(nextScore)
     } else {
       setStreak(0)
+      void loseLife().then(({ lives }) => {
+        if (lives <= 0) finishScore(score, 'lives')
+      })
     }
   }
 
@@ -119,6 +133,9 @@ export function Blitz() {
         </span>
         <h1 className="h1">{t('blitz.over')}</h1>
         <p className="tnum font-display text-4xl font-bold text-ink">{score}</p>
+        {reason === 'lives' && (
+          <p className="text-sm font-semibold text-danger">{t('game.outOfLives')}</p>
+        )}
         <p className="text-sm text-muted">
           {t('blitz.best')}: {best} · {t('blitz.bestStreak')}: {bestStreak}
         </p>
@@ -137,6 +154,7 @@ export function Blitz() {
   if (phase === 'ready') {
     return (
       <div className="animate-fade-in mx-auto max-w-xl space-y-5">
+        <GamifiedHud />
         <div className="card-premium rounded-2xl p-6">
           <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent-soft text-ink">
             <Icon name="bolt" className="h-6 w-6" />
@@ -171,6 +189,7 @@ export function Blitz() {
 
   return (
     <div className="animate-fade-in mx-auto max-w-2xl space-y-4">
+      <GamifiedHud />
       <div className="flex items-center justify-between gap-2">
         <span className="tnum text-sm font-bold text-muted">
           {index + 1} / {deck.length}

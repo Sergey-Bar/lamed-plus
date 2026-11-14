@@ -1,4 +1,16 @@
-export type LanguageId = 'he' | 'en' | 'ru' | 'ar' | 'fr' | 'es'
+export type LanguageId =
+  | 'he'
+  | 'en'
+  | 'ru'
+  | 'ar'
+  | 'fr'
+  | 'es'
+  | 'ro'
+  | 'yi'
+  | 'am'
+  | 'pl'
+  | 'lad'
+  | 'ady'
 
 export type QuestionType = 'single' | 'multi' | 'boolean' | 'image'
 

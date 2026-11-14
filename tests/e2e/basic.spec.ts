@@ -10,7 +10,7 @@ test.describe('LAMED+ landing and shell', () => {
     )
     await expect(page.getByRole('link', { name: 'Start learning' }).first()).toBeVisible()
     await expect(page.getByText('1,841 official questions')).toBeVisible()
-    await expect(page.getByRole('heading', { name: 'Works offline' })).toBeVisible()
+    await expect(page.getByText('Downloadable offline pack')).toBeVisible()
   })
 
   test('language switch changes locale and direction', async ({ page }) => {
@@ -52,7 +52,7 @@ test.describe('LAMED+ landing and shell', () => {
     )
     expect(overflow).toBeLessThanOrEqual(1)
 
-    await expect(page.getByRole('navigation', { name: 'Home' })).toBeVisible()
+    await expect(page.getByRole('navigation', { name: 'Main navigation' })).toBeVisible()
     await expect(page.getByRole('link', { name: 'Learn' }).last()).toBeVisible()
   })
 
@@ -67,6 +67,6 @@ test.describe('LAMED+ landing and shell', () => {
     await expect(page.getByRole('heading', { level: 1 })).toContainText(
       "La théorie n'est pas un test de mémoire.",
     )
-    await expect(page.getByText('Fonctionne hors ligne').first()).toBeVisible()
+    await expect(page.getByText('Pack hors ligne téléchargeable').first()).toBeVisible()
   })
 })

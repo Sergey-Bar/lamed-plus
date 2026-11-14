@@ -23,11 +23,19 @@ export function Signs() {
   const [loading, setLoading] = useState(true)
   const [query, setQuery] = useState('')
   const [visible, setVisible] = useState(PAGE)
+  const [loadedCategory, setLoadedCategory] = useState<string | null>(null)
   const category = getCategory(defaultCategory)
+
+  // Reset derived list state during render when the category changes instead
+  // of syncing it inside an effect.
+  if (loadedCategory !== defaultCategory) {
+    setLoadedCategory(defaultCategory)
+    setQuestions([])
+    setLoading(true)
+  }
 
   useEffect(() => {
     let cancelled = false
-    setLoading(true)
     void loadCategoryQuestions(defaultCategory).then((bank) => {
       if (cancelled) return
       setQuestions(bank.filter((question) => isPlayable(question) && question.image && question.topicId === 'signs'))

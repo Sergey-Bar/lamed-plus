@@ -1,0 +1,203 @@
+{
+  "version": 1,
+  "updatedAt": "2026-11-13",
+  "note": "Authored explanations for core official questions, starting with the foundational items every licence class meets. Hebrew is the source language; English follows. Questions without an entry fall back to the authored lesson point that explains the idea (src/lib/content/related.ts).",
+  "questions": {
+    "q0001": {
+      "he": "החוק חל על הדרך כולה, ולכן החובה להכיר אותו ולציית לו מוטלת על כל מי שמשתמש בדרך — נהג, הולך רגל, רוכב אופניים ונוסע — ולא רק על מי שמחזיק בהגה.",
+      "en": "The law applies to the road as a whole, so everyone who uses it — drivers, pedestrians, cyclists and passengers — must know and obey it, not only the person holding the wheel."
+    },
+    "q0002": {
+      "he": "נהיגה ברכב מנועי מותנית ברישיון נהיגה תקף לאותו סוג רכב. טסט בתוקף או בעלות על הרכב אינם מחליפים את הרישיון.",
+      "en": "Driving a motor vehicle requires a valid licence for that class of vehicle. A valid roadworthiness test or owning the car does not replace the licence."
+    },
+    "q0003": {
+      "he": "מי שמוסר את ההגה חייב לוודא שלנהג יש רישיון תקף לאותו סוג רכב. האחריות אינה עוברת לנוהג בלבד.",
+      "en": "Whoever hands over the wheel must check that the driver holds a valid licence for that class of vehicle. The responsibility does not pass to the driver alone."
+    },
+    "q0004": {
+      "he": "מלווה שאינו מורה נהיגה צריך ותק של חמש שנים ברישיון מתאים מגיל 24, או שלוש שנים מגיל 30. ותק קצר או גיל צעיר מזה אינם מספיקים.",
+      "en": "A non-instructor escort needs five years on a matching licence from age 24, or three years from age 30. Less experience or a younger age is not enough."
+    },
+    "q0005": {
+      "he": "השוטר רשאי לעכב בלי צו דווקא כשהנהג אינו מוסר שם ומען או אינו מציג רישיון. עצם העבירה או חומרתה אינם התנאי.",
+      "en": "Police may detain without a warrant specifically when the driver does not give a name and address or does not present a licence. The offence itself, or its severity, is not the condition."
+    },
+    "q0006": {
+      "he": "30 יום הוא הצעד הראשון בסולם הפסילה, והוא חל על סיכון הולך רגל במעבר חצייה — לא על נוסע לא חגור ולא על רישיון שפג תוקפו.",
+      "en": "Thirty days is the first step in the disqualification ladder and applies to endangering a pedestrian on a crossing — not to an unbelted passenger or an expired licence."
+    },
+    "q0007": {
+      "he": "60 יום חלים כשהנהג היה מעורב בתאונה עם נפגע או נזק לרכוש ויש חשד סביר לאשמתו. בלי תאונה כזו הפסילה קצרה יותר.",
+      "en": "Sixty days applies when the driver was involved in a crash with injury or property damage and there is reasonable suspicion of fault. Without such a crash the disqualification is shorter."
+    },
+    "q0008": {
+      "he": "כשבתאונה נהרג אדם והנהג חשוד באחריות, הפסילה עולה ל-90 יום. חומרת התוצאה היא שקובעת את משך הפסילה.",
+      "en": "When a crash kills a person and the driver is suspected of responsibility, disqualification rises to ninety days. The severity of the outcome sets its length."
+    },
+    "q0009": {
+      "he": "נהיגה בזמן פסילה היא עבירה בפני עצמה, שעונשה עד שלוש שנות מאסר בנוסף לעונשים על העבירה שגרמה לפסילה.",
+      "en": "Driving while disqualified is an offence of its own, punishable by up to three years' imprisonment in addition to the penalties for the offence that caused the disqualification."
+    },
+    "q0010": {
+      "he": "ההגדרה רחבה: כל מסלול, רחוב, סמטה, כיכר, גשר או שטח פתוח שהציבור רשאי לעבור בו הוא דרך — לא רק כביש סלול.",
+      "en": "The definition is broad: any track, street, alley, square, bridge or open space the public may pass through is a road — not only a paved carriageway."
+    },
+    "q0011": {
+      "he": "זמן תאורה כולל את הלילה וגם כל זמן אחר שבו הראות נפגעה ממזג אוויר או מסיבה אחרת — ולכן גם ערפל או גשם כבד מחייבים אורות.",
+      "en": "Lighting-up time covers night plus any other time when visibility is reduced by weather or another cause — so fog or heavy rain also require lights."
+    },
+    "q0012": {
+      "he": "חנייה היא העמדת רכב לזמן כלשהו שלא לצורך מיידי של העלאה או הורדה של אנשים או טעינה ופריקה. ברגע שהעצירה היא לעניין אחר — זה חנייה.",
+      "en": "Parking is leaving a vehicle standing for any period that is not for immediately setting down or picking up people or loading and unloading goods. Once the stop serves another purpose, it is parking."
+    },
+    "q0016": {
+      "he": "חד-סטרי מוגדר לפי כיוון התנועה: כביש שכלי רכב רשאים לנסוע בו בכיוון אחד בלבד, גם אם רוחבו מאפשר כמה נתיבים.",
+      "en": "One-way is defined by direction of travel: a road on which vehicles may move in one direction only, even if its width allows several lanes."
+    },
+    "q0017": {
+      "he": "זמן הלילה נמדד מהרבע שעה שאחרי שקיעת השמש עד הרבע שעה שלפני הזריחה — לא מהרגע שבו השמש נעלמת.",
+      "en": "Night time runs from a quarter of an hour after sunset to a quarter of an hour before sunrise — not from the moment the sun disappears."
+    },
+    "q0018": {
+      "he": "המדרכה היא חלק הדרך המיועד להולכי רגל. רכב אינו רשאי לנסוע או לחנות עליה, אלא אם סומן אחרת.",
+      "en": "The pavement is the part of the road reserved for pedestrians. A vehicle may not drive or park on it unless marked otherwise."
+    },
+    "q0019": {
+      "he": "מחלף הוא מפגש של דרכים במפלסים שונים, ולכן אינו צומת רגיל: התנועה עוברת מדרך לדרך בלי לחתוך זו את זו.",
+      "en": "An interchange is a meeting of roads at different levels, so it is not an ordinary junction: traffic moves from road to road without crossing."
+    },
+    "q0021": {
+      "he": "תחום הצומת נקבע לפי קווי שפות הכבישים הנפגשים בו (או אבני השפה, או הארכתם המדומה) — ולא לפי מרכז ההצטלבות.",
+      "en": "The junction area is fixed by the edge lines of the roads that meet there (or the kerb stones, or their imaginary extension) — not by the centre of the crossing."
+    },
+    "q0022": {
+      "he": "האחריות לחגור אינה רק של הנוסע: הנהג חייב לוודא שכל נוסע חגור, ולכן האחריות מוטלת על שניהם.",
+      "en": "Responsibility for belting up is not the passenger's alone: the driver must ensure every passenger is belted, so it rests on both."
+    },
+    "q0023": {
+      "he": "מעבר חצייה הוא חלק מהכביש המסומן להולכי רגל. הולך רגל במעבר מקבל קדימות, והנהג חייב לאפשר לו לעבור.",
+      "en": "A pedestrian crossing is the part of the road marked for pedestrians. A pedestrian on it has priority, and the driver must let them cross."
+    },
+    "q0027": {
+      "he": "מתן זכות קדימה פירושו לאפשר לאחר להמשיך בלי לשנות מהירות ובלי לסטות מנתיבו — לא רק להאט או לעצור לידו.",
+      "en": "Giving way means letting the other driver continue without changing speed or leaving their lane — not merely slowing down or stopping beside them."
+    },
+    "q0015": {
+      "he": "התמרור אוסר עצירה בצד שבו הוא מוצב — כולל השול. בצד הנגדי של כביש דו-סטרי האיסור אינו חל מכוחו.",
+      "en": "The sign prohibits stopping on the side where it stands, including the shoulder. It does not apply to the opposite side of a two-way road."
+    },
+    "q0093": {
+      "he": "ברמזור תקין האור הירוק מהבהב שלוש פעמים לפני הצהוב. ההבהוב הוא אזהרה שהאור עומד להתחלף — לא רשות להמשיך.",
+      "en": "In a properly working traffic light the green flashes three times before amber. The flash warns that the light is about to change; it is not permission to continue."
+    },
+    "q0153": {
+      "he": "התמרור קובע מהירות מרבית של 40 קמ״ש. זהו גבול עליון בתנאים אידיאליים, ולא מהירות מומלצת כשהכביש רטוב, חשוך או עמוס.",
+      "en": "The sign sets a maximum speed of 40 km/h. That is an upper limit in ideal conditions, not a recommended speed for a wet, dark or busy road."
+    },
+    "q0180": {
+      "he": "התמרור מחייב לתת זכות קדימה לתנועה שמשמאל — כלומר לאפשר לה להמשיך בלי לשנות מהירות ובלי לסטות.",
+      "en": "The sign requires giving way to traffic from the left — letting it continue without changing speed or deviating."
+    },
+    "q0181": {
+      "he": "ב'עצור' אין די להאט: עוצרים ממש, נותנים קדימה למי שכבר בצומת או מתקרב מכביש אחר, ורק אז ממשיכים.",
+      "en": "At a stop sign, slowing down is not enough: stop completely, give way to anyone already in the junction or approaching from another road, and only then proceed."
+    },
+    "q0182": {
+      "he": "כשקיים קו עצירה, עוצרים לפניו וסמוך אליו — לא לתוך הצומת, ולא במרחק שממנו אי אפשר לראות את התנועה.",
+      "en": "Where a stop line exists, stop just before it — not inside the junction, and not so far back that you cannot see the traffic."
+    },
+    "q0183": {
+      "he": "כשאין קו עצירה, עוצרים במקום שממנו רואים את התנועה בדרך שאליה נכנסים — בלי להיכנס לתחום הצומת.",
+      "en": "Without a stop line, stop where you can see the traffic on the road you are entering — without entering the junction."
+    },
+    "q0184": {
+      "he": "התמרור מורה על עצירה מוחלטת ועל מתן זכות קדימה. הוא אינו 'האט והימשך'.",
+      "en": "The sign orders a full stop and giving way. It is not 'slow down and carry on'."
+    },
+    "q0186": {
+      "he": "אור צהוב מהבהב פירושו 'האט והיזהר': מתקרבים בזהירות, עוצרים אם התנועה מחייבת, ופועלים לפי התמרורים והתנועה סביב.",
+      "en": "A flashing amber means slow down and take care: approach cautiously, stop if the traffic requires it, and follow the signs and the traffic around you."
+    },
+    "q0215": {
+      "he": "התמרור מייעד את המקום לתחנת מוניות: רכב שאינו מונית רשאי לעצור רק כדי להוריד נוסעים, ואסור לו להעמיד את הרכב שם.",
+      "en": "The sign reserves the place for a taxi rank: a vehicle that is not a taxi may stop only to set passengers down, and may not leave the vehicle standing there."
+    },
+    "q0246": {
+      "he": "גם כאן הצהוב המהבהב אינו 'פנוי לדרך': מאטים, נותנים זכות קדימה לפי הכללים והתמרורים, ורק אז ממשיכים.",
+      "en": "Here too the flashing amber is not a free pass: slow down, give way according to the rules and the signs, and only then proceed."
+    },
+    "q0310": {
+      "he": "לתמרורים האלה צורה מיוחדת (משולש או מתומן) כדי שיבלטו, יזוהו מהר ויפורשו נכון גם בראות גרועה.",
+      "en": "These signs have a distinctive shape (triangle or octagon) so that they stand out, are recognised quickly and are read correctly even in poor visibility."
+    },
+    "q0349": {
+      "he": "התמרור מסמן את קצה תחום תחנת המוניות — מהנקודה הזו והלאה אין מדובר עוד בתחום התחנה.",
+      "en": "The sign marks the end of the taxi rank: beyond this point the area is no longer part of the rank."
+    },
+    "q0043": {
+      "he": "בנסיעה לאחור הראות מוגבלת, ולכן מותר ואף רצוי שאדם מבחוץ יכוון את הנהג. האחריות לנהיגה בטוחה נשארת על הנהג.",
+      "en": "Reversing limits visibility, so another person guiding the driver from outside is permitted and advisable. Responsibility for safe driving stays with the driver."
+    },
+    "q0140": {
+      "he": "החובה להאט אינה תלויה במהירות המותרת: מאטים בכל מקום שבו צפויה סכנה לרכב, לעוברי דרך או לרכוש.",
+      "en": "The duty to slow down does not depend on the speed limit: slow wherever danger to the vehicle, to road users or to property is foreseeable."
+    },
+    "q0145": {
+      "he": "בלימת חירום היא אמצעי אחרון, ולכן היא מוצדקת רק כדי למנוע תאונה שאי אפשר למנוע בדרך אחרת.",
+      "en": "Emergency braking is a last resort, so it is justified only to prevent a crash that cannot be avoided another way."
+    },
+    "q0188": {
+      "he": "לפני השתלבות בתנועה מאותתים, בודקים מראות ונקודה עיוורת, ומתחילים לנסוע רק כשאפשר להשתלב בלי לסכן אחרים.",
+      "en": "Before joining traffic: signal, check the mirrors and the blind spot, and move off only when you can merge without endangering others."
+    },
+    "q0194": {
+      "he": "בירידה ארוכה הבלמים מתחממים ומאבדים יעילות. הילוך נמוך (בלימת מנוע) שומר על הבלמים ומאפשר שליטה במהירות.",
+      "en": "On a long descent the brakes heat up and lose effectiveness. A low gear (engine braking) keeps the brakes cooler and the speed under control."
+    },
+    "q0195": {
+      "he": "השול הוא מקום מסוכן לעצירה, ולכן מותר לעצור בו רק לרכב שמבצע עבודות ציבוריות או לרכב צה״ל — לצורך מילוי תפקידם.",
+      "en": "The shoulder is a dangerous place to stop, so only a vehicle carrying out public works, or an IDF vehicle on duty, may stop there."
+    },
+    "q0257": {
+      "he": "כשמופיע רכב ממול באמצע עקיפה, מפסיקים את העקיפה, מאטים וחוזרים מיד לימין. הניסיון 'להספיק' הוא הסיכון הגדול ביותר.",
+      "en": "If a vehicle appears head-on mid-overtake, abandon it: slow down and return to the right immediately. Trying to 'make it' is the greatest risk."
+    },
+    "q0273": {
+      "he": "חניית רכב המונע בגפ״מ מוגבלת לחניונים שהותרו לכך לפי הנחיות המשרד לאיכות הסביבה, בגלל סיכון הדליפה והתפשטות הגז.",
+      "en": "Parking an LPG-fuelled vehicle is limited to car parks approved for it under Ministry of Environmental Protection rules, because of leak and gas-spread risk."
+    },
+    "q0688": {
+      "he": "צמיגים על אותו סרן חייבים להיות במידה שווה ולפי הוראות היצרן. הבדל במידה משנה אחיזה ובלימה ועלול לגרום לאיבוד שליטה.",
+      "en": "Tyres on the same axle must match in size and follow the manufacturer's instructions. A size difference changes grip and braking and can cause loss of control."
+    },
+    "q0689": {
+      "he": "בלם העזר (חנייה) נועד להחזיק את הרכב בנייח, לא לעצור אותו בנסיעה. לבלימה בנסיעה משתמשים בבלם הרגיל.",
+      "en": "The parking (hand) brake is meant to hold the vehicle when stationary, not to stop it while driving. Use the service brake for that."
+    },
+    "q0696": {
+      "he": "חגורות, משענות ראש וכריות אוויר פועלות יחד: החגורה מחזיקה את הגוף, המשענת מונעת צליפת שוט והכרית מרככת את המכה.",
+      "en": "Belts, head restraints and airbags work together: the belt restrains the body, the restraint prevents whiplash and the airbag cushions the impact."
+    },
+    "q0742": {
+      "he": "בעלייה, כשהרכב מתקשה, לחיצה עמוקה ומהירה על דוושת הדלק (קיק-דאון) או מתג ייעודי מורידים הילוך ומחזירים כוח — בלי להזיז את הידית.",
+      "en": "Uphill, when the car struggles, a firm quick press of the accelerator (kick-down) or a dedicated switch selects a lower gear and restores pulling power without moving the lever."
+    },
+    "q0743": {
+      "he": "מעבר מ-P ל-R או D מחייב לחיצה על הבלם ועל כפתור השחרור. זה מונע שילוב הילוך בטעות כשהרכב אינו מאופס.",
+      "en": "Moving from P to R or D requires pressing the brake and the shift-lock release. This prevents an accidental gear selection while the car is not secured."
+    },
+    "q0765": {
+      "he": "שמירת רווח מונעת האצות ובלימות תכופות, ולכן מפחיתה גם צריכת דלק וגם שחיקת בלמים. המשפט נכון.",
+      "en": "Keeping a gap avoids repeated acceleration and braking, so it cuts both fuel use and brake wear. The statement is true."
+    },
+    "q0830": {
+      "he": "רכב היברידי משלב מנוע חשמלי עם מנוע בעירה. המנוע החשמלי מסייע בהאצה ובבלימה ומאפשר נסיעה חשמלית קצרה.",
+      "en": "A hybrid combines an electric motor with a combustion engine. The electric motor assists acceleration and braking and allows short electric-only driving."
+    },
+    "q0886": {
+      "he": "בגלל הסיוע החשמלי והבלימה המשחזרת, רכב היברידי צורך פחות דלק מרכב רגיל באותם תנאים.",
+      "en": "Because of electric assistance and regenerative braking, a hybrid uses less fuel than a conventional car in the same conditions."
+    }
+  }
+}

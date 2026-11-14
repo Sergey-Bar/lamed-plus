@@ -5,7 +5,7 @@ import { LANGUAGES, LANGUAGE_ORDER } from '../lib/i18n/languages'
 import { CATEGORIES } from '../lib/content/categories'
 import { DAILY_GOAL_OPTIONS } from '../lib/progress/onboarding'
 import { useProgress } from '../lib/progress/ProgressProvider'
-import { totalQuestionCount } from '../lib/content/bankStats'
+import { availableQuestionCount, totalQuestionCount } from '../lib/content/bankStats'
 import { Icon } from '../components/Icon'
 import { LogoMark } from '../components/Logo'
 import { CategoryMark } from '../components/CategoryMark'
@@ -35,7 +35,7 @@ export function Onboarding() {
   const [stage, setStage] = useState('starting')
   const [goal, setGoal] = useState(20)
   const [testDate, setTestDate] = useState('')
-  const minDate = useMemo(todayIso, [])
+  const minDate = useMemo(() => todayIso(), [])
   const totalQuestions = totalQuestionCount()
 
   const headings = [
@@ -196,7 +196,9 @@ export function Onboarding() {
                       <CategoryMark id={item.id} tone={active ? 'accent' : 'default'} />
                       <span className="min-w-0 flex-1">
                         <span className="block truncate text-sm font-semibold text-ink">{t(item.nameKey)}</span>
-                        <span className="block text-[11px] text-muted">{item.questionCount} {t('common.questions')}</span>
+                        <span className="block text-[11px] text-muted">
+                          {availableQuestionCount(item.id)} {t('common.questions')}
+                        </span>
                       </span>
                       {active && <Icon name="check-circle" className="h-5 w-5 shrink-0 text-accent" />}
                     </button>

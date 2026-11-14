@@ -1,7 +1,7 @@
 import { expect, type Page } from '@playwright/test'
 
 export interface SeedOptions {
-  language?: 'he' | 'en' | 'ru' | 'ar' | 'fr' | 'es'
+  language?: 'he' | 'en' | 'ru' | 'ar' | 'fr' | 'es' | 'ro' | 'yi' | 'am' | 'pl' | 'lad' | 'ady'
   defaultCategory?: string
   dailyGoal?: number
   testDate?: string | null

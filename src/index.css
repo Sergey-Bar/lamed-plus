@@ -6,16 +6,16 @@
 /* ------------------------------------------------------------------ */
 
 :root {
-  --bg: #f7f8fa;
-  --bg-2: #eef1f4;
+  --bg: #f7f4ed;
+  --bg-2: #efe9df;
   --surface: #ffffff;
-  --surface-2: #f4f6f8;
-  --surface-3: #e9eef2;
-  --ink: #172433;
-  --ink-soft: #33475b;
-  --muted: #657487;
-  --line: #e2e7ec;
-  --line-strong: #ccd6df;
+  --surface-2: #f7f4ee;
+  --surface-3: #ece7de;
+  --ink: #1b1917;
+  --ink-soft: #3c3733;
+  --muted: #7d766c;
+  --line: #efe9e1;
+  --line-strong: #ddd6ca;
 
   --accent: #287c79;
   --accent-strong: #1f6361;
@@ -43,9 +43,9 @@
 
   --radius-sm: 0.375rem;
   --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-  --radius-xl: 1rem;
-  --radius-2xl: 1.25rem;
+  --radius-lg: 0.875rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.5rem;
 }
 
 [data-theme="dark"] {
@@ -130,12 +130,16 @@
   --color-brand-purple: var(--info);
   --color-netflix: var(--danger);
 
+  /* Ethiopic (Amharic) has no bundled webfont, so keep a real fallback chain
+     instead of letting the OS pick a glyph-missing default. */
   --font-sans:
     "Inter Variable", "Heebo Variable", -apple-system, BlinkMacSystemFont,
-    "Segoe UI Variable", "Segoe UI", system-ui, sans-serif;
+    "Segoe UI Variable", "Segoe UI", "Noto Sans Ethiopic", "Nyala", "Ebrima",
+    system-ui, sans-serif;
   --font-display:
     "Heebo Variable", "Inter Variable", -apple-system, BlinkMacSystemFont,
-    "Segoe UI Variable", "Segoe UI", system-ui, sans-serif;
+    "Segoe UI Variable", "Segoe UI", "Noto Sans Ethiopic", "Nyala", "Ebrima",
+    system-ui, sans-serif;
   --font-hebrew:
     "Heebo Variable", "Inter Variable", "Segoe UI", Arial, system-ui, sans-serif;
   --font-arabic:
@@ -367,14 +371,10 @@
 
   .card {
     position: relative;
-    background: linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--surface) 93%, var(--surface-raised)) 0%,
-      var(--surface) 46%
-    );
+    background: var(--surface);
     border: 1px solid var(--line);
     border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-sm), inset 0 1px 0 var(--card-highlight);
+    box-shadow: 0 10px 28px -24px rgb(43 36 26 / 0.5), var(--shadow-sm);
     transition:
       border-color var(--motion-base),
       box-shadow var(--motion-base),
@@ -383,14 +383,10 @@
 
   .card-premium {
     position: relative;
-    background: linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--surface) 93%, var(--surface-raised)) 0%,
-      var(--surface) 46%
-    );
+    background: var(--surface);
     border: 1px solid var(--line);
     border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-sm), inset 0 1px 0 var(--card-highlight);
+    box-shadow: 0 10px 28px -24px rgb(43 36 26 / 0.5), var(--shadow-sm);
     transition:
       border-color var(--motion-base),
       box-shadow var(--motion-base),
@@ -431,7 +427,93 @@
 
   .row-card:hover {
     border-color: var(--line-strong);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 16px 34px -26px rgb(43 36 26 / 0.55), var(--shadow-sm);
+  }
+
+  /* Soft illustration-style tiles and the summary strip from the reference. */
+  .icon-tile {
+    display: grid;
+    place-items: center;
+    width: 3.15rem;
+    height: 3.15rem;
+    border-radius: 1rem;
+    background: var(--surface-2);
+    color: var(--ink-soft);
+  }
+
+  .tint-teal {
+    background: #e4f1ee;
+    color: #1f6f6b;
+  }
+
+  .tint-amber {
+    background: #fdf1da;
+    color: #9a6c14;
+  }
+
+  .tint-blue {
+    background: #e6eefa;
+    color: #2f6fad;
+  }
+
+  .tint-rose {
+    background: #fbe8e9;
+    color: #b74e52;
+  }
+
+  .tint-violet {
+    background: #efe9f8;
+    color: #6a4f9f;
+  }
+
+  .tint-sage {
+    background: #e9f1e3;
+    color: #4a7539;
+  }
+
+  .tint-stone {
+    background: #f1ece3;
+    color: #7f6135;
+  }
+
+  [data-theme="dark"] .icon-tile {
+    background: rgb(255 255 255 / 0.06);
+  }
+
+  [data-theme="dark"] .tint-teal,
+  [data-theme="dark"] .tint-amber,
+  [data-theme="dark"] .tint-blue,
+  [data-theme="dark"] .tint-rose,
+  [data-theme="dark"] .tint-violet,
+  [data-theme="dark"] .tint-sage,
+  [data-theme="dark"] .tint-stone {
+    background: rgb(255 255 255 / 0.07);
+    color: var(--ink);
+  }
+
+  .stat-tile {
+    padding: 0.7rem 0.85rem 0.75rem;
+    text-align: start;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: 0 10px 24px -24px rgb(43 36 26 / 0.5);
+  }
+
+  .stat-tile-label {
+    font-size: 0.7rem;
+    font-weight: 650;
+    color: var(--muted);
+  }
+
+  .stat-tile-value {
+    margin-top: 0.15rem;
+    font-variant-numeric: tabular-nums;
+    font-family: var(--font-display, inherit);
+    font-size: 1.4rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: var(--ink);
   }
 
   .row-card:hover::before {
@@ -801,10 +883,11 @@
     bottom: 0;
     z-index: 40;
     border-top: 1px solid var(--line);
-    background: color-mix(in srgb, var(--surface) 92%, transparent);
+    border-radius: 1.75rem 1.75rem 0 0;
+    background: var(--surface);
     backdrop-filter: blur(20px) saturate(1.08);
     -webkit-backdrop-filter: blur(20px) saturate(1.08);
-    box-shadow: 0 -16px 34px -30px rgb(23 36 51 / 0.45);
+    box-shadow: 0 -14px 32px -26px rgb(43 36 26 / 0.45);
   }
 
   @media (min-width: 1024px) {
@@ -812,6 +895,7 @@
       display: none;
     }
   }
+
 
   .bottom-nav-item {
     position: relative;
@@ -831,19 +915,12 @@
   }
 
   .bottom-nav-item[aria-current="page"] {
-    color: var(--accent);
+    color: var(--ink);
+    background: var(--surface-3);
   }
 
   .bottom-nav-item[aria-current="page"]::after {
-    content: "";
-    position: absolute;
-    inset-block-start: 0;
-    inset-inline-start: 50%;
-    width: 1.35rem;
-    height: 2px;
-    border-radius: 999px;
-    background: var(--accent);
-    translate: -50% 0;
+    content: none;
   }
 
   [data-theme="dark"] .bottom-nav-item[aria-current="page"] {
@@ -863,8 +940,7 @@
   }
 
   .bottom-nav-item[aria-current="page"] .bottom-nav-icon {
-    background: var(--accent-soft);
-    transform: translateY(-1px);
+    background: transparent;
   }
 
   /* Content patterns ------------------------------------------------ */
@@ -1056,9 +1132,7 @@
   }
 
   .readiness-panel {
-    background:
-      radial-gradient(circle at 16% 12%, var(--accent-soft), transparent 46%),
-      var(--surface);
+    background: var(--surface);
   }
 
   .final-cta {

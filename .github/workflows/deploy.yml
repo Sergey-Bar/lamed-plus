@@ -1,31 +1,17 @@
-name: Build & Deploy
+name: Deploy
 
 on:
   push:
     branches: [main]
-  pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
 
+# Validation (data, lint, typecheck, unit and E2E tests) runs in ci.yml.
+# This workflow only builds and publishes the production bundle to GitHub Pages.
 jobs:
-  validate:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - run: npm run validate:data
-      - run: npm run lint
-      - run: npm test
-      - run: npm run build
-
   deploy:
-    if: github.ref == 'refs/heads/main'
-    needs: validate
     runs-on: ubuntu-latest
     permissions:
       pages: write
@@ -33,6 +19,9 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    concurrency:
+      group: pages
+      cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

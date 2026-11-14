@@ -10,7 +10,7 @@ import {
   subjectProgress,
 } from './curriculum'
 
-const TRANSLATED = ['en', 'ru', 'ar', 'fr', 'es'] as const
+const TRANSLATED = ['en', 'ru', 'ar', 'fr', 'es', 'ro', 'pl', 'yi', 'am', 'lad'] as const
 
 describe('lesson localization', () => {
   it.each(TRANSLATED)('%s translates every lesson with the same structure', (language) => {
@@ -34,6 +34,10 @@ describe('lesson localization', () => {
     expect(localizeLesson(LESSONS[0], 'he')).toBe(LESSONS[0])
   })
 
+  it('falls back to Hebrew lesson content for a new UI language', () => {
+    expect(localizeLesson(LESSONS[0], 'ady').title).toBe(LESSONS[0].title)
+  })
+
   it.each(TRANSLATED)('%s translates every subject insight', (language) => {
     for (const subjectId of Object.keys(SUBJECT_META)) {
       const insight = getSubjectInsight(subjectId, language)
@@ -45,6 +49,10 @@ describe('lesson localization', () => {
 
   it('falls back to the Hebrew insight for an unknown subject', () => {
     expect(getSubjectInsight('unknown', 'en')).toBe('')
+  })
+
+  it('falls back to the Hebrew insight for a new UI language', () => {
+    expect(getSubjectInsight('laws', 'ady')).toBe(SUBJECT_META['laws'].insights)
   })
 })
 

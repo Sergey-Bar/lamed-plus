@@ -44,7 +44,7 @@ export function LanguageMenu() {
         <div
           role="listbox"
           aria-label={t('common.language')}
-          className="animate-pop-in absolute end-0 top-[calc(100%+0.5rem)] z-50 w-44 overflow-hidden rounded-xl border border-line bg-surface p-1 shadow-[var(--shadow-lg)]"
+          className="animate-pop-in absolute end-0 top-[calc(100%+0.5rem)] z-50 max-h-[min(70vh,28rem)] w-44 overflow-y-auto rounded-xl border border-line bg-surface p-1 shadow-[var(--shadow-lg)]"
         >
           {LANGUAGE_ORDER.map((id) => {
             const active = id === language

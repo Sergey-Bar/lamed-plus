@@ -3,13 +3,14 @@ import { AR_EXTRA } from './extra.ar'
 import { ES_EXTRA } from './extra.es'
 import { FR_EXTRA } from './extra.fr'
 import { RU_EXTRA } from './extra.ru'
+import { FULL_EXTRA } from './full'
 
 /**
  * Supplemental app catalog for LAMED+ surfaces added on top of the
  * ministry content catalogs. Existing catalog keys win for content, while
  * these keys intentionally extend them.
  */
-export const EXTRA_CATALOG: Partial<Record<LanguageId, I18nCatalog>> = {
+const BASE_EXTRA: Partial<Record<LanguageId, I18nCatalog>> = {
   he: {
     'nav.learn': 'למידה',
     'nav.exams': 'מבחני דמה',
@@ -92,7 +93,7 @@ export const EXTRA_CATALOG: Partial<Record<LanguageId, I18nCatalog>> = {
     'learn.practiceBody': 'שאלות אמיתיות מהמאגר הרשמי על הנושא שלמדת.',
     'learn.startPractice': 'לתרגול הנושא',
     'learn.checkTitle': 'בדיקת ידע',
-    'learn.checkBody': 'סבב קצר עם משוב מיידי והסבר לכל תשובה.',
+    'learn.checkBody': 'סבב קצר עם משוב מיידי והסבר לכל טעות.',
     'learn.note': 'תוכן הלימוד נכתב בעברית ומבוסס על עקרונות משרד התחבורה. יש לאמת פרטים מחייבים מול החוק המעודכן.',
     'learn.lesson': 'שיעור {current} מתוך {total}',
     'learn.of': 'מתוך',
@@ -178,7 +179,7 @@ export const EXTRA_CATALOG: Partial<Record<LanguageId, I18nCatalog>> = {
     'profile.settings': 'הגדרות',
     'profile.language': 'שפה',
     'profile.dataTitle': 'הנתונים שלך',
-    'profile.dataBody': 'אין חשבון ואין שרת. כל ההתקדמות נשמרת מקומית במכשיר ויכולה להיות מיוצאת או נמחקת.',
+    'profile.dataBody': 'כל ההתקדמות נשמרת במכשיר. חשבון וסנכרון בין מכשירים יגיעו בקרוב, ואפשר לייצא או למחוק בכל רגע.',
     'profile.reset': 'מחיקת הנתונים',
     'ads.label': 'ממומן',
     'ads.title': 'בדיקת רכב לפני הטסט',
@@ -199,7 +200,7 @@ export const EXTRA_CATALOG: Partial<Record<LanguageId, I18nCatalog>> = {
     'settings.reducedMotion': 'תנועה מופחתת',
     'settings.reducedMotionBody': 'האפליקציה מכבדת את הגדרת המערכת. אפשר לכבות אנימציות גם דרך הגדרות המכשיר.',
     'settings.localTitle': 'הנתונים והחשבון',
-    'settings.localBody': 'LAMED+ פועלת ללא חשבון וללא שרת. ההתקדמות נשמרת במכשיר.',
+    'settings.localBody': 'LAMED+ פועלת כברירת מחדל בלי חשבון. ההתקדמות נשמרת במכשיר; חשבון וסנכרון בין מכשירים יגיעו בקרוב.',
   },
   en: {
     'nav.learn': 'Learn',
@@ -283,7 +284,7 @@ export const EXTRA_CATALOG: Partial<Record<LanguageId, I18nCatalog>> = {
     'learn.practiceBody': 'Real questions from the official bank on what you just learned.',
     'learn.startPractice': 'Practise this subject',
     'learn.checkTitle': 'Knowledge check',
-    'learn.checkBody': 'A short round with instant feedback and an explanation for every answer.',
+    'learn.checkBody': 'A short round with instant feedback and an explanation for every mistake.',
     'learn.note': 'Lesson content is written in Hebrew and based on Ministry of Transport principles. Verify binding details against current law.',
     'learn.lesson': 'Lesson {current} of {total}',
     'learn.of': 'of',
@@ -369,7 +370,7 @@ export const EXTRA_CATALOG: Partial<Record<LanguageId, I18nCatalog>> = {
     'profile.settings': 'Settings',
     'profile.language': 'Language',
     'profile.dataTitle': 'Your data',
-    'profile.dataBody': 'No account and no server. All progress is stored locally and can be exported or deleted.',
+    'profile.dataBody': 'All progress stays on this device. An account and sync between devices are coming soon; you can export or delete at any time.',
     'profile.reset': 'Delete data',
     'ads.label': 'Sponsored',
     'ads.title': 'Vehicle check before the test',
@@ -396,6 +397,66 @@ export const EXTRA_CATALOG: Partial<Record<LanguageId, I18nCatalog>> = {
   ar: AR_EXTRA,
   fr: FR_EXTRA,
   es: ES_EXTRA,
+  ro: {
+    'nav.learn': 'Învață',
+    'nav.exams': 'Examene simulate',
+    'nav.games': 'Jocuri',
+    'nav.profile': 'Profil',
+    'nav.signs': 'Indicatoare',
+    'app.tagline': 'Învață corect. Ajungi în siguranță.',
+    'common.more': 'Mai mult',
+    'readiness.title': 'Pregătire pentru examen',
+    'offline.banner': 'Fără conexiune — învățarea continuă de pe dispozitiv.',
+  },
+  pl: {
+    'nav.learn': 'Nauka',
+    'nav.exams': 'Egzaminy próbne',
+    'nav.games': 'Gry',
+    'nav.profile': 'Profil',
+    'nav.signs': 'Znaki',
+    'app.tagline': 'Ucz się dobrze. Dojedź bezpiecznie.',
+    'common.more': 'Więcej',
+    'readiness.title': 'Gotowość do egzaminu',
+    'offline.banner': 'Brak połączenia — nauka trwa dalej na tym urządzeniu.',
+  },
+  yi: {
+    'nav.learn': 'לערנען',
+    'nav.exams': 'מאקבחינות',
+    'nav.games': 'שפילן',
+    'nav.profile': 'פּראָפיל',
+    'nav.signs': 'צייכנס',
+    'app.tagline': 'לערן ריכטיק. קום זיכער.',
+    'common.more': 'מער',
+    'readiness.title': 'גרייטלקייט פֿאַר בחינה',
+    'offline.banner': 'נישטא קיין פֿאַרבינדונג — מען לערנט ווייטער פֿון דעם מכשיר.',
+  },
+  am: {
+    'nav.learn': 'ትምህርት',
+    'nav.exams': 'የሙከራ ፈተናዎች',
+    'nav.games': 'ጨዋታዎች',
+    'nav.profile': 'መገለጫ',
+    'nav.signs': 'ምልክቶች',
+    'app.tagline': 'በትክክል ይማሩ። በደህንነት ይድረሱ።',
+    'common.more': 'ተጨማሪ',
+    'readiness.title': 'ለፈተና ዝግጁነት',
+    'offline.banner': 'ከመስመር ውጭ — ትምህርቱ በመሣሪያው ላይ ይቀጥላል።',
+  },
+  lad: {
+    'nav.learn': 'Ambezar',
+    'nav.exams': 'Egzamenes de prova',
+    'nav.games': 'Juegos',
+    'nav.profile': 'Perfil',
+    'nav.signs': 'Señales',
+    'app.tagline': 'Ambeza bien. Yega seguro.',
+    'common.more': 'Mas',
+    'readiness.title': 'Preparasion para el egzamen',
+    'offline.banner': 'Sin koneksión — el estudio kontinua en este aparato.',
+  },
 }
 
-export const EXTRA_FALLBACK: I18nCatalog = EXTRA_CATALOG.en ?? {}
+export const EXTRA_CATALOG: Partial<Record<LanguageId, I18nCatalog>> = {
+  ...BASE_EXTRA,
+  ...FULL_EXTRA,
+}
+
+export const EXTRA_FALLBACK: I18nCatalog = EXTRA_CATALOG.he ?? {}

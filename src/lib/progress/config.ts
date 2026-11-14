@@ -7,6 +7,8 @@ export const GAME = {
   livesRegenMs: 30 * 60 * 1000,
   energyPerCorrect: 1,
   maxEnergy: 10,
+  maxShield: 3,
+  freezeSeconds: 15,
   powerups: {
     hint: 1,
     fifty: 2,
@@ -23,7 +25,6 @@ export const GAME = {
     weightWindow: 50,
   },
   practiceRoundSize: 10,
-  practiceTimerSeconds: 120,
 } as const
 
 export type PowerupKind = keyof typeof GAME.powerups

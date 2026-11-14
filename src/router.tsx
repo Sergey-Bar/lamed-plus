@@ -22,6 +22,7 @@ const Profile = React.lazy(() => import('./pages/Profile'))
 const Settings = React.lazy(() => import('./pages/Settings'))
 const LanguageSettings = React.lazy(() => import('./pages/LanguageSettings'))
 const NotFound = React.lazy(() => import('./pages/NotFound'))
+const Legal = React.lazy(() => import('./pages/Legal'))
 
 export function AppRoutes() {
   return (
@@ -36,6 +37,9 @@ export function AppRoutes() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="welcome" element={<Onboarding />} />
+        <Route path="privacy" element={<Legal doc="privacy" />} />
+        <Route path="terms" element={<Legal doc="terms" />} />
+        <Route path="accessibility" element={<Legal doc="accessibility" />} />
         <Route element={<Layout />}>
           <Route path="app" element={<Home />} />
           <Route path="learn" element={<Learn />} />

@@ -69,7 +69,7 @@ export function Stats() {
 
       <div className="grid grid-cols-2 gap-2.5 lg:grid-cols-4">
         {[
-          { icon: 'clipboard' as const, value: answeredCount, label: t('stats.answered') },
+          { icon: 'clipboard' as const, value: categoryEvents.length, label: t('stats.answered') },
           { icon: 'target' as const, value: `${accuracy}%`, label: t('stats.overall') },
           { icon: 'chart' as const, value: `${Math.round(report?.components.coverage ?? 0)}%`, label: t('stats.coverage') },
           { icon: 'exam' as const, value: categoryExams.length, label: t('exams.total') },
@@ -149,12 +149,12 @@ export function Stats() {
         <div className="mt-4 flex h-28 items-end gap-1.5" role="img" aria-label={t('stats.activity')}>
           {days.map((day) => (
             <div key={day.key} className="flex min-w-0 flex-1 flex-col items-center justify-end gap-1">
-              <span className="tnum text-[9px] font-semibold text-muted">{day.count || ''}</span>
+              <span className="tnum text-[11px] font-semibold text-muted">{day.count || ''}</span>
               <span
                 className="w-full rounded-t-[3px] bg-accent/80"
                 style={{ height: `${Math.max(3, (day.count / max) * 82)}px` }}
               />
-              <span className="text-[9px] font-semibold text-muted">{day.label}</span>
+              <span className="text-[11px] font-semibold text-muted">{day.label}</span>
             </div>
           ))}
         </div>

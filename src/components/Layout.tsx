@@ -1,15 +1,33 @@
+import { useEffect } from 'react'
 import { NavLink, Navigate, Outlet, useLocation } from 'react-router-dom'
 import { useI18n } from '../lib/i18n/useI18n'
+import { stripBidiIsolates } from '../lib/i18n/bidi'
 import { useProgress } from '../lib/progress/ProgressProvider'
-import { MobileNav, PRIMARY_NAV } from './MobileNav'
+import { MobileNav } from './MobileNav'
+import { PRIMARY_NAV } from './navItems'
 import { QuotaBanner } from './QuotaBanner'
 import { RouteTransition } from './RouteTransition'
-import { SwUpdateBanner } from './SwUpdateBanner'
 import { OfflineBanner } from './OfflineBanner'
 import { Icon } from './Icon'
 import { Logo, LogoMark } from './Logo'
 import { ThemeToggle } from './ThemeToggle'
 import { LanguageMenu } from './LanguageMenu'
+import { scrollToId } from '../lib/scrollTo'
+
+const TITLE_KEYS: Array<[RegExp, string]> = [
+  [/^\/practice/, 'practice.title'],
+  [/^\/review/, 'review.title'],
+  [/^\/exams/, 'nav.exam'],
+  [/^\/exam\//, 'exam.introTitle'],
+  [/^\/learn/, 'nav.study'],
+  [/^\/signs/, 'nav.signs'],
+  [/^\/games/, 'nav.games'],
+  [/^\/stats/, 'stats.title'],
+  [/^\/achievements/, 'dash.ach'],
+  [/^\/profile/, 'nav.profile'],
+  [/^\/settings/, 'settings.title'],
+  [/^\/app/, 'nav.home'],
+]
 
 const TOOLS = [
   { to: '/practice', icon: 'practice', key: 'nav.practice' },
@@ -22,6 +40,13 @@ export function Layout() {
   const { ready, onboarded, displayName, daily, dailyGoal, streak } = useProgress()
   const location = useLocation()
   const focusMode = /^\/exam\/[^/]+$/.test(location.pathname)
+
+  // A single global document title made every tab, bookmark and history entry
+  // look identical. Name the current route instead.
+  useEffect(() => {
+    const key = TITLE_KEYS.find(([pattern]) => pattern.test(location.pathname))?.[1]
+    if (key) document.title = stripBidiIsolates(`${t(key)} · ${t('app.name')}`)
+  }, [location.pathname, t])
 
   if (!ready) {
     return (
@@ -51,13 +76,12 @@ export function Layout() {
             </div>
           </div>
         </header>
-        <main id="main" className="app-container w-full py-4 pb-10 sm:py-6">
+        <main id="main" tabIndex={-1} className="app-container w-full pt-4 pb-10 sm:pt-6">
           <OfflineBanner />
           <RouteTransition>
             <Outlet />
           </RouteTransition>
         </main>
-        <SwUpdateBanner />
       </div>
     )
   }
@@ -66,6 +90,10 @@ export function Layout() {
     <div className="shell">
       <a
         href="#main"
+        onClick={(event) => {
+          event.preventDefault()
+          scrollToId('main', { focus: true })
+        }}
         className="sr-only focus:not-sr-only focus:fixed focus:start-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:font-bold focus:text-accent-ink"
       >
         {t('common.skipToContent')}
@@ -165,7 +193,7 @@ export function Layout() {
           </div>
         </header>
 
-        <main id="main" className="app-container w-full py-5 pb-28 sm:py-7 lg:pb-12">
+        <main id="main" tabIndex={-1} className="app-container w-full pt-5 pb-28 sm:pt-7 lg:pb-12">
           <QuotaBanner />
           <OfflineBanner />
           <RouteTransition>
@@ -175,7 +203,6 @@ export function Layout() {
       </div>
 
       <MobileNav />
-      <SwUpdateBanner />
     </div>
   )
 }

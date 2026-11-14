@@ -5,7 +5,9 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
+  // One shared dev server: too many parallel contexts make the heavy bank
+  // routes flaky (one intermittent onboarding timeout). CI stays serial.
+  workers: process.env.CI ? 1 : 4,
   timeout: 45000,
   expect: { timeout: 10000 },
   reporter: [['list'], ['html', { open: 'never' }]],

@@ -36,6 +36,12 @@ export function Review() {
   const [lastCorrect, setLastCorrect] = useState(false)
   const [correctCount, setCorrectCount] = useState(0)
   const [finished, setFinished] = useState(false)
+  const [now, setNow] = useState(() => Date.now())
+
+  useEffect(() => {
+    const id = window.setInterval(() => setNow(Date.now()), 60000)
+    return () => window.clearInterval(id)
+  }, [])
 
   useEffect(() => {
     let cancelled = false
@@ -54,7 +60,6 @@ export function Review() {
   }, [category.id])
 
   const { due, fresh, mastered } = useMemo(() => {
-    const now = Date.now()
     const dueList: Question[] = []
     const freshList: Question[] = []
     let masteredCount = 0
@@ -69,7 +74,7 @@ export function Review() {
     }
     dueList.sort((a, b) => (srs[a.id]?.dueTs ?? 0) - (srs[b.id]?.dueTs ?? 0))
     return { due: dueList, fresh: freshList, mastered: masteredCount }
-  }, [bank, srs])
+  }, [bank, srs, now])
 
   function startSession(questions: Question[]) {
     if (questions.length === 0) return

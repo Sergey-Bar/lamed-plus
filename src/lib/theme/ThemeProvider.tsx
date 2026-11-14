@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import type { ReactNode } from 'react'
 import { get, put } from '../store/store'
-import { ThemeContext, THEME_STORAGE_KEY, applyTheme, resolveTheme } from './context'
+import { ThemeContext, THEME_STORAGE_KEY, applyTheme } from './context'
 import type { ResolvedTheme, ThemeChoice } from './context'
 
 const PREF_KEY = 'theme'
@@ -13,9 +13,26 @@ function readLocalTheme(): ThemeChoice {
   return 'light'
 }
 
+function useSystemPrefersDark(): boolean {
+  const [prefersDark, setPrefersDark] = useState(() =>
+    typeof window === 'undefined'
+      ? false
+      : window.matchMedia('(prefers-color-scheme: dark)').matches,
+  )
+  useEffect(() => {
+    const media = window.matchMedia('(prefers-color-scheme: dark)')
+    const onChange = () => setPrefersDark(media.matches)
+    media.addEventListener('change', onChange)
+    return () => media.removeEventListener('change', onChange)
+  }, [])
+  return prefersDark
+}
+
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setThemeState] = useState<ThemeChoice>(readLocalTheme)
-  const [resolved, setResolved] = useState<ResolvedTheme>(() => resolveTheme(readLocalTheme()))
+  const systemPrefersDark = useSystemPrefersDark()
+  const resolved: ResolvedTheme =
+    theme === 'system' ? (systemPrefersDark ? 'dark' : 'light') : theme
 
   useEffect(() => {
     let cancelled = false
@@ -31,17 +48,9 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   }, [])
 
   useEffect(() => {
-    setResolved(applyTheme(theme))
+    applyTheme(theme)
     window.localStorage.setItem(THEME_STORAGE_KEY, theme)
-  }, [theme])
-
-  useEffect(() => {
-    if (theme !== 'system') return
-    const media = window.matchMedia('(prefers-color-scheme: dark)')
-    const onChange = () => setResolved(applyTheme('system'))
-    media.addEventListener('change', onChange)
-    return () => media.removeEventListener('change', onChange)
-  }, [theme])
+  }, [theme, resolved])
 
   const setTheme = useCallback((next: ThemeChoice) => {
     setThemeState(next)

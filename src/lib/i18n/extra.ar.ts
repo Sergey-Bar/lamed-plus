@@ -83,7 +83,7 @@ export const AR_EXTRA: I18nCatalog = {
   'learn.practiceBody': 'أسئلة حقيقية من البنك الرسمي عن الموضوع الذي تعلمته.',
   'learn.startPractice': 'تدرّب على الموضوع',
   'learn.checkTitle': 'فحص المعرفة',
-  'learn.checkBody': 'جولة قصيرة مع تغذية راجعة فورية وشرح لكل إجابة.',
+  'learn.checkBody': 'جولة قصيرة مع تغذية راجعة فورية وشرح لكل خطأ.',
   'learn.note': 'محتوى الدروس مكتوب بالعبرية ومبني على مبادئ وزارة النقل. تحقّق من التفاصيل الملزمة وفق القانون الحالي.',
   'learn.lesson': 'الدرس {current} من {total}',
   'learn.of': 'من',

@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import { useI18n } from '../lib/i18n/useI18n'
 import { Icon } from './Icon'
+import { scrollToId } from '../lib/scrollTo'
 
-export function useIsOnline(): boolean {
+function useIsOnline(): boolean {
   const [online, setOnline] = useState(() =>
     typeof navigator === 'undefined' ? true : navigator.onLine,
   )
@@ -21,21 +22,27 @@ export function useIsOnline(): boolean {
 export function OfflineBanner() {
   const { t } = useI18n()
   const online = useIsOnline()
-  const [wasOffline, setWasOffline] = useState(false)
+  const [wasOffline, setWasOffline] = useState(!online)
   const [showRestored, setShowRestored] = useState(false)
+  const [prevOnline, setPrevOnline] = useState(online)
 
-  useEffect(() => {
+  // Adjust derived UI state during render instead of syncing it in an effect.
+  if (prevOnline !== online) {
+    setPrevOnline(online)
     if (!online) {
       setWasOffline(true)
       setShowRestored(false)
-      return
+    } else if (wasOffline) {
+      setShowRestored(true)
+      setWasOffline(false)
     }
-    if (!wasOffline) return
-    setShowRestored(true)
+  }
+
+  useEffect(() => {
+    if (!showRestored) return
     const id = window.setTimeout(() => setShowRestored(false), 3200)
-    setWasOffline(false)
     return () => window.clearTimeout(id)
-  }, [online, wasOffline])
+  }, [showRestored])
 
   if (online && !showRestored) return null
 
@@ -56,7 +63,14 @@ export function OfflineBanner() {
         {online ? t('offline.ready') : t('offline.banner')}
       </p>
       {!online && (
-        <a href="#main" className="text-xs font-bold text-ink underline underline-offset-2">
+        <a
+          href="#main"
+          onClick={(event) => {
+            event.preventDefault()
+            scrollToId('main', { focus: true })
+          }}
+          className="text-xs font-bold text-ink underline underline-offset-2"
+        >
           {t('common.continue')}
         </a>
       )}

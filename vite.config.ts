@@ -47,12 +47,15 @@ export default defineConfig({
         // The official bank and its images are content, not app shell. Keeping
         // them out of the install-time precache makes the first visit much
         // lighter; each topic chunk and image is cached on demand instead.
+        // Bank chunks are `laws-01-*.js`; matching `laws-*` also swallowed the
+        // `Signs-*.js` page chunk (globs here are case-insensitive), which broke
+        // offline navigation to that screen.
         globIgnores: [
-          '**/laws-*.js',
-          '**/signs-*.js',
-          '**/safety-*.js',
-          '**/vehicle-*.js',
-          '**/a3-*.js',
+          '**/laws-??-*.js',
+          '**/signs-??-*.js',
+          '**/safety-??-*.js',
+          '**/vehicle-??-*.js',
+          '**/a3-??-*.js',
           '**/assets/official/**',
         ],
         runtimeCaching: [
@@ -89,8 +92,21 @@ export default defineConfig({
     include: ['src/**/*.test.{ts,tsx}'],
     setupFiles: ['src/test/setup.ts'],
     coverage: {
-      // CI reads coverage/coverage-summary.json to enforce the 80% line threshold.
+      // Measure the logic layer, not only the files a test happens to import.
+      // Without `include`, the reported percentage covered ~2% of the codebase
+      // and the CI gate could never fail for the code that matters.
+      include: ['src/lib/**/*.{ts,tsx}'],
+      exclude: ['src/lib/**/*.test.ts', 'src/lib/**/*.test.tsx'],
       reporter: ['text', 'json-summary', 'html'],
+      // Honest ratchet: 49.5% of the logic layer is covered today. The old
+      // "89.6%" only counted the ~2% of files a test happened to import.
+      // Raise these numbers as tests land; never lower them.
+      thresholds: {
+        lines: 48,
+        statements: 48,
+        functions: 41,
+        branches: 48,
+      },
     },
   },
   build: {

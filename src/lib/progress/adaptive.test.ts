@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { adaptiveWeight, pickAdaptive } from './adaptive'
-import type { MasteryRecord } from './types'
+import { adaptiveWeight, pickAdaptive, reviewWeight } from './adaptive'
+import type { MasteryRecord, SrsRecord } from './types'
 
 const record = (correct: number, answered: number): MasteryRecord => ({
   id: 'B:laws',
@@ -50,5 +50,45 @@ describe('adaptive practice', () => {
     // A high draw lands in the last, heaviest slice (the weak topic).
     const picked = pickAdaptive(questions, mastery, 'B', 1, () => 0.99)
     expect(picked[0].topicId).toBe('laws')
+  })
+})
+
+const NOW = new Date('2026-03-15T12:00:00Z').getTime()
+const DAY = 86400000
+
+const srs = (overrides: Partial<SrsRecord>): SrsRecord => ({
+  id: 'q1',
+  intervalDays: 3,
+  dueTs: NOW + DAY,
+  lapses: 0,
+  lastSeenTs: NOW - 2 * DAY,
+  ...overrides,
+})
+
+describe('per-question review weighting', () => {
+  it('prefers unseen questions over scheduled ones', () => {
+    expect(reviewWeight(undefined, NOW)).toBeGreaterThan(reviewWeight(srs({}), NOW))
+  })
+
+  it('suppresses a question answered moments ago', () => {
+    const justSeen = srs({ lastSeenTs: NOW - 1000, dueTs: NOW + 3 * DAY })
+    expect(reviewWeight(justSeen, NOW)).toBeLessThan(reviewWeight(undefined, NOW))
+  })
+
+  it('brings due and lapsed questions back first', () => {
+    const overdue = srs({ dueTs: NOW - DAY, lapses: 2 })
+    expect(reviewWeight(overdue, NOW)).toBeGreaterThan(reviewWeight(srs({}), NOW))
+  })
+
+  it('avoids repeating a question seen in the same session', () => {
+    const questions = [
+      { id: 'seen', topicId: 'laws' },
+      { id: 'fresh', topicId: 'laws' },
+    ]
+    const state: Record<string, SrsRecord> = {
+      seen: srs({ id: 'seen', lastSeenTs: NOW - 1000, dueTs: NOW + 5 * DAY }),
+    }
+    const picked = pickAdaptive(questions, {}, 'B', 1, () => 0.99, state, NOW)
+    expect(picked[0].id).toBe('fresh')
   })
 })

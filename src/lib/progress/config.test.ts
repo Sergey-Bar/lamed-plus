@@ -48,7 +48,6 @@ describe('progress config', () => {
 
     it('has correct practice settings', () => {
       expect(GAME.practiceRoundSize).toBe(10)
-      expect(GAME.practiceTimerSeconds).toBe(120)
     })
   })
 

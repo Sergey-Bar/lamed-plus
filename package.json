@@ -1,8 +1,11 @@
 {
-  "name": "theoria",
+  "name": "lamed-plus",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "vite",
     "build": "npm run validate:data && tsc -b && vite build",
@@ -15,17 +18,14 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "test:e2e": "playwright test",
+    "audit:offline": "node scripts/check-offline.mjs",
     "analyze": "vite-bundle-analyzer dist",
     "preview": "vite preview",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "oxlint --fix",
-      "prettier --write"
-    ],
-    "*.json": [
-      "prettier --write"
+      "oxlint --fix"
     ]
   },
   "dependencies": {
@@ -33,6 +33,7 @@
     "@fontsource-variable/inter": "^5.3.0",
     "@fontsource-variable/noto-sans-arabic": "^5.3.0",
     "@phosphor-icons/react": "^2.1.10",
+    "@supabase/supabase-js": "^2.119.0",
     "idb": "^8.0.4",
     "lucide-react": "^1.72.0",
     "react": "^19.3.1",
@@ -50,6 +51,7 @@
     "fake-indexeddb": "^6.2.8",
     "husky": "^9.1.7",
     "jsdom": "^31.0.0",
+    "lint-staged": "^17.6.0",
     "oxlint": "^1.90.0",
     "prettier": "^3.9.10",
     "sharp": "^0.35.5",

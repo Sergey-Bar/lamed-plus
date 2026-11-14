@@ -1,0 +1,354 @@
+{
+  "lessons": {
+    "laws-speed": {
+      "title": "Prędkość, droga hamowania i utrzymanie odstępu",
+      "summary": "Dlaczego ograniczenie prędkości jest pułapem, a nie celem i jak zbudować prawdziwy dystans bezpieczeństwa?",
+      "blocks": [
+        {
+          "heading": "Prędkość to decyzja, a nie nawyk",
+          "body": "Maksymalna prędkość podana na znaku lub zgodnie z prawem jest górną granicą w idealnych warunkach. Na mokrej drodze, w ciemności, we mgle lub przy ograniczonej widoczności bezpieczna prędkość jest niższa. Jazda z dozwoloną prędkością nie gwarantuje zatrzymania się na czas."
+        },
+        {
+          "heading": "Trzy odległości, które powinieneś znać",
+          "body": "Droga reakcji to droga przebyta od momentu wykrycia zagrożenia do momentu naciśnięcia hamulca. Droga hamowania to droga przebyta przez samochód od momentu hamowania do zatrzymania. Razem tworzą drogę hamowania.",
+          "bullets": [
+            "Im większa prędkość, tym droga hamowania rośnie bardzo szybko.",
+            "Przy dwukrotnie większej prędkości droga hamowania wydłuża się mniej więcej czterokrotnie.",
+            "Na mokrej lub śliskiej drodze droga hamowania jest jeszcze dłuższa."
+          ]
+        },
+        {
+          "heading": "faktyczne zatrzymanie zysku",
+          "body": "Prostą zasadą jest odstęp co najmniej dwóch sekund od pojazdu poprzedzającego. Na mokrej nawierzchni, w ciemności lub gdy pojazd poprzedzający jest ciężki – zwiększ zysk. Wybierz punkt odniesienia na poboczu drogi i licz, aż pojazd poprzedzający go minie."
+        },
+        {
+          "heading": "Jak jechać z bezpieczną prędkością",
+          "body": "Patrz daleko w przyszłość, wcześnie dostrzegaj zagrożenia i zwalniaj przed zakrętem, skrzyżowaniem lub przejściem dla pieszych – nie w ostatniej chwili. Utrzymanie stałej i przewidywalnej prędkości ułatwia także jazdę osobom jadącym w pobliżu."
+        }
+      ],
+      "keyPoints": [
+        "Ograniczenie prędkości jest wartością maksymalną, a nie docelową.",
+        "Zysk o co najmniej dwie sekundy – i więcej w trudnych warunkach.",
+        "Zwolnij przed niebezpieczeństwem, a nie po nim."
+      ]
+    },
+    "laws-right-of-way": {
+      "title": "pierwszeństwo przejazdu i skrzyżowania",
+      "summary": "Kto tak naprawdę jest pierwszy na skrzyżowaniu i jak uniknąć sytuacji, w której dwóch kierowców przyjmuje różne założenia.",
+      "blocks": [
+        {
+          "heading": "Pierwszeństwo przejazdu jest zasadą, a nie prawem",
+          "body": "Pierwszeństwo przejazdu ma zapobiegać sytuacji, w której dwóch kierowców w tym samym momencie podejmie odmienną decyzję. Nawet jeśli wolno Ci wyprzedzać, musisz powoli zbliżać się do skrzyżowania, rozglądać się w obie strony i być przygotowanym na zatrzymanie się."
+        },
+        {
+          "heading": "Kto jest pierwszy na skrzyżowaniu?",
+          "body": "Znak stopu lub ustąpienia pierwszeństwa obowiązuje zgodnie ze swoim znaczeniem. Pojazd skręcający ma obowiązek ustąpić pierwszeństwa pieszym przechodzącym przez jezdnię, na którą wjeżdża. Pojazd wjeżdżający na drogę musi ustąpić pierwszeństwa osobie już nim prowadzącej.",
+          "bullets": [
+            "Na skrzyżowaniu bez sygnalizacji świetlnej: zwolnij, rozejrzyj się i ustąpi pierwszeństwa zgodnie z przepisami ruchu drogowego.",
+            "Nie polegaj tylko na tym, że „zasługuję na to” – zadbaj o to, aby druga osoba przestała.",
+            "Pojazd jadący do tyłu musi ustąpić pierwszeństwa całemu ruchowi."
+          ]
+        },
+        {
+          "heading": "Piesi, rowerzyści i sygnalizacja świetlna",
+          "body": "Zielone światło nie gwarantuje, że skrzyżowanie będzie wolne. Przed wjazdem na skrzyżowanie należy upewnić się, czy na skrzyżowaniu nie ma pieszych, rowerzystów ani pojazdu. Na przejściu dla pieszych pieszy, który zaczyna przechodzić, ma pierwszeństwo."
+        },
+        {
+          "heading": "Kiedy coś jest nie jasne",
+          "body": "Jeśli masz wątpliwości, kto jest pierwszy – zwolnij i odpuść. Zrzeczenie się pierwszeństwa przejazdu nie jest niepowodzeniem; To najpewniejszy sposób na rozwiązanie niepewności na drodze."
+        }
+      ],
+      "keyPoints": [
+        "Zwolnij przed każdym skrzyżowaniem, nawet jeśli jedziesz główną drogą.",
+        "Puna ustępuje pieszym i tym, którzy są już na skrzyżowaniu.",
+        "Wątpliwości - idziemy dalej."
+      ]
+    },
+    "laws-signals": {
+      "title": "Sygnały, pasy i obwodnica",
+      "summary": "Jak dać znać drugiej osobie, co zamierzasz zrobić i jak odejść, nie zaskakując nikogo.",
+      "blocks": [
+        {
+          "heading": "Sygnał jest ostrzeżeniem",
+          "body": "Sygnalizują przed zmianą pasa, skrętem czy zatrzymaniem, a nie w trakcie wykonywania. Sygnał należy dać na tyle wcześnie, aby inny kierowca mógł zareagować i zatrzymać się po wykonaniu skrętu."
+        },
+        {
+          "heading": "Prawidłowe korzystanie z pasów ruchu",
+          "body": "Jedź jak najdalej prawym pasem, a z lewego pasa zjeżdżaj w celu wyprzedzania lub skręcania. Zmiana pasa ruchu odbywa się wyłącznie wtedy, gdy pas jest wolny, z włączonym kierunkowskazem, lusterkiem i patrząc w martwe pole."
+        },
+        {
+          "heading": "Bezpieczne obejście",
+          "body": "Wyprzedzanie tylko przy dobrej widoczności, przeciwny pas jest wolny i przepisy na to pozwalają. Nie wyprzedzaj przed przejściem dla pieszych, na skrzyżowaniu, na zakręcie lub gdy widoczność jest ograniczona. Jeśli nie ma pewności - żadnego wyprzedzania.",
+          "bullets": [
+            "Przed wyprzedzaniem: sprawdzenie lusterek, sygnalizacja i rozejrzenie się po terenie.",
+            "Podczas wyprzedzania: utrzymywanie stałej prędkości i odległości od pojazdu wyprzedzającego.",
+            "Na koniec: wróć na pas dopiero wtedy, gdy w lusterku będzie widoczny pojazd wyprzedzający."
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Sygnalizacja przed, a nie w trakcie.",
+        "Jedź w prawo i zostaw w lewo, aby wyprzedzić.",
+        "Objazd jest decyzją wynikającą z pewności, a nie cierpliwości."
+      ]
+    },
+    "signs-shapes": {
+      "title": "Jak czytać znak drogowy przed przeczytaniem napisu?",
+      "summary": "Kształt i kolor mówią niemal wszystko: ostrzeżenie, zakaz, obowiązek czy informację.",
+      "blocks": [
+        {
+          "heading": "Język kształtów i kolorów",
+          "body": "Trójkątny znak z czerwoną ramką jest znakiem ostrzegawczym: przygotowuje Cię na bezpośrednie niebezpieczeństwo. Okrąg w czerwonej ramce to zakaz lub ograniczenie, a niebieski to nakaz lub obowiązek. Kwadratowy lub prostokątny znak zawiera informacje lub wskazówki."
+        },
+        {
+          "heading": "Znaki drogowe, które są nietypowe",
+          "body": "Znak stopu ma unikalny kształt ośmiokąta, a znak pierwszeństwa ma kształt odwróconego trójkąta. Kształt umożliwia ich identyfikację nawet wtedy, gdy napis jest zakryty lub przy słabej widoczności.",
+          "bullets": [
+            "Żółte tło znaku ostrzegawczego zwykle wskazuje na prace lub sytuację tymczasową.",
+            "Znak informacyjny może wskazywać miejsce, parking lub usługę.",
+            "Znaki drogowe na drodze uzupełniają znaki drogowe, a nie je zastępują."
+          ]
+        },
+        {
+          "heading": "Co robisz, gdy widzisz znak drogowy?",
+          "body": "Rozpoznaj kształt, przetłumacz znaczenie i odpowiednio dostosuj prowadzenie. Znak ostrzegawczy nakazuje zmniejszenie prędkości i gotowość do zmiany warunków drogowych; Znak zakazu nie jest zaleceniem."
+        }
+      ],
+      "keyPoints": [
+        "Czerwony trójkąt: ostrzeżenie. Czerwone kółko: Zakaz. Niebieskie kółko: obowiązkowe.",
+        "Kształt znaku drogowego jest częścią jego znaczenia.",
+        "Obowiązkowy jest także tymczasowy żółty znak."
+      ]
+    },
+    "signs-warning": {
+      "title": "Znaki ostrzegawcze: niebezpieczeństwo, zanim je zobaczysz",
+      "summary": "Zakręt, skrzyżowanie, przejście dla pieszych, dzieci, gładka droga czy roboty – o co każe każdy znak.",
+      "blocks": [
+        {
+          "heading": "Znak ostrzegawczy nie jest ozdobą",
+          "body": "Znak ostrzegawczy informuje o niebezpieczeństwie, które może jeszcze nie być widoczne. Wymaga dostosowania prędkości, zwiększenia wzmocnienia i wzmożonej obserwacji. Jeśli będziemy jechać dalej z tą samą prędkością, znak nie spełnił swojej funkcji."
+        },
+        {
+          "heading": "Przykłady warte natychmiastowego rozpoznania",
+          "body": "Ostry zakręt, skrzyżowanie, przejście dla pieszych, dzieci na drodze, gładka droga, niebezpieczne wzniesienie, roboty drogowe i przejścia dla zwierząt. Na autostradzie znak ostrzegawczy zwykle wskazuje następny odcinek, dlatego nie należy czekać, aż zobaczysz rzeczywiste niebezpieczeństwo.",
+          "bullets": [
+            "Dzieci w pobliżu drogi: znaczne spowolnienie i gotowość do zatrzymania.",
+            "Gładka droga: zmniejszenie prędkości i unikanie ostrych zakrętów oraz mocnego hamowania.",
+            "Prace na drodze: Przechodzenie przez określony pas ruchu, utrzymanie niskiej prędkości."
+          ]
+        },
+        {
+          "heading": "Co się stanie, jeśli przegapisz sygnalizację świetlną?",
+          "body": "Jeżeli zauważyłeś spóźnione światła, nie hamuj gwałtownie ani nie wykonuj gwałtownych manewrów. Zwolnij stopniowo i postępuj ostrożnie. Nagłe hamowanie może spowodować większe niebezpieczeństwo niż to, o którym ostrzega znak."
+        }
+      ],
+      "keyPoints": [
+        "Ostrzeżenie = zwalnianie i rozglądanie się, a nie tylko wiedza.",
+        "Niebezpieczeństwo na znaku ostrzegawczym jest przed tobą.",
+        "Brakuje Ci sygnalizacji świetlnej? Zwalniaj stopniowo, nie gwałtownie hamując."
+      ]
+    },
+    "signs-control": {
+      "title": "Zatrzymaj się, ustąpisz i zakazy",
+      "summary": "Znaki drogowe wymagające natychmiastowego działania – i jaka jest między nimi różnica.",
+      "blocks": [
+        {
+          "heading": "zatrzymaj się z przodu, ustąpi pierwszeństwa",
+          "body": "Na znaku stopu należy całkowicie się zatrzymać przed linią zatrzymania lub przed skrzyżowaniem, nawet jeśli droga wygląda na wolną. Na znaku pierwszeństwa nie ma bezwzględnego obowiązku zatrzymania się, ale obowiązek ustąpienia pierwszeństwa osobom, które są do tego uprawnione – i w razie potrzeby zatrzymania się."
+        },
+        {
+          "heading": "Zakazy i ograniczenia",
+          "body": "Znak czerwonego koła zabrania: wjazdu, skręcania, wyprzedzania, parkowania lub przekraczania dozwolonej prędkości. Zastrzeżenie obowiązuje w miejscu umieszczenia znaku, aż do znaku, który go znosi lub do skrzyżowania, jeżeli tak ustalono."
+        },
+        {
+          "heading": "Obowiązkowe instrukcje",
+          "body": "Niebieski znak określa, co należy zrobić: skręcić w określonym kierunku, jechać określonym pasem lub skorzystać z określonej drogi. Trasę należy zaplanować z wyprzedzeniem i nie skręcać zbyt późno.",
+          "bullets": [
+            "Znak drogowy nie eliminuje konieczności rozglądania się i jazdy zgodnie z warunkami.",
+            "Sygnalizacja świetlna i znak drogowy mogą ze sobą współpracować; Obu trzeba szanować.",
+            "Jeżeli znak drogowy jest zablokowany lub niejasny, należy zachować szczególną ostrożność."
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Stop = kropka. Daj prawo = poddaj się i jeśli to konieczne, zatrzymaj się.",
+        "Czerwone kółko zabrania; Obowiązkowe niebieskie kółko.",
+        "Planowanie trasy przed skrzyżowaniem."
+      ]
+    },
+    "safety-belts": {
+      "title": "Pasy, foteliki dziecięce i odpowiednie siedzenie",
+      "summary": "Co dzieje się z karoserią podczas nagłego hamowania i jak ustawić fotelik, aby zabezpieczenie zadziałało.",
+      "blocks": [
+        {
+          "heading": "Pasek jest systemem, a nie dodatkiem",
+          "body": "Podczas nagłego zatrzymania ciało kontynuuje ruch do przodu. Pas rozkłada siłę na mocne kości ciała i zapobiega uszkodzeniom ciała lub opuszczeniu fotelika. Obowiązkowe jest korzystanie z niego podczas każdej podróży, nawet z tyłu i na krótkiej wycieczce."
+        },
+        {
+          "heading": "Dzieci – zgodnie z prawem i miarą",
+          "body": "Dzieci, które nie mają odpowiedniego wzrostu lub wieku, aby można było zapiąć zwykły pas bezpieczeństwa, muszą korzystać z fotelika bezpieczeństwa lub odpowiedniego fotelika podwyższającego, zgodnie z przepisami. Nie należy przenosić dziecka na przednie siedzenie, zanim jest to dozwolone, a w każdym przypadku fotelik musi być dostosowany do jego wzrostu i wagi.",
+          "bullets": [
+            "Fotelik dostosowany jest do wieku, wagi i wzrostu – nie tylko wieku.",
+            "Poduszka powietrzna nie zastępuje pasa bezpieczeństwa ani fotelika bezpieczeństwa.",
+            "Fotelik należy wzmocnić zgodnie z instrukcją producenta."
+          ]
+        },
+        {
+          "heading": "Pozycja siedząca, która Cię chroni",
+          "body": "Zagłówek powinien podtrzymywać głowę na wysokości oczu lub uszu, a plecy powinny znajdować się blisko zagłówka. Ciężkie przedmioty, które nie są zabezpieczone w kabinie pasażerskiej, po zatrzymaniu mogą stać się pociskami."
+        }
+      ],
+      "keyPoints": [
+        "Pas bezpieczeństwa na każdą podróż i dla wszystkich pasażerów.",
+        "Fotelik dziecięcy dostosowany do wieku, wagi i wzrostu, a nie komfortu.",
+        "Regulowany zagłówek i siedzisko zmniejszają ryzyko obrażeń."
+      ]
+    },
+    "safety-weather": {
+      "title": "Deszcz, mgła i brak widoczności",
+      "summary": "Dlaczego droga zmienia się, gdy zaczyna padać deszcz i co zmienia się podczas jazdy.",
+      "blocks": [
+        {
+          "heading": "Najbardziej niebezpieczny jest moment, w którym zaczyna padać deszcz",
+          "body": "Na początku deszczu kurz i olej na drodze mieszają się z wodą i tworzą śliską warstwę. Zwolnij, zanim droga stanie się gładka, zwiększ odległość i unikaj ostrych manewrów kierownicą."
+        },
+        {
+          "heading": "Jazda w deszczu i przez wodę",
+          "body": "Woda na drodze może spowodować utratę przyczepności (aquaplaning). W takiej sytuacji nie należy gwałtownie hamować ani gwałtownie kręcić kierownicą; Spuść trochę gazu, trzymaj kierownicę nieruchomo i poczekaj, aż opony odzyskają przyczepność.",
+          "bullets": [
+            "Wycieraczki i światła włączają się w zależności od warunków widoczności.",
+            "Zwiększ odstęp na co najmniej dwie sekundy - i przy większym deszczu.",
+            "Unikaj przekraczania kałuż o nieznanej głębokości."
+          ]
+        },
+        {
+          "heading": "Mgła i słaba widoczność",
+          "body": "We mgle jedź powoli, z odpowiednimi światłami i szukaj linii krawężników lub płotów, aby utrzymać pas ruchu. Nie daj się oślepić wysokim światłom innego pojazdu. Jeśli widoczność jest zbyt słaba, zatrzymaj się w bezpiecznym miejscu do czasu poprawy warunków."
+        }
+      ],
+      "keyPoints": [
+        "Zwolnij na początku deszczu, a nie po zjeżdżalni.",
+        "Hydroplaning: mniej gazu, stabilne sterowanie, brak ostrego hamowania.",
+        "Przy słabej widoczności – zwolnij, włącz światła, a w razie potrzeby zatrzymaj się."
+      ]
+    },
+    "safety-fatigue": {
+      "title": "Zmęczenie, rozproszenie uwagi i bezpieczna jazda",
+      "summary": "Największym zagrożeniem nie zawsze jest droga – czasami znajduje się ono we wnętrzu pojazdu.",
+      "blocks": [
+        {
+          "heading": "Zmęczenie jest upośledzeniem zdolności, nawet bez zasypiania",
+          "body": "Zmęczenie spowalnia czas reakcji i pogarsza zdolność oceniania odległości. Ziewanie, uczucie ciężkości w oczach, brak wypróżnień i trudności w utrzymaniu pasa ruchu to sygnały ostrzegawcze. Krótki postój przy kasie lub filiżanka kawy nie zastąpią snu."
+        },
+        {
+          "heading": "odwrócenie uwagi",
+          "body": "Wiadomość, nawigacja, jedzenie lub intensywna rozmowa odwracają wzrok i umysł od drogi. Przed wyruszeniem skonfiguruj nawigację, wycisz powiadomienia i uporządkuj pojazd. Prowadzenie pojazdu wymaga pełnej uwagi.",
+          "bullets": [
+            "Nie pisz ani nie czytaj wiadomości podczas jazdy.",
+            "Pasażerowie mogą pomóc w nawigacji i alertach.",
+            "Głośni lub niepokojący pasażerowie – proszą o chwilę ciszy."
+          ]
+        },
+        {
+          "heading": "Konstrukcja zapobiega zmęczeniu",
+          "body": "Wyjdź po wystarczającej ilości snu, planuj przerwy na długą podróż i unikaj prowadzenia pojazdu w godzinach, kiedy organizm jest przyzwyczajony do snu. Jeśli jesteś zmęczony – zatrzymaj się w bezpiecznym miejscu, nie kontynuuj „tylko trochę dłużej”."
+        }
+      ],
+      "keyPoints": [
+        "Zmęczenie osłabia reakcję, zanim pojawią się zawroty głowy.",
+        "Ekrany i alerty wyłączają się przed wyruszeniem w podróż.",
+        "Lepiej odpocząć w bezpiecznym miejscu, niż kontynuować męczącą podróż."
+      ]
+    },
+    "vehicle-tires": {
+      "title": "Opony: Twoja jedyna przyczepność na drodze",
+      "summary": "Ciśnienie powietrza, głębokość rowków i nierównomierne zużycie – co i kiedy sprawdzać.",
+      "blocks": [
+        {
+          "heading": "Prawidłowe ciśnienie powietrza",
+          "body": "Ciśnienie powietrza określa się zgodnie z zaleceniami producenta, a nie na podstawie wyglądu opony. Sprawdzaj to przy zimnych oponach, przed dłuższą podróżą lub przynajmniej raz w miesiącu. Niskie ciśnienie wydłuża drogę hamowania, zużycie paliwa i zużycie ścian."
+        },
+        {
+          "heading": "głębokość rowków i erozja",
+          "body": "Płytkie rowki ograniczają odprowadzanie wody i zwiększają ryzyko poślizgu. Nierówne zużycie, wyboje, pęknięcia lub przedmiot utknięty w oponie wymagają profesjonalnego przeglądu. Koło zapasowe również powinno być w dobrym stanie i napompowane.",
+          "bullets": [
+            "Sprawdź obie strony i ściankę każdej opony.",
+            "Szlifowanie po jednej stronie zwykle wskazuje na problem z wyrównaniem lub ciśnieniem.",
+            "Opony wymienia się zgodnie z zaleceniami producenta i przepisami prawa, a nie tylko wtedy, gdy są już całkowicie zużyte."
+          ]
+        },
+        {
+          "heading": "Opony sezonowe",
+          "body": "W trudnych warunkach zimowych opony muszą być dostosowane do warunków drogowych. Opona letnia nie zastępuje opony zimowej, gdy droga jest szczególnie mokra lub zimna."
+        }
+      ],
+      "keyPoints": [
+        "Według producenta ciśnienie powietrza sprawdza się, gdy opona jest zimna.",
+        "Płytkie rowki = mniejsze odprowadzanie wody i większy poślizg.",
+        "Nierówne zużycie jest oznaką przeglądu."
+      ]
+    },
+    "vehicle-lights": {
+      "title": "światła, hamulce i deska rozdzielcza",
+      "summary": "Jak rozpoznać awarię, zanim stanie się ona awarią na drodze.",
+      "blocks": [
+        {
+          "heading": "Widoczność to bezpieczeństwo",
+          "body": "Światła przednie, światła tylne, światła stopu i kierunkowskazy to Twoje środki komunikacji z innymi kierowcami. Sprawdzane są przed jazdą, zwłaszcza po zaparkowaniu pojazdu lub po naprawie. Przepalona żarówka stanowi usterkę bezpieczeństwa."
+        },
+        {
+          "heading": "Hamulce: co czujesz?",
+          "body": "Miękki pedał hamulca, wibracje, ciągłe piszczenie lub ściąganie na bok podczas hamowania to oznaki, które należy sprawdzić. Nie ignoruj ​​ich. ABS ma za zadanie zapobiegać blokowaniu kół, ale w żadnych warunkach nie skraca drogi hamowania.",
+          "bullets": [
+            "Świeci się czerwone światło stopu – bezpieczne zatrzymanie i sprawdzenie.",
+            "Kontrolka silnika miga – unikaj przeciążenia i sprawdź jak najszybciej.",
+            "Jeżeli działanie hamulca jest inne, nie kontynuuj normalnej jazdy."
+          ]
+        },
+        {
+          "heading": "Krótka procedura testowa",
+          "body": "Przed jazdą: światła, opony, lusterka, płyn do spryskiwaczy i pas bezpieczeństwa. Po zakończeniu jazdy: bezpieczne parkowanie, zaciągnięcie hamulca ręcznego, zamknięcie szyb i kontrola pojazdu. Krótka rutyna zapobiega niespodziankom."
+        }
+      ],
+      "keyPoints": [
+        "Odpowiednie światła zapewniają komunikację z resztą drogi.",
+        "Zmiana wyczucia hamulca wymaga kontroli.",
+        "Krótki przegląd przed jazdą zapobiega awariom."
+      ]
+    },
+    "vehicle-load": {
+      "title": "Ładunek, ładunek i przedziały ładunkowe",
+      "summary": "Jak niezabezpieczony ładunek staje się zagrożeniem – i o czym nie można zapomnieć przed podróżą.",
+      "blocks": [
+        {
+          "heading": "Ładunek musi pozostać na miejscu",
+          "body": "W przypadku nagłego zatrzymania niezabezpieczony ładunek nadal się porusza. Ciężki ładunek należy zabezpieczyć w bagażniku lub za pomocą pasów i siatek, a ciężki ładunek powinien być umieszczony nisko i jak najbliżej środka pojazdu."
+        },
+        {
+          "heading": "Limity wagowe",
+          "body": "Każdy pojazd ma określony limit masy całkowitej i nacisku na oś. Przeciążenie zmienia zachowanie pojazdu, wydłuża drogę hamowania i zwiększa zużycie opon. Nie ładuj więcej niż jest to dozwolone, nawet jeśli pojazd „jedzie”.",
+          "bullets": [
+            "Ładunek na wysokości może zmienić środek ciężkości i zwiększyć ryzyko przewrócenia się.",
+            "Bagażnik dachowy zwiększa zużycie paliwa i wrażliwość na wiatr.",
+            "Upewnij się, że ładunek nie zakłóca pola widzenia ani oświetlenia."
+          ]
+        },
+        {
+          "heading": "przed wyjściem",
+          "body": "Sprawdź, czy ładunek jest zabezpieczony, czy drzwi i okno są zamknięte, czy żaden przedmiot nie zakrywa tablicy rejestracyjnej lub oświetlenia oraz czy opony są odpowiednie do obciążenia. Jedź z odpowiednią prędkością i ostrożnie skręcaj."
+        }
+      ],
+      "keyPoints": [
+        "Niezabezpieczony ładunek stwarza zagrożenie nawet podczas krótkiej podróży.",
+        "Nie przekraczaj dopuszczalnej masy pojazdu.",
+        "Niskie obciążenie, zapinane i nie zasłaniające widoczności."
+      ]
+    }
+  },
+  "subjects": {
+    "laws": "Przepisy ruchu drogowego, prędkość, pierwszeństwo i sygnały – podstawa każdej decyzji na drodze.",
+    "signs": "Znaki drogowe i oznakowanie drogowe: kształt, kolor i znaczenie, bez zapamiętywania.",
+    "safety": "Bezpieczeństwo praktyczne: pasy bezpieczeństwa, pogoda, zmęczenie i rozproszenie uwagi.",
+    "vehicle": "Znajomość pojazdu: opony, hamulce, światła i obciążenie – co i dlaczego sprawdza się."
+  }
+}

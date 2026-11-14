@@ -1,4 +1,4 @@
-import { all, get, put, append } from '../store/store'
+import { all, get, put, append, trimHistory } from '../store/store'
 import type {
   MasteryRecord,
   SrsRecord,
@@ -133,6 +133,12 @@ export async function saveProgress(
   await Promise.all(updates)
 }
 
+/** Answer log retention. Large enough for long-term accuracy, small enough
+ * that building the readiness report stays fast. */
+const HISTORY_LIMIT = 5000
+const TRIM_EVERY = 50
+let appendsSinceTrim = 0
+
 export async function appendHistory(entry: {
   category: string
   topicId: string
@@ -142,6 +148,11 @@ export async function appendHistory(entry: {
   ts: number
 }): Promise<void> {
   await append('history', entry)
+  appendsSinceTrim += 1
+  if (appendsSinceTrim >= TRIM_EVERY) {
+    appendsSinceTrim = 0
+    await trimHistory(HISTORY_LIMIT)
+  }
 }
 
 export async function saveLastSession(session: LastSession): Promise<void> {

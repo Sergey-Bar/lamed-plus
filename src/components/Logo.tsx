@@ -57,8 +57,13 @@ export function Logo({ size = 38, withWordmark = true, className = '', to = '/' 
         <LogoMark size={size} className="rounded-[0.7rem]" />
       </span>
       {withWordmark && (
-        <span className="flex items-baseline gap-0.5 text-[1.22rem] font-extrabold leading-none tracking-[-0.04em] text-ink">
-          <span dir="ltr">LAMED</span>
+        // The wordmark is always Latin and left-to-right; without `dir` here the
+        // RTL page flips it into "+LAMED".
+        <span
+          dir="ltr"
+          className="flex items-baseline gap-0.5 text-[1.22rem] font-extrabold leading-none tracking-[-0.04em] text-ink"
+        >
+          <span>LAMED</span>
           <span className="text-accent-2" aria-hidden="true">
             +
           </span>

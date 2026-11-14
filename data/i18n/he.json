@@ -69,7 +69,7 @@
   "settings.title": "הגדרות",
   "settings.languageSection": "שפה",
   "settings.privacyTitle": "פרטיות",
-  "settings.privacyBody": "הכול מאוחסן במכשיר זה. אין חשבון, אין מעקב — שום דבר לא יוצא מהמכשיר.",
+  "settings.privacyBody": "הכול נשמר במכשיר הזה. חשבון וסנכרון בין מכשירים יגיעו בקרוב, ואין מעקב פרסומי.",
   "settings.dataSection": "נתונים",
   "settings.exportLabel": "ייצוא התקדמות לקובץ",
   "settings.clearLabel": "מחיקת כל ההתקדמות המקומית",
@@ -309,5 +309,13 @@
   "blitz.false": "לא נכון",
   "blitz.tap": "בחרו נכון או לא נכון",
   "question.imageAlt": "תמונה לשאלה {number}",
-  "question.imageCaption": "תמונה רשמית של משרד התחבורה לשאלה {number}"
+  "question.imageCaption": "תמונה רשמית של משרד התחבורה לשאלה {number}",
+  "nav.primary": "ניווט ראשי",
+  "settings.importLabel": "ייבוא התקדמות מקובץ",
+  "common.importDone": "ההתקדמות שוחזרה.",
+  "common.importError": "הקובץ אינו תקין.",
+  "practice.statTopics": "נושאים",
+  "practice.statQuestions": "שאלות",
+  "practice.statSeen": "נצפו",
+  "practice.statUnseen": "לא נצפו"
 }

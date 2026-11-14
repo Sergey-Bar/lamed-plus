@@ -24,7 +24,7 @@ assignees: ''
 <!-- Why is this the correct answer? -->
 
 ## Category
-<!-- B, A, C, TRACTOR, BUS, ZMAHA -->
+<!-- B, A, C, C1, TRACTOR, BUS, A3 -->
 
 ## Topic
 <!-- signs, markings, rightOfWay, speed, lanes, vehicle, environment, firstAid, signals, safety -->

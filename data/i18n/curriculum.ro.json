@@ -1,0 +1,354 @@
+{
+  "lessons": {
+    "laws-speed": {
+      "title": "Viteza, distanta de oprire si mentinerea distantei",
+      "summary": "De ce limita de viteză este un plafon și nu un obiectiv și cum construiești o distanță reală de siguranță?",
+      "blocks": [
+        {
+          "heading": "Viteza este o decizie, nu un obicei",
+          "body": "Viteza maximă pe un semn sau prin lege este limita superioară în condiții ideale. Pe un drum umed, pe întuneric, în ceață sau când vizibilitatea este blocată, viteza de siguranță este mai mică. Conducerea la limita de viteză nu garantează oprirea la timp."
+        },
+        {
+          "heading": "Cele trei distanțe pe care ar trebui să le cunoști",
+          "body": "Distanța de reacție este distanța parcursă din momentul în care este detectat un pericol și până când sunt apăsate frânele. Distanța de frânare este distanța parcursă de mașină din momentul frânării până la oprire. Împreună formează distanța de oprire.",
+          "bullets": [
+            "Cu cât viteza este mai mare, distanța de oprire crește foarte repede.",
+            "La o viteză de două ori mai mare, distanța de frânare este aproximativ de patru ori.",
+            "Pe un drum umed sau alunecos, distanța de frânare este și mai mare."
+          ]
+        },
+        {
+          "heading": "reținerea efectivă a profitului",
+          "body": "Regula simplă este un decalaj de cel puțin două secunde față de vehiculul din față. Pe umed, pe întuneric sau când vehiculul din față este greu - crește profitul. Alegeți un punct de referință pe marginea drumului și numărați până când vehiculul din față îl trece."
+        },
+        {
+          "heading": "Cum să conduci cu o viteză sigură",
+          "body": "Privind departe în față, recunoscând pericolele devreme și încetinind înainte de o curbă, intersecție sau trecere de pietoni - nu în ultimul moment. Menținerea unei viteze uniforme și previzibile face, de asemenea, mai ușor pentru cei care conduc în jurul tău."
+        }
+      ],
+      "keyPoints": [
+        "Limita de viteză este un maxim, nu o țintă.",
+        "Un câștig de cel puțin două secunde - și mai mult în condiții dificile.",
+        "Încetinește înainte de pericol, nu după el."
+      ]
+    },
+    "laws-right-of-way": {
+      "title": "drept de trecere și intersecții",
+      "summary": "Cine este cu adevărat primul la intersecție și cum eviți o situație în care doi șoferi fac presupuneri diferite.",
+      "blocks": [
+        {
+          "heading": "Dreptul de trecere este o regulă, nu un drept",
+          "body": "Dreptul de trecere are scopul de a preveni o situație în care doi șoferi decid diferit în același moment. Chiar și atunci când ai voie să treci, trebuie să te apropii încet de intersecție, să privești în ambele părți și să fii pregătit să te oprești."
+        },
+        {
+          "heading": "Cine este primul la intersecție?",
+          "body": "Un semn de oprire sau de cedare este obligatoriu în funcție de sensul său. Un vehicul care virează este obligat să cedeze drumul pietonilor care traversează drumul în care intră. Un vehicul care intră pe drum trebuie să cedeze locul persoanei care îl conduce deja.",
+          "bullets": [
+            "La o intersecție fără semafoare: încetiniți, priviți și lăsați drumul conform regulilor de circulație.",
+            "Nu te baza doar pe faptul că „merit” - asigură-te că cealaltă persoană se oprește.",
+            "Un vehicul care circulă înapoi trebuie să cedeze loc întregului trafic."
+          ]
+        },
+        {
+          "heading": "Pietoni, biciclete și semafoare",
+          "body": "Un semafor verde nu garantează că intersecția este liberă. Înainte de a intra în intersecție, asigurați-vă că nu sunt pietoni, bicicliști sau vreun vehicul blocat în interior. La o trecere de pietoni, un pieton care începe să traverseze ia dreptul de trecere."
+        },
+        {
+          "heading": "Când ceva nu este clar",
+          "body": "Dacă există vreo îndoială cine este primul - încetinește și eliberează. Renunțarea la dreptul de trecere nu este un eșec; Este cel mai sigur mod de a rezolva incertitudinile de pe drum."
+        }
+      ],
+      "keyPoints": [
+        "Încetiniți înainte de fiecare intersecție, chiar și atunci când vă aflați pe un drum principal.",
+        "Puna lasă loc pietonilor și celor aflați deja la intersecție.",
+        "În îndoială - să mergem înainte."
+      ]
+    },
+    "laws-signals": {
+      "title": "Semnale, benzi și ocolire",
+      "summary": "Cum îi dai pe celălalt să știe ce intenționezi să faci și cum te ocolizi fără a surprinde pe nimeni.",
+      "blocks": [
+        {
+          "heading": "Un semnal este un avertisment",
+          "body": "Semnalizează înainte de schimbarea benzilor, viraj sau oprire, și nu în timpul execuției. Semnalul ar trebui să fie dat suficient de devreme pentru ca un alt șofer să reacționeze și să se oprească după încheierea virajului."
+        },
+        {
+          "heading": "Utilizarea corectă a benzilor",
+          "body": "Conduceți pe banda dreaptă cât mai mult posibil și părăsiți banda din stânga pentru depășire sau viraj. Schimbarea benzii se face doar atunci când banda este liberă, cu semnal, oglindă și privind spre punctul mort."
+        },
+        {
+          "heading": "Bypass sigur",
+          "body": "Depășirea doar când este vizibilitate bună, banda opusă este liberă și legea permite. Nu depășiți înaintea unei treceri de pietoni, la o intersecție, într-o curbă sau când vizibilitatea este blocată. Dacă nu există certitudine - nicio depășire.",
+          "bullets": [
+            "Înainte de depășire: verificarea oglinzilor, semnalizarea și privirea spre teren.",
+            "În timpul depășirii: menținerea unei viteze și distanțe stabile față de vehiculul care îl depășește.",
+            "La sfârșit: reveniți pe bandă numai când vehiculul care depășește este vizibil în oglindă."
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Semnalizarea înainte, nu în timpul.",
+        "Conduceți la dreapta și lăsați stânga pentru a depăși.",
+        "Ocolul este o decizie a certitudinii, nu a răbdării."
+      ]
+    },
+    "signs-shapes": {
+      "title": "Cum citești un semn rutier înainte de a citi inscripția?",
+      "summary": "Forma și culoarea spun aproape totul: avertisment, interdicție, obligație sau informație.",
+      "blocks": [
+        {
+          "heading": "Un limbaj de forme și culori",
+          "body": "Un semn triunghiular cu un cadru roșu este un semn de avertizare: te pregătește pentru un pericol iminent. Un cerc cu un cadru roșu este o interdicție sau restricție, iar un cerc albastru este o instrucțiune sau o obligație. Un semn pătrat sau dreptunghiular oferă informații sau îndrumări."
+        },
+        {
+          "heading": "Semne de circulație care sunt neobișnuite",
+          "body": "Semnul de oprire are o formă unică de octogon, iar semnul de drept de trecere are forma unui triunghi inversat. Forma face posibilă identificarea acestora chiar și atunci când inscripția este acoperită sau când vizibilitatea este slabă.",
+          "bullets": [
+            "Un fundal galben într-un semn de avertizare indică de obicei lucrări sau o situație temporară.",
+            "Un semn de informare poate ghida către un loc, parcare sau serviciu.",
+            "Marcajele de pe drum completează indicatoarele rutiere și nu le înlocuiesc."
+          ]
+        },
+        {
+          "heading": "Ce faci când vezi un semn rutier?",
+          "body": "Recunoașteți forma, traduceți sensul și reglați conducerea în consecință. Un semn de avertizare necesită o reducere a vitezei și pregătirea pentru schimbarea condițiilor de drum; Un semn de interdicție nu este o recomandare."
+        }
+      ],
+      "keyPoints": [
+        "Triunghi roșu: avertisment. Cercul roșu: Interdicție. Cerc albastru: Obligatoriu.",
+        "Forma semnului rutier face parte din sens.",
+        "Un semn temporar galben este, de asemenea, obligatoriu."
+      ]
+    },
+    "signs-warning": {
+      "title": "Semne de avertizare: pericolul înainte de a-l vedea",
+      "summary": "O curbă, o intersecție, o trecere de pietoni, copii, un drum neted sau lucrări - ceea ce îți cere fiecare semn.",
+      "blocks": [
+        {
+          "heading": "Un semn de avertizare nu este un decor",
+          "body": "Un semn de avertizare anunță un pericol care este posibil să nu fie văzut încă. Necesită reglarea vitezei, creșterea câștigului și observarea sporită. Dacă continuăm cu aceeași viteză, semnul nu și-a îndeplinit funcția."
+        },
+        {
+          "heading": "Exemple care merită recunoscute imediat",
+          "body": "Curbă ascuțită, intersecție, trecere de pietoni, copii pe șosea, drum neted, pantă periculoasă, lucrări rutiere și trecere de animale. Pe o autostradă, un semn de avertizare se referă de obicei la următoarea secțiune, așa că nu ar trebui să așteptați până când vedeți pericolul real.",
+          "bullets": [
+            "Copii din apropierea drumului: încetinirea semnificativă și disponibilitatea de a opri.",
+            "Drum lin: reducerea vitezei și evitarea virajelor strânse și frânările puternice.",
+            "Lucrari la drum: Traversarea unei benzi definite, mentinerea unei viteze reduse."
+          ]
+        },
+        {
+          "heading": "Ce se întâmplă când ratezi un semafor?",
+          "body": "Dacă ați detectat un semafor târziu, nu frânați brusc și nu efectuați o manevră ascuțită. Încetiniți treptat și procedați cu prudență. Frânarea bruscă poate crea un pericol mai mare decât pericolul despre care avertizează semnul."
+        }
+      ],
+      "keyPoints": [
+        "Avertizare = încetinirea și privirea, nu doar a ști.",
+        "Pericolul de pe un semn de avertizare este înaintea ta.",
+        "Îți lipsește un semafor? Încetiniți treptat, nu cu frânări bruște."
+      ]
+    },
+    "signs-control": {
+      "title": "Opriți, cedați și interdicțiile",
+      "summary": "Semnele rutiere care necesită acțiune imediată - și care este diferența dintre ele.",
+      "blocks": [
+        {
+          "heading": "opriți în față dați dreptul de trecere",
+          "body": "La un semn de oprire este obligatoriu să se oprească complet înainte de linia de oprire sau înainte de intersecție, chiar dacă drumul pare liber. La semnul de predare a dreptului de trecere nu există nicio obligație absolută de a opri, ci o obligație de a ceda loc celor care au dreptul la acesta - și dacă este necesar, de a opri."
+        },
+        {
+          "heading": "Interdicții și restricții",
+          "body": "Un semn cerc roșu interzice acțiunile: intrarea, întoarcerea, depășirea, parcarea sau depășirea limitei de viteză permisă. Restrictia se aplica la locul unde a fost amplasat semnul, pana la semnul care il anuleaza sau pana la intersectie daca se determina astfel."
+        },
+        {
+          "heading": "Instructiuni obligatorii",
+          "body": "Un semn albastru determină ce trebuie făcut: virați într-o anumită direcție, conduceți pe o anumită bandă sau folosiți un anumit drum. Ar trebui să planificați traseul din timp și să nu faceți o viraj târziu.",
+          "bullets": [
+            "Un indicator rutier nu elimină nevoia de a privi și de a conduce în funcție de condiții.",
+            "Un semafor și un semn rutier pot funcționa împreună; Ambele trebuie respectate.",
+            "Dacă semnul rutier este blocat sau neclar, conduceți cu precauție extremă."
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Stop = punct. Dă drept = a da înainte și, dacă este necesar, oprește-te.",
+        "Un cerc roșu interzice; Cercul albastru obligatoriu.",
+        "Planificarea unui traseu înainte de intersecție."
+      ]
+    },
+    "safety-belts": {
+      "title": "Centuri, scaune pentru copii și scaune adecvate",
+      "summary": "Ce se întâmplă cu corpul într-o oprire bruscă și cum aranjați scaunul astfel încât protecția să funcționeze.",
+      "blocks": [
+        {
+          "heading": "Cureaua este un sistem, nu un accesoriu",
+          "body": "În timpul unei opriri bruște, corpul continuă să se miște înainte. Centura distribuie forța asupra oaselor puternice ale corpului și previne deteriorarea corpului sau părăsirea scaunului. Este obligatoriu să-l folosești în fiecare călătorie, chiar și în spate și într-o călătorie scurtă."
+        },
+        {
+          "heading": "Copii - conform legii și măsurii",
+          "body": "Copiii care nu au înălțimea sau vârsta potrivită pentru o centură de siguranță normală trebuie să folosească un scaun de siguranță sau un înălțător corespunzător, în conformitate cu legea. Nu mutați copilul pe scaunul din față înainte ca acest lucru să fie permis și, în orice caz, scaunul trebuie ajustat la înălțimea și greutatea lui.",
+          "bullets": [
+            "Un scaun de siguranță este adaptat vârstei, greutății și înălțimii - nu doar vârstei.",
+            "Un airbag nu înlocuiește o centură sau un scaun de siguranță.",
+            "Scaunul trebuie întărit conform instrucțiunilor producătorului."
+          ]
+        },
+        {
+          "heading": "O poziție așezată care te protejează",
+          "body": "Tetiera trebuie să susțină capul la nivelul ochilor sau al urechilor, iar spatele să fie aproape de tetiera. Obiectele grele care nu sunt asigurate în habitaclu pot deveni proiectile atunci când sunt oprite."
+        }
+      ],
+      "keyPoints": [
+        "O centură de siguranță pentru fiecare călătorie și pentru toți pasagerii.",
+        "Scaun pentru copii in functie de varsta, greutate si inaltime - si nu in functie de confort.",
+        "Tetiera și scaunul reglabil reduc rănile."
+      ]
+    },
+    "safety-weather": {
+      "title": "Ploaie, ceață și lipsă de vizibilitate",
+      "summary": "De ce se schimbă drumul când începe să plouă și ce se schimbă când conduceți.",
+      "blocks": [
+        {
+          "heading": "Momentul în care începe ploaia este cel mai periculos",
+          "body": "La începutul ploii, praful și uleiul de pe drum se amestecă cu apa și formează un strat alunecos. Încetiniți înainte ca drumul să fie neted, măriți distanța și evitați manevrele bruște de direcție."
+        },
+        {
+          "heading": "Conducerea pe ploaie și prin apă",
+          "body": "Apa de pe drum poate cauza pierderea aderenței (hidroplaning). Într-un astfel de caz, nu frânați brusc și nu rotiți brusc volanul; Eliberați puțin gaz, mențineți volanul stabil și lăsați anvelopele să-și recapete aderența.",
+          "bullets": [
+            "Stergatoarele si luminile sunt activate in functie de conditiile de vizibilitate.",
+            "Măriți decalajul timp de cel puțin două secunde - și în ploaie mai abundentă.",
+            "Evitați să traversați bălți de adâncime necunoscută."
+          ]
+        },
+        {
+          "heading": "Ceață și vizibilitate redusă",
+          "body": "În ceață, conduceți încet, cu lumini adecvate și căutați linii de bordură sau un gard pentru a menține o bandă. Nu vă lăsați orbiți de luminile ridicate ale altui vehicul. Dacă vizibilitatea este prea scăzută, opriți-vă într-un loc sigur până când condițiile se îmbunătățesc."
+        }
+      ],
+      "keyPoints": [
+        "Încetiniți la începutul ploii, nu după alunecare.",
+        "Hidroplanare: mai puțin gaz, direcție stabilă, fără frânare bruscă.",
+        "În condiții de vizibilitate scăzută - încetiniți, aprindeți luminile și, dacă este necesar, opriți-vă."
+      ]
+    },
+    "safety-fatigue": {
+      "title": "Oboseală, distrageri și conducere în siguranță",
+      "summary": "Cel mai mare pericol nu este întotdeauna drumul - uneori se află în interiorul vehiculului.",
+      "blocks": [
+        {
+          "heading": "Oboseala este o afectare a capacității, chiar și fără a adormi",
+          "body": "Oboseala încetinește timpul de reacție și afectează capacitatea de a estima distanțe. Cascătul, greutatea în ochi, mișcările intestinale ratate și dificultățile de a menține o bandă sunt semne de avertizare. O scurtă oprire la casă sau o ceașcă de cafea nu înlocuiește somnul."
+        },
+        {
+          "heading": "distragerea atenției",
+          "body": "Un mesaj, navigare, mâncare sau o conversație intensă vă abat ochii și mintea de la drum. Înainte de a porni, configurați navigarea, opriți notificările și aranjați vehiculul. Conducerea necesită o atenție deplină.",
+          "bullets": [
+            "Nu scrieți sau citiți mesaje în timp ce conduceți.",
+            "Pasagerii pot ajuta cu navigare și alerte.",
+            "Pasagerii zgomotoși sau deranjanți – cerând un moment de tăcere."
+          ]
+        },
+        {
+          "heading": "Designul previne oboseala",
+          "body": "Plecați după ce ați dormit suficient, planificați pauzele pe o călătorie lungă și evitați să conduceți în timpul orelor în care corpul este obișnuit să doarmă. Dacă sunteți obosit - opriți-vă într-un loc sigur, nu continuați „doar puțin mai mult”."
+        }
+      ],
+      "keyPoints": [
+        "Oboseala afectează răspunsul înainte de a se simți amețeala.",
+        "Ecranele și alertele se opresc înainte de a porni.",
+        "O pauză într-un loc sigur este mai bună decât a continua o călătorie obosită."
+      ]
+    },
+    "vehicle-tires": {
+      "title": "Anvelope: singura ta aderență pe șosea",
+      "summary": "Presiunea aerului, adâncimea canelurii și uzura neuniformă - ce se verifică și când.",
+      "blocks": [
+        {
+          "heading": "Presiunea corectă a aerului",
+          "body": "Presiunea aerului se determină conform instrucțiunilor producătorului, nu după aspectul anvelopei. Verificați-l când anvelopele sunt reci, înainte de o călătorie lungă sau cel puțin o dată pe lună. Presiunea scăzută crește distanța de frânare, consumul de combustibil și uzura peretelui."
+        },
+        {
+          "heading": "adâncimea șanțurilor și eroziunea",
+          "body": "Canelurile superficiale reduc evacuarea apei si cresc riscul de alunecare. Uzura neuniformă, denivelările, crăpăturile sau un obiect blocat în anvelopă necesită o inspecție profesională. De asemenea, roata de rezervă trebuie să fie în stare bună și umflată.",
+          "bullets": [
+            "Verificați ambele părți și peretele fiecărei anvelope.",
+            "Slefuirea pe o parte indică de obicei o problemă de aliniere sau presiune.",
+            "Anvelopele se schimba conform instructiunilor producatorului si conform legii, nu numai atunci cand sunt complet uzate."
+          ]
+        },
+        {
+          "heading": "Anvelope de sezon",
+          "body": "În condiții severe de iarnă, anvelopele trebuie adaptate la condițiile de drum. O anvelopă de vară nu înlocuiește o anvelopă de iarnă atunci când drumul este deosebit de umed sau rece."
+        }
+      ],
+      "keyPoints": [
+        "Presiunea aerului este verificată când anvelopa este rece, conform producătorului.",
+        "Caneluri superficiale = mai puțină evacuare a apei și mai multă alunecare.",
+        "Uzura neuniformă este un semn de inspecție."
+      ]
+    },
+    "vehicle-lights": {
+      "title": "lumini, frane si bord",
+      "summary": "Cum să identificați o defecțiune înainte ca aceasta să devină o defecțiune pe drum.",
+      "blocks": [
+        {
+          "heading": "Vizibilitatea este siguranță",
+          "body": "Luminile din față, luminile din spate, luminile de frână și semnalizatoarele sunt mijloacele dumneavoastră de comunicare cu alți șoferi. Acestea sunt verificate înainte de a conduce, mai ales după ce vehiculul a fost parcat sau după reparații. Un bec ars este o defecțiune de siguranță."
+        },
+        {
+          "heading": "Frâne: ce simți?",
+          "body": "O pedală de frână moale, vibrațiile, scârțâitul continuu sau tragerea în lateral în timpul frânării sunt semne de verificat. Nu le ignorați. ABS este conceput pentru a preveni blocarea roților, dar nu scurtează distanța de frânare în nicio condiție.",
+          "bullets": [
+            "Lumina roșie de frână aprinsă - oprire și verificare în siguranță.",
+            "Lumina motorului clipește - evitați supraîncărcarea și verificați cât mai curând posibil.",
+            "Dacă frâna se simte diferit, nu continuați să conduceți ca de obicei."
+          ]
+        },
+        {
+          "heading": "O scurtă rutină de testare",
+          "body": "Înainte de a conduce: lumini, anvelope, oglinzi, lichid de spălare a parbrizului și centură de siguranță. După conducere: parcare în siguranță, frână de mână, închiderea geamurilor și inspecția vehiculului. O rutină scurtă previne surprizele."
+        }
+      ],
+      "keyPoints": [
+        "Luminile adecvate sunt comunicarea cu restul drumului.",
+        "O modificare a senzației de frână necesită inspecție.",
+        "O scurtă verificare înainte de conducere previne avariile."
+      ]
+    },
+    "vehicle-load": {
+      "title": "Compartimente de încărcare, marfă și marfă",
+      "summary": "Cum o încărcătură neasigurată devine un pericol - și ce nu trebuie uitat înainte de a călători.",
+      "blocks": [
+        {
+          "heading": "Sarcina trebuie să rămână pe loc",
+          "body": "Într-o oprire bruscă, o încărcătură neasigurată continuă să se miște. Marfa grea trebuie asigurata in portbagaj sau cu ajutorul curelelor si plaselor, iar marfa grea trebuie tinuta la cota jos si cat mai aproape de centrul vehiculului."
+        },
+        {
+          "heading": "Limitele de greutate",
+          "body": "Fiecare vehicul are o limită de greutate totală și o limită de sarcină pe osie. Supraîncărcarea modifică comportamentul vehiculului, prelungește distanța de frânare și crește uzura anvelopelor. Nu încărcați dincolo de ceea ce este permis chiar dacă vehiculul „funcționează”.",
+          "bullets": [
+            "O sarcină la înălțime poate modifica centrul de greutate și poate crește răsturnarea.",
+            "Un portbagaj de acoperiș crește consumul de combustibil și sensibilitatea la vânt.",
+            "Asigurați-vă că încărcătura nu interferează cu vederea sau iluminarea."
+          ]
+        },
+        {
+          "heading": "înainte de a ieși",
+          "body": "Verificați dacă încărcătura este asigurată, dacă ușile și fereastra sunt închise, că nu există niciun obiect care să acopere plăcuța de înmatriculare sau lumina și că anvelopele sunt potrivite pentru încărcătură. Conduceți cu o viteză adecvată și întoarceți cu atenție."
+        }
+      ],
+      "keyPoints": [
+        "O încărcătură neasigurată este un pericol chiar și pe o călătorie scurtă.",
+        "Nu depășiți limitele de greutate ale vehiculului.",
+        "Sarcina redusa, fixata si fara blocarea vizibilitatii."
+      ]
+    }
+  },
+  "subjects": {
+    "laws": "Reguli de drum, viteză, drept de trecere și semnale - baza oricărei decizii privind drumul.",
+    "signs": "Semnale rutiere și marcaje rutiere: formă, culoare și semnificație, fără memorare.",
+    "safety": "Siguranță practică: centuri de siguranță, vreme, oboseală și distragere a atenției.",
+    "vehicle": "Cunoașterea vehiculului: anvelope, frâne, lumini și sarcină - ce se verifică și de ce."
+  }
+}

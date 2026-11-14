@@ -69,7 +69,7 @@
   "settings.title": "Settings",
   "settings.languageSection": "Language",
   "settings.privacyTitle": "Privacy",
-  "settings.privacyBody": "Everything is stored on this device. No account, no tracking — nothing leaves your device.",
+  "settings.privacyBody": "Everything stays on this device. An account and sync between devices are coming soon, and there is no advertising tracking.",
   "settings.dataSection": "Data",
   "settings.exportLabel": "Export progress as a file",
   "settings.clearLabel": "Erase all local progress",
@@ -309,5 +309,13 @@
   "blitz.false": "False",
   "blitz.tap": "Choose true or false",
   "question.imageAlt": "Question {number} image",
-  "question.imageCaption": "Official Ministry image for question {number}"
+  "question.imageCaption": "Official Ministry image for question {number}",
+  "nav.primary": "Main navigation",
+  "settings.importLabel": "Import progress from a file",
+  "common.importDone": "Progress restored.",
+  "common.importError": "That file is not valid.",
+  "practice.statTopics": "Topics",
+  "practice.statQuestions": "Questions",
+  "practice.statSeen": "Seen",
+  "practice.statUnseen": "Not seen"
 }

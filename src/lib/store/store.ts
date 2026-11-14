@@ -38,8 +38,8 @@ export async function append(
   value: Record<string, unknown>,
 ): Promise<void> {
   const db = await ensureDb()
-  if (store === 'history') {
-    await db.add('history', value)
+  if (store === HISTORY_STORE) {
+    await db.add(HISTORY_STORE, value)
   } else {
     await db.put(store, value as DataRecord)
   }
@@ -48,6 +48,28 @@ export async function append(
 export async function all<T = DataRecord>(store: StoreName): Promise<T[]> {
   const db = await ensureDb()
   return db.getAll(store) as Promise<T[]>
+}
+
+const HISTORY_STORE = 'history'
+
+/**
+ * Keep the answer log bounded. The log grows with every answer and is scanned
+ * to build the readiness report, so an unbounded store eventually slows the
+ * dashboard down. Oldest entries are dropped first.
+ */
+export async function trimHistory(keep: number): Promise<void> {
+  const db = await ensureDb()
+  const count = await db.count(HISTORY_STORE)
+  if (count <= keep) return
+  let remaining = count - keep
+  const tx = db.transaction(HISTORY_STORE, 'readwrite')
+  let cursor = await tx.objectStore(HISTORY_STORE).openCursor()
+  while (cursor && remaining > 0) {
+    await cursor.delete()
+    remaining -= 1
+    cursor = await cursor.continue()
+  }
+  await tx.done
 }
 
 export async function clear(store: StoreName): Promise<void> {
@@ -60,6 +82,26 @@ export async function clearAll(): Promise<void> {
   const tx = db.transaction(STORES, 'readwrite')
   for (const store of STORES) {
     tx.objectStore(store).clear()
+  }
+  await tx.done
+}
+
+/**
+ * Replace every store with a previously exported snapshot. This is the only
+ * way progress moves between devices without an account.
+ */
+export async function restoreAll(data: Record<string, unknown>): Promise<void> {
+  const db = await ensureDb()
+  const tx = db.transaction(STORES, 'readwrite')
+  for (const store of STORES) {
+    const target = tx.objectStore(store)
+    await target.clear()
+    const rows = Array.isArray(data[store]) ? (data[store] as Record<string, unknown>[]) : []
+    for (const row of rows) {
+      if (!row || typeof row !== 'object') continue
+      if (store === HISTORY_STORE) await target.add(row)
+      else await target.put(row as DataRecord)
+    }
   }
   await tx.done
 }

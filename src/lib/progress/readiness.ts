@@ -17,10 +17,12 @@ export interface ReadinessReport {
   score: number
   band: ReadinessBand
   sample: number
+  /** Size of the category bank, for context. */
   totalQuestions: number
+  /** How many questions count as full coverage for the score. */
+  coverageTarget: number
   components: ReadinessComponents
   weakest: string | null
-  firstAttemptAccuracy: number
 }
 
 export interface ReadinessEvent {
@@ -37,7 +39,23 @@ export const READINESS_WEIGHTS = {
   unseen: 0.15,
 } as const
 
+/**
+ * Coverage is measured against a realistic study target, not the whole bank.
+ * A category holds well over a thousand questions, so dividing by the bank
+ * meant no learner could ever reach a strong score even after answering
+ * hundreds of questions correctly. The target is capped by the bank size so
+ * small categories (A3) can still reach full coverage.
+ */
+export const READINESS_COVERAGE_TARGET = 250
+
 const clamp = (value: number) => Math.max(0, Math.min(100, value))
+
+const BAND_RANK: Record<ReadinessBand, number> = {
+  insufficient: 0,
+  weak: 1,
+  building: 2,
+  strong: 3,
+}
 
 export function buildReadiness(input: {
   events: ReadinessEvent[]
@@ -55,7 +73,8 @@ export function buildReadiness(input: {
     if (!firstAttempt.has(event.questionId)) firstAttempt.set(event.questionId, event.correct)
   }
   const sample = firstAttempt.size
-  const coverage = input.totalQuestions > 0 ? clamp((sample / input.totalQuestions) * 100) : 0
+  const coverageTarget = Math.max(1, Math.min(input.totalQuestions, READINESS_COVERAGE_TARGET))
+  const coverage = clamp((sample / coverageTarget) * 100)
 
   const recent = sorted.slice(-50)
   const passRate = 0.86
@@ -103,13 +122,18 @@ export function buildReadiness(input: {
 
   const hasEnough = sample >= 20
   const score = hasEnough ? Math.round(weighted) : 0
-  const band: ReadinessBand = !hasEnough
-    ? 'insufficient'
-    : score >= 75
-      ? 'strong'
-      : score >= 50
-        ? 'building'
-        : 'weak'
+  // Breadth signals (coverage, consistency, exam history) can lift the score of
+  // a learner who is still answering below the real pass margin. The band is
+  // therefore capped by recent accuracy, which is what actually decides the exam.
+  const scoreBand: ReadinessBand = score >= 75 ? 'strong' : score >= 50 ? 'building' : 'weak'
+  const accuracyBand: ReadinessBand = accuracy >= 85 ? 'strong' : accuracy >= 70 ? 'building' : 'weak'
+  const hasEnoughBand: ReadinessBand = !hasEnough ? 'insufficient' : scoreBand
+  const band: ReadinessBand =
+    hasEnoughBand === 'insufficient'
+      ? 'insufficient'
+      : BAND_RANK[hasEnoughBand] <= BAND_RANK[accuracyBand]
+        ? hasEnoughBand
+        : accuracyBand
 
   const categoryMastery = Object.values(input.mastery).filter((m) => m.category === input.category)
 
@@ -118,9 +142,9 @@ export function buildReadiness(input: {
     band,
     sample,
     totalQuestions: input.totalQuestions,
+    coverageTarget,
     components,
     weakest: weakestTopic(categoryMastery),
-    firstAttemptAccuracy: Math.round(unseen),
   }
 }
 

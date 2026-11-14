@@ -30,13 +30,13 @@ describe('question helpers', () => {
       expect(en?.stem).toBe('e')
     })
 
-    it('falls back to English when the requested translation is missing', () => {
+    it('falls back to Hebrew when the requested translation is missing', () => {
       const ar = translate(base, 'ar')
-      expect(ar?.stem).toBe('e')
+      expect(ar?.stem).toBe('ש')
     })
 
     it('reports the language actually shown after fallback', () => {
-      expect(contentLanguage(base, 'ar')).toBe('en')
+      expect(contentLanguage(base, 'ar')).toBe('he')
       expect(contentLanguage(base, 'en')).toBe('en')
       expect(contentLanguage(base, 'he')).toBe('he')
     })
@@ -58,6 +58,16 @@ describe('question helpers', () => {
       expect(isPublished(base)).toBe(true)
       expect(isPublished(draft)).toBe(false)
       expect(isPublished(reviewed)).toBe(false)
+    })
+  })
+
+  describe('isPlayable', () => {
+    it('only plays published questions from the official bank', () => {
+      expect(isPlayable(base)).toBe(true)
+      expect(isPlayable({ ...base, source: 'authored' })).toBe(false)
+      expect(isPlayable({ ...base, source: 'community' })).toBe(false)
+      expect(isPlayable({ ...base, status: 'draft' })).toBe(false)
+      expect(isPlayable({ ...base, status: 'reviewed' })).toBe(false)
     })
   })
 

@@ -1,3 +1,4 @@
+import type { MouseEvent } from 'react'
 import { Link } from 'react-router-dom'
 import { useI18n } from '../lib/i18n/useI18n'
 import { useProgress } from '../lib/progress/ProgressProvider'
@@ -10,270 +11,37 @@ import { ThemeToggle } from '../components/ThemeToggle'
 import { LanguageMenu } from '../components/LanguageMenu'
 import { ProgressRing } from '../components/ui/ProgressRing'
 import { totalQuestionCount } from '../lib/content/bankStats'
-import landingFr from '../../data/i18n/landing.fr.json'
-import landingEs from '../../data/i18n/landing.es.json'
+import { scrollToId } from '../lib/scrollTo'
+import { FULL_LANDING } from '../lib/i18n/full'
+import { COPY, LANDING_PARTIALS, FEATURES, WHY_COPY } from './landing/copy'
+import type { WhyLanguage } from './landing/copy'
 
-export const COPY = {
-  he: {
-    navHow: 'איך זה עובד',
-    navFeatures: 'מה בפנים',
-    navFaq: 'שאלות',
-    heroBadge: 'מבוסס על מאגר משרד התחבורה',
-    heroTitleA: 'התיאוריה היא לא מבחן לזכור.',
-    heroTitleB: 'היא מיומנות לנהוג.',
-    heroBody:
-      'LAMED+ מלמדת אותך להבין את הכביש: שיעורים קצרים, תרגול שמתאים בדיוק למה שאתה צריך, ומבחני דמה בפורמט האמיתי. עד שתרגיש מוכן.',
-    cta: 'מתחילים ללמוד',
-    ctaSecond: 'איך זה עובד',
-    trustOfficial: '1,841 שאלות רשמיות',
-    trustLang: 'עברית · English · Русский · العربية · Français · Español',
-    trustOffline: 'עובד גם בלי אינטרנט',
-    previewLabel: 'תצוגה מקדימה של המסלול',
-    previewTitle: 'המסלול שלי',
-    previewReady: 'מוכנות למבחן',
-    previewNext: 'הצעד הבא',
-    previewLesson: 'זכות קדימה וצמתים',
-    previewLessonMeta: 'שיעור 2 מתוך 3 · 5 דק׳',
-    previewContinue: 'המשך שיעור',
-    previewGoal: 'היעד היומי',
-    previewGoalMeta: '14 מתוך 20 שאלות',
-    statQuestions: 'שאלות רשמיות',
-    statSubjects: 'נושאי לימוד',
-    statFormat: 'שאלות · דקות · מעבר',
-    howTitle: 'מסלול אחד, שלושה שלבים',
-    howSub: 'לא עוד רשימת שאלות אינסופית. לומדים, מתרגלים, בודקים — וחוזרים רק למה שצריך.',
-    how1: 'בוחרים את הדרך',
-    how1b: 'קטגוריית רישיון, נקודת פתיחה ויעד יומי. המסלול נבנה סביבך, לא להיפך.',
-    how2: 'לומדים ומתרגלים',
-    how2b: 'שיעור קצר, דוגמאות אמיתיות ובדיקת ידע. כל טעות מקבלת הסבר, לא רק סימון אדום.',
-    how3: 'בודקים מוכנות',
-    how3b: 'מבחן דמה בפורמט אמיתי, ציון מוכנות מוסבר וצעד הבא ברור. בלי ניחושים.',
-    featuresTitle: 'בנוי ללמוד, לא רק לעבור',
-    featuresSub: 'כל חלק ב־LAMED+ נועד לקצר את הדרך מהבנה לביטחון.',
-    f1: 'הבנה לפני שינון',
-    f1b: 'מסבירים את ההיגיון מאחורי החוק, התמרור והחלטת הנהיגה.',
-    f2: 'תרגול שמתאים לך',
-    f2b: 'שאלות חדשות, טעויות קודמות ונושאים חלשים — בסדר ובקצב שלך.',
-    f3: 'משוב שמסביר למה',
-    f3b: 'כל תשובה מקבלת הסבר. טעות היא נקודת התחלה, לא סוף.',
-    f4: 'מוכנות שקופה',
-    f4b: 'רואה בדיוק מה מרכיב את הציון ומה כדאי לעשות עכשיו.',
-    examTitle: 'מבחן דמה שלא מפתיע אותך',
-    examBody:
-      'אותן 30 שאלות, 40 דקות ואותו ציון מעבר — עם טיימר, סימון לבדיקה וניווט בין שאלות. אחרי ההגשה מקבלים פירוט מלא וחזרה על הטעויות.',
-    exam1: 'פורמט זהה למבחן המשרד',
-    exam2: 'שמירה אוטומטית אם נקטעה הנסיעה',
-    exam3: 'אפס פרסומות בזמן המבחן',
-    examCta: 'למבחני הדמה',
-    gamesTitle: 'לומדים גם כשמשחקים',
-    gamesBody: 'ספרינט תמרורים ובליץ נכון/לא נכון — אימון קצר לזיהוי מהיר, בלי לוותר על דיוק.',
-    gamesCta: 'למשחקים',
-    readinessTitle: 'ציון מוכנות, לא תחושת בטן',
-    readinessBody:
-      'הציון נבנה מחמישה אותות מדידים. הוא מוצג עם הפירוק שלו, כדי שתדע מה לשפר — ומוצג כהערכה, לא כהבטחה.',
-    r1: 'כיסוי החומר',
-    r2: 'דיוק בשאלות האחרונות',
-    r3: 'התמדה ב־14 יום',
-    r4: 'ביצועי מבחני דמה',
-    r5: 'ביצועים בשאלות חדשות',
-    categoriesTitle: 'מתכוננים לקטגוריה אחרת?',
-    categoriesSub: 'אותו מסלול, שאלות ומבחן בהתאם לקטגוריית הרישיון.',
-    faqTitle: 'שאלות שכדאי לשאול',
-    q1: 'השאלות רשמיות?',
-    a1: 'השאלות והתמונות מגיעות ממאגר משרד התחבורה והבטיחות בדרכים. ההסברים והשיעורים נכתבו על ידי LAMED+ ואינם חומר רשמי של המשרד.',
-    q2: 'אפשר ללמוד בלי אינטרנט?',
-    a2: 'כן. אחרי הטעינה הראשונה השיעורים והשאלות נשמרים במכשיר. תמונות חדשות ומבחן שלא נטען מראש דורשים חיבור.',
-    q3: 'באילו שפות אפשר ללמוד?',
-    a3: 'הממשק זמין בשש שפות. השאלות הרשמיות בעברית, אנגלית, רוסית וערבית; A3 גם בצרפתית ובספרדית. תוכן השיעורים בעברית.',
-    q4: 'מה כולל מבחן הדמה?',
-    a4: 'בפורמט הנוכחי: 30 שאלות, 40 דקות ו־26 תשובות נכונות לעבור. יש לאמת את דרישות המשרד לפני המבחן האמיתי.',
-    q5: 'איפה נשמרת ההתקדמות?',
-    a5: 'במכשיר שלך. אין חשבון ואין שרת, ואפשר לייצא או למחוק את הנתונים מההגדרות.',
-    finalTitle: 'הדרך לטסט מתחילה בהבנה.',
-    finalBody: 'שיעור ראשון לוקח חמש דקות. משם כבר יש מסלול.',
-    finalCta: 'מתחילים ללמוד בחינם',
-    footerNote: 'LAMED+ היא כלי לימוד עצמאי ואינה קשורה למשרד התחבורה או לרשות הרישוי.',
-    footerProduct: 'מוצר',
-    footerLearn: 'למידה',
-    footerExams: 'מבחני דמה',
-    footerGames: 'משחקים',
-    footerInfo: 'מידע',
-    footerSettings: 'הגדרות',
-    footerPrivacy: 'פרטיות',
-    footerDisclaimer: 'גילוי נאות',
-    continueApp: 'המשך ללמוד',
-    demo: 'תצוגה',
-  },
-  en: {
-    navHow: 'How it works',
-    navFeatures: 'What is inside',
-    navFaq: 'FAQ',
-    heroBadge: 'Built on the Ministry of Transport bank',
-    heroTitleA: 'Theory is not a memory test.',
-    heroTitleB: 'It is a driving skill.',
-    heroBody:
-      'LAMED+ teaches you to read the road: short lessons, practice that matches exactly what you need, and mock exams in the real format. Until you feel ready.',
-    cta: 'Start learning',
-    ctaSecond: 'How it works',
-    trustOfficial: '1,841 official questions',
-    trustLang: 'Hebrew · English · Russian · Arabic · French · Spanish',
-    trustOffline: 'Works offline',
-    previewLabel: 'Product preview',
-    previewTitle: 'My route',
-    previewReady: 'Exam readiness',
-    previewNext: 'Next step',
-    previewLesson: 'Right of way and junctions',
-    previewLessonMeta: 'Lesson 2 of 3 · 5 min',
-    previewContinue: 'Continue lesson',
-    previewGoal: 'Daily goal',
-    previewGoalMeta: '14 of 20 questions',
-    statQuestions: 'official questions',
-    statSubjects: 'learning subjects',
-    statFormat: 'questions · minutes · pass',
-    howTitle: 'One route, three stages',
-    howSub: 'No endless question list. Learn, practise, check — then return only to what needs work.',
-    how1: 'Choose your route',
-    how1b: 'Licence category, starting point and daily goal. The route is built around you.',
-    how2: 'Learn and practise',
-    how2b: 'A short lesson, real examples and a knowledge check. Every mistake gets an explanation.',
-    how3: 'Check readiness',
-    how3b: 'A real-format mock exam, an explained readiness score and a clear next step.',
-    featuresTitle: 'Built to learn, not just to pass',
-    featuresSub: 'Every part of LAMED+ is designed to shorten the path from understanding to confidence.',
-    f1: 'Understanding before memorising',
-    f1b: 'We explain the reasoning behind the rule, the sign and the driving decision.',
-    f2: 'Practice that fits you',
-    f2b: 'New questions, previous mistakes and weak subjects — in your order and at your pace.',
-    f3: 'Feedback that explains why',
-    f3b: 'Every answer gets an explanation. A mistake is a starting point, not the end.',
-    f4: 'Transparent readiness',
-    f4b: 'See exactly what makes up the score and what to do next.',
-    examTitle: 'A mock exam with no surprises',
-    examBody:
-      'The same 30 questions, 40 minutes and pass score — with a timer, review flags and question navigation. After submitting you get a full breakdown and mistake review.',
-    exam1: 'Same format as the ministry exam',
-    exam2: 'Autosaved if the trip is interrupted',
-    exam3: 'Zero ads during the exam',
-    examCta: 'Mock exams',
-    gamesTitle: 'Learning that feels like play',
-    gamesBody: 'Sign Sprint and True/False Blitz — short training for fast recognition without sacrificing accuracy.',
-    gamesCta: 'Games',
-    readinessTitle: 'Readiness, not a gut feeling',
-    readinessBody:
-      'The score is built from five measurable signals and shown with its breakdown, so you know what to improve. It is an estimate, not a promise.',
-    r1: 'Material coverage',
-    r2: 'Recent accuracy',
-    r3: 'Consistency over 14 days',
-    r4: 'Mock exam performance',
-    r5: 'Performance on new questions',
-    categoriesTitle: 'Preparing for another category?',
-    categoriesSub: 'Same route, with questions and exam format for your licence.',
-    faqTitle: 'Worth asking',
-    q1: 'Are the questions official?',
-    a1: 'Questions and images come from the Ministry of Transport open-data bank. Explanations and lessons are written by LAMED+ and are not official ministry material.',
-    q2: 'Can I study offline?',
-    a2: 'Yes. After the first load, lessons and questions are stored on the device. New images and an uncached exam need a connection.',
-    q3: 'Which languages are supported?',
-    a3: 'The interface is available in six languages. Official questions are in Hebrew, English, Russian and Arabic; A3 is also in French and Spanish. Lesson content is written in Hebrew.',
-    q4: 'What does the mock exam include?',
-    a4: 'Current format: 30 questions, 40 minutes and 26 correct answers to pass. Verify ministry requirements before the real exam.',
-    q5: 'Where is my progress stored?',
-    a5: 'On your device. There is no account or server, and you can export or delete your data in Settings.',
-    finalTitle: 'The road to the test starts with understanding.',
-    finalBody: 'The first lesson takes five minutes. After that, you have a route.',
-    finalCta: 'Start learning for free',
-    footerNote: 'LAMED+ is an independent study aid and is not affiliated with the Ministry of Transport or the licensing authority.',
-    footerProduct: 'Product',
-    footerLearn: 'Learn',
-    footerExams: 'Mock exams',
-    footerGames: 'Games',
-    footerInfo: 'Info',
-    footerSettings: 'Settings',
-    footerPrivacy: 'Privacy',
-    footerDisclaimer: 'Disclaimer',
-    continueApp: 'Continue learning',
-    demo: 'Preview',
-  },
-  fr: landingFr,
-  es: landingEs,
-}
-
-const FEATURES: Array<{ icon: IconName; title: string; body: string }> = [
-  { icon: 'brain', title: 'f1', body: 'f1b' },
-  { icon: 'target', title: 'f2', body: 'f2b' },
-  { icon: 'check-circle', title: 'f3', body: 'f3b' },
-  { icon: 'chart', title: 'f4', body: 'f4b' },
-]
-
-type WhyLanguage = 'he' | 'en' | 'fr' | 'es'
-
-const WHY_COPY: Record<
-  WhyLanguage,
-  { title: string; sub: string; items: Array<{ icon: IconName; title: string; body: string }> }
-> = {
-  he: {
-    title: 'למה LAMED+?',
-    sub: 'לא עוד אתר תרגול. מערכת שלמה שמכבדת את הזמן, העיניים והשפה שלך.',
-    items: [
-      { icon: 'shield-check', title: 'בלי חשבון', body: 'מתחילים ללמוד בעוד דקה. ההתקדמות נשמרת במכשיר.' },
-      { icon: 'download', title: 'עובד בלי אינטרנט', body: 'אחרי טעינה ראשונה השיעורים והתרגול ממשיכים גם בלי קליטה.' },
-      { icon: 'accessibility', title: 'נגישות אמיתית', body: 'גודל טקסט, ניגודיות, תנועה מופחתת, קווי קישור והקראה — לא רק הצהרה.' },
-      { icon: 'globe', title: 'שש שפות ממשק', body: 'עברית, אנגלית, רוסית, ערבית, צרפתית וספרדית. A3 גם בצרפתית ובספרדית.' },
-      { icon: 'motorcycle', title: 'A3 כלול', body: 'מבחן ייעודי לאופניים חשמליים: 30 שאלות, 40 דקות, 26 למעבר.' },
-      { icon: 'chart', title: 'מוכנות מוסברת', body: 'רואים מה מרכיב את הציון ומה הצעד הבא — בלי תחושת בטן.' },
-    ],
-  },
-  en: {
-    title: 'Why LAMED+?',
-    sub: 'Not another question site. A complete system that respects your time, your eyes and your language.',
-    items: [
-      { icon: 'shield-check', title: 'No account', body: 'Start in under a minute. Progress stays on your device.' },
-      { icon: 'download', title: 'Works offline', body: 'After the first load, lessons and practice keep working without a connection.' },
-      { icon: 'accessibility', title: 'Accessibility that is real', body: 'Text size, contrast, reduced motion, underlined links and read-aloud — not just a statement.' },
-      { icon: 'globe', title: 'Six interface languages', body: 'Hebrew, English, Russian, Arabic, French and Spanish. A3 content is also in French and Spanish.' },
-      { icon: 'motorcycle', title: 'A3 included', body: 'A dedicated electric-bicycle exam: 30 questions, 40 minutes, 26 to pass.' },
-      { icon: 'chart', title: 'Readiness you can inspect', body: 'See what makes up the score and what to do next — no gut feeling.' },
-    ],
-  },
-  fr: {
-    title: 'Pourquoi LAMED+ ?',
-    sub: 'Pas un site de questions de plus. Un système complet qui respecte votre temps, vos yeux et votre langue.',
-    items: [
-      { icon: 'shield-check', title: 'Sans compte', body: 'Commencez en moins d’une minute. La progression reste sur votre appareil.' },
-      { icon: 'download', title: 'Fonctionne hors ligne', body: 'Après le premier chargement, les leçons et l’entraînement continuent sans connexion.' },
-      { icon: 'accessibility', title: 'Une accessibilité réelle', body: 'Taille du texte, contraste, animations réduites, liens soulignés et lecture à voix haute — pas seulement une déclaration.' },
-      { icon: 'globe', title: 'Six langues d’interface', body: 'Hébreu, anglais, russe, arabe, français et espagnol. Le contenu A3 est aussi en français et en espagnol.' },
-      { icon: 'motorcycle', title: 'A3 inclus', body: 'Un examen dédié au vélo électrique : 30 questions, 40 minutes, 26 pour réussir.' },
-      { icon: 'chart', title: 'Une préparation explicable', body: 'Voyez ce qui compose le score et quelle est la prochaine étape — sans intuition.' },
-    ],
-  },
-  es: {
-    title: '¿Por qué LAMED+?',
-    sub: 'No es otro sitio de preguntas. Un sistema completo que respeta tu tiempo, tus ojos y tu idioma.',
-    items: [
-      { icon: 'shield-check', title: 'Sin cuenta', body: 'Empieza en menos de un minuto. El progreso se queda en tu dispositivo.' },
-      { icon: 'download', title: 'Funciona sin conexión', body: 'Tras la primera carga, las lecciones y la práctica siguen funcionando sin conexión.' },
-      { icon: 'accessibility', title: 'Accesibilidad real', body: 'Tamaño del texto, contraste, movimiento reducido, enlaces subrayados y lectura en voz alta — no solo una declaración.' },
-      { icon: 'globe', title: 'Seis idiomas de interfaz', body: 'Hebreo, inglés, ruso, árabe, francés y español. El contenido A3 también está en francés y español.' },
-      { icon: 'motorcycle', title: 'A3 incluido', body: 'Un examen dedicado a la bicicleta eléctrica: 30 preguntas, 40 minutos, 26 para aprobar.' },
-      { icon: 'chart', title: 'Preparación explicable', body: 'Mira qué compone la puntuación y cuál es el siguiente paso — sin intuiciones.' },
-    ],
-  },
-}
 
 export function Landing() {
   const { language, t } = useI18n()
   const { onboarded } = useProgress()
-  const copy = (COPY as Record<string, typeof COPY.en>)[language] ?? COPY.en
+  const landing = FULL_LANDING[language]
+  const copy = {
+    ...COPY.he,
+    ...(COPY as Record<string, typeof COPY.en>)[language],
+    ...LANDING_PARTIALS[language],
+    ...landing?.copy,
+  }
   const dynamic = copy as Record<string, string>
-  const why = WHY_COPY[language === 'he' ? 'he' : language === 'fr' ? 'fr' : language === 'es' ? 'es' : 'en']
+  const why = (landing?.why ?? WHY_COPY[language as WhyLanguage] ?? WHY_COPY.he) as (typeof WHY_COPY)['he']
   const startHref = onboarded ? '/app' : '/welcome'
   const totalQuestions = totalQuestionCount()
+
+  function jumpTo(event: MouseEvent<HTMLAnchorElement>, id: string) {
+    event.preventDefault()
+    scrollToId(id, { focus: id === 'main' })
+  }
 
   return (
     <div className="min-h-screen bg-bg">
       <a
         href="#main"
+        onClick={(event) => jumpTo(event, 'main')}
         className="sr-only focus:not-sr-only focus:fixed focus:start-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:font-bold focus:text-accent-ink"
       >
         {t('common.skipToContent')}
@@ -282,9 +50,9 @@ export function Landing() {
         <div className="app-container flex h-16 items-center gap-3">
           <Logo size={36} />
           <nav className="ms-6 hidden items-center gap-5 text-sm font-semibold text-muted md:flex" aria-label={copy.navFeatures}>
-            <a href="#how" className="hover:text-ink">{copy.navHow}</a>
-            <a href="#features" className="hover:text-ink">{copy.navFeatures}</a>
-            <a href="#faq" className="hover:text-ink">{copy.navFaq}</a>
+            <a href="#how" onClick={(event) => jumpTo(event, 'how')} className="hover:text-ink">{copy.navHow}</a>
+            <a href="#features" onClick={(event) => jumpTo(event, 'features')} className="hover:text-ink">{copy.navFeatures}</a>
+            <a href="#faq" onClick={(event) => jumpTo(event, 'faq')} className="hover:text-ink">{copy.navFaq}</a>
           </nav>
           <div className="ms-auto flex items-center gap-1">
             <ThemeToggle />
@@ -297,7 +65,7 @@ export function Landing() {
         </div>
       </header>
 
-      <main id="main">
+      <main id="main" tabIndex={-1}>
         <section className="hero-surface app-container grid gap-10 pb-16 pt-10 sm:pt-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(330px,0.95fr)] lg:items-center lg:gap-14 lg:pb-24">
           <div className="hero-ambient" aria-hidden="true" />
           <div className="hero-copy">
@@ -317,7 +85,7 @@ export function Landing() {
                 {onboarded ? copy.continueApp : copy.cta}
                 <Icon name="arrow-forward" className="h-4 w-4 rtl:rotate-180" />
               </Link>
-              <a href="#how" className="btn-secondary touch-target px-5 py-3 text-sm">
+              <a href="#how" onClick={(event) => jumpTo(event, 'how')} className="btn-secondary touch-target px-5 py-3 text-sm">
                 {copy.ctaSecond}
               </a>
             </div>
@@ -651,9 +419,10 @@ export function Landing() {
           <div>
             <p className="text-xs font-bold text-ink">{copy.footerInfo}</p>
             <ul className="mt-2 space-y-1.5 text-xs text-muted">
-              <li><Link to={onboarded ? '/settings' : '/welcome'} className="hover:text-ink">{t('a11y.title')}</Link></li>
+              <li><Link to="/accessibility" className="hover:text-ink">{t('legal.accessibility')}</Link></li>
+              <li><Link to="/privacy" className="hover:text-ink">{t('legal.privacy')}</Link></li>
+              <li><Link to="/terms" className="hover:text-ink">{t('legal.terms')}</Link></li>
               <li><Link to="/settings" className="hover:text-ink">{copy.footerSettings}</Link></li>
-              <li><Link to="/settings" className="hover:text-ink">{copy.footerPrivacy}</Link></li>
             </ul>
           </div>
           <div>
